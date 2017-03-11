@@ -1,12 +1,13 @@
 package br.edu.ufcg.computacao.si1.model;
 
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.AuthorityUtils;
-import org.springframework.security.core.userdetails.UserDetails;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-import javax.persistence.*;
-import java.util.Collection;
-import java.util.LinkedList;
+import org.springframework.security.core.authority.AuthorityUtils;
 
 @Entity(name = "Usuario")
 @Table(name = "tb_usuario")
@@ -22,12 +23,23 @@ public class Usuario extends org.springframework.security.core.userdetails.User{
     private String senha;
     @Column
     private String role;
+    @Column
+    private double saldo;
 
     public Usuario() {
         super("default", "default", AuthorityUtils.createAuthorityList("USER"));
     }
+    
+    /**
+     * 
+     * @param nome
+     * @param email
+     * @param senha
+     * @param role
+     * @param saldo foi alterado, pois originalmente o saldo não era um atributo do usuario
+     */
 
-    public Usuario(String nome, String email, String senha, String role) {
+    public Usuario(String nome, String email, String senha, String role, double saldo) {
 
         super(email, senha, AuthorityUtils.createAuthorityList(role));
 
@@ -35,6 +47,7 @@ public class Usuario extends org.springframework.security.core.userdetails.User{
         this.email = email;
         this.senha = senha;
         this.role = role;
+        this.saldo = saldo;
     }
 
     public Long getId() {
@@ -45,12 +58,12 @@ public class Usuario extends org.springframework.security.core.userdetails.User{
         this.id = id;
     }
 
-    public String getN() {
+    public String getNome() {
         return nome;
     }
 
-    public void setN(String n) {
-        this.nome = n;
+    public void setNome(String novoNome) {
+        this.nome = novoNome;
     }
 
     public String getEmail() {
@@ -69,12 +82,20 @@ public class Usuario extends org.springframework.security.core.userdetails.User{
         this.senha = senha;
     }
 
-    public String getR() {
+    public String getRole() {
         return role;
     }
 
-    public void setR(String r) {
-        this.role = r;
+    public void setRole(String novoRole) {
+        this.role = novoRole;
+    }
+    
+    public double getSaldo() {
+    	return saldo;
+    }
+    
+    public void setSaldo(double novoSaldo) {
+    	this.saldo = novoSaldo;
     }
 
 }

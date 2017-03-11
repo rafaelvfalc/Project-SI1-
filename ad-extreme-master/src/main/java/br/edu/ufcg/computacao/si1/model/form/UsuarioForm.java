@@ -19,6 +19,7 @@ public class UsuarioForm {
     private String senha;
     @NotNull
     private Integer role;
+	private double saldo;
 
     public String getNome() {
         return nome;
@@ -50,5 +51,20 @@ public class UsuarioForm {
 
     public void setRole(Integer role) {
         this.role = role;
+    }
+    
+    /**
+     * adicionado posteriormente por causa da criação do saldo
+     * @return
+     */
+    public double getSaldo() {
+    	return saldo;
+    }
+    /**
+     * adicionado posteriormente por causa da criação do saldo
+     * @param novoSaldo
+     */
+    public void setSaldo(double novoSaldo){
+    	this.saldo = novoSaldo;
     }
 }
