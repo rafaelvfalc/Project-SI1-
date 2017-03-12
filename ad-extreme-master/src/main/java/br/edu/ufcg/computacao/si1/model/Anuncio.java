@@ -32,6 +32,8 @@ public class Anuncio {
     @Column(name = "preco", nullable = false)
     private double preco;
 
+    //talves usar uma colecao de Strings, onde cada nota sera 
+    //numero de estrela + comentario ??
     @Column(name = "nota")
     private String nota;
 

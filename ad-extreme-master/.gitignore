@@ -5,3 +5,6 @@ ad-extreme.iml
 mvnw
 mvnw.cmd
 target/
+ad-extreme-master/.classpath
+ad-extreme-master/.project
+ad-extreme-master/.settings/
