@@ -38,8 +38,8 @@ public class Usuario extends org.springframework.security.core.userdetails.User{
      * @param role
      * @param saldo foi alterado, pois originalmente o saldo não era um atributo do usuario
      */
-
-    public Usuario(String nome, String email, String senha, String role, double saldo) {
+    // alteracao, usuario nao sera passado com saldo, sera 0 ao criar o usuario @filipe
+    public Usuario(String nome, String email, String senha, String role) {
 
         super(email, senha, AuthorityUtils.createAuthorityList(role));
 
@@ -47,7 +47,7 @@ public class Usuario extends org.springframework.security.core.userdetails.User{
         this.email = email;
         this.senha = senha;
         this.role = role;
-        this.saldo = saldo;
+        this.saldo = 0;
     }
 
     public Long getId() {
@@ -97,5 +97,17 @@ public class Usuario extends org.springframework.security.core.userdetails.User{
     public void setSaldo(double novoSaldo) {
     	this.saldo = novoSaldo;
     }
+    
+    //criei metodo debitar para ser discutido @filipe
+    public void debitarSaldo(double debito) {
+    	if(this.saldo >= debito ){
+    		this.saldo = this.saldo - debito;
+    	}
+    }
 
+    //criei metodo creditar para ser discutido @filipe
+    public void creditarSaldo(double credito) {
+    	this.saldo = this.saldo + credito;
+    }
+    
 }
