@@ -98,14 +98,14 @@ public class Usuario extends org.springframework.security.core.userdetails.User{
     	this.saldo = novoSaldo;
     }
     
-    //criei metodo debitar para ser discutido @filipe
+    //Criei metodo debitar para ser discutido @Filipe
     public void debitarSaldo(double debito) {
     	if(this.saldo >= debito ){
     		this.saldo = this.saldo - debito;
     	}
     }
 
-    //criei metodo creditar para ser discutido @filipe
+    //Criei metodo creditar para ser discutido @Filipe
     public void creditarSaldo(double credito) {
     	this.saldo = this.saldo + credito;
     }
