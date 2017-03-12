@@ -1,8 +1,5 @@
 package br.edu.ufcg.computacao.si1.model;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -28,9 +25,6 @@ public class Usuario extends org.springframework.security.core.userdetails.User{
     private String role;
     @Column
     private double saldo;
-    // criacao de uma lista de anuncios
-    @Column
-    private Collection<Anuncio> anuncios;
 
     public Usuario() {
         super("default", "default", AuthorityUtils.createAuthorityList("USER"));
@@ -43,7 +37,6 @@ public class Usuario extends org.springframework.security.core.userdetails.User{
      * @param senha
      * @param role
      * @param saldo foi alterado, pois originalmente o saldo não era um atributo do usuario
-     * @param anuncios
      */
     // alteracao, usuario nao sera passado com saldo, sera 0 ao criar o usuario @filipe
     public Usuario(String nome, String email, String senha, String role) {
@@ -54,12 +47,7 @@ public class Usuario extends org.springframework.security.core.userdetails.User{
         this.email = email;
         this.senha = senha;
         this.role = role;
-        this.saldo = 0;
-<<<<<<< HEAD
-        this.anuncios = new ArrayList<>();
-=======
-        
->>>>>>> bugFix/entityManagerFactoryError
+        this.saldo = 0.0;
     }
 
     public Long getId() {
@@ -121,20 +109,5 @@ public class Usuario extends org.springframework.security.core.userdetails.User{
     public void creditarSaldo(double credito) {
     	this.saldo = this.saldo + credito;
     }
-
-    // ???
-	public Collection<Anuncio> getAnuncios() {
-		return anuncios;
-	}
-
-	// ???
-	public void addAnuncio(Anuncio anuncio) {
-		this.anuncios.add(anuncio);
-	}
-	
-	// ???
-	public void rmvAnuncio(Anuncio anuncio){
-		this.anuncios.remove(anuncio);
-	}
     
 }
