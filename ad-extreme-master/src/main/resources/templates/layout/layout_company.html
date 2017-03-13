@@ -12,6 +12,8 @@
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}" media="screen"/>
     <link rel="stylesheet" th:href="@{/webjars/font-awesome/4.7.0/css/font-awesome.min.css}" media="screen"/>
     <link rel="stylesheet" th:href="@{/css/style.css}" media="screen"/>
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
 <!-- init menu -->
@@ -61,6 +63,9 @@
                         <input type="submit" value="Logout"/>
                     </form>
                 </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <p>Saldo: R$<span id="saldoUser" style="color:green"></span></p>
             </ul>
         </div>
     </div>
