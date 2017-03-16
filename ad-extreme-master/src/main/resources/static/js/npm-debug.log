@@ -1,0 +1,2147 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', 'pg', 'pg-native' ]
+2 info using npm@3.5.2
+3 info using node@v4.2.6
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData pg
+8 silly fetchPackageMetaData pg-native
+9 silly fetchNamedPackageData pg
+10 silly mapToRegistry name pg
+11 silly mapToRegistry using default registry
+12 silly mapToRegistry registry https://registry.npmjs.org/
+13 silly mapToRegistry uri https://registry.npmjs.org/pg
+14 silly fetchNamedPackageData pg-native
+15 silly mapToRegistry name pg-native
+16 silly mapToRegistry using default registry
+17 silly mapToRegistry registry https://registry.npmjs.org/
+18 silly mapToRegistry uri https://registry.npmjs.org/pg-native
+19 verbose request uri https://registry.npmjs.org/pg
+20 verbose request no auth needed
+21 info attempt registry request try #1 at 21:19:05
+22 verbose request id 5ae8214bca580018
+23 verbose etag W/"58c1c3e1-2bf08"
+24 verbose lastModified Thu, 09 Mar 2017 21:06:41 GMT
+25 http request GET https://registry.npmjs.org/pg
+26 verbose request uri https://registry.npmjs.org/pg-native
+27 verbose request no auth needed
+28 info attempt registry request try #1 at 21:19:05
+29 verbose etag W/"5679a1d6-a891"
+30 verbose lastModified Tue, 22 Dec 2015 19:17:42 GMT
+31 http request GET https://registry.npmjs.org/pg-native
+32 http 304 https://registry.npmjs.org/pg
+33 verbose headers { date: 'Wed, 15 Mar 2017 00:19:06 GMT',
+33 verbose headers   via: '1.1 varnish',
+33 verbose headers   'cache-control': 'max-age=300',
+33 verbose headers   etag: 'W/"58c1c3e1-2bf08"',
+33 verbose headers   age: '119',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'x-served-by': 'cache-gru7120-GRU',
+33 verbose headers   'x-cache': 'HIT',
+33 verbose headers   'x-cache-hits': '1',
+33 verbose headers   'x-timer': 'S1489537146.176280,VS0,VE0',
+33 verbose headers   vary: 'Accept-Encoding' }
+34 silly get cb [ 304,
+34 silly get   { date: 'Wed, 15 Mar 2017 00:19:06 GMT',
+34 silly get     via: '1.1 varnish',
+34 silly get     'cache-control': 'max-age=300',
+34 silly get     etag: 'W/"58c1c3e1-2bf08"',
+34 silly get     age: '119',
+34 silly get     connection: 'keep-alive',
+34 silly get     'x-served-by': 'cache-gru7120-GRU',
+34 silly get     'x-cache': 'HIT',
+34 silly get     'x-cache-hits': '1',
+34 silly get     'x-timer': 'S1489537146.176280,VS0,VE0',
+34 silly get     vary: 'Accept-Encoding' } ]
+35 verbose etag https://registry.npmjs.org/pg from cache
+36 verbose get saving pg to /home/rafaelf/.npm/registry.npmjs.org/pg/.cache.json
+37 http 304 https://registry.npmjs.org/pg-native
+38 verbose headers { date: 'Wed, 15 Mar 2017 00:19:06 GMT',
+38 verbose headers   via: '1.1 varnish',
+38 verbose headers   'cache-control': 'max-age=300',
+38 verbose headers   etag: 'W/"5679a1d6-a891"',
+38 verbose headers   age: '19',
+38 verbose headers   connection: 'keep-alive',
+38 verbose headers   'x-served-by': 'cache-gru7123-GRU',
+38 verbose headers   'x-cache': 'HIT',
+38 verbose headers   'x-cache-hits': '1',
+38 verbose headers   'x-timer': 'S1489537146.184903,VS0,VE0',
+38 verbose headers   vary: 'Accept-Encoding' }
+39 silly get cb [ 304,
+39 silly get   { date: 'Wed, 15 Mar 2017 00:19:06 GMT',
+39 silly get     via: '1.1 varnish',
+39 silly get     'cache-control': 'max-age=300',
+39 silly get     etag: 'W/"5679a1d6-a891"',
+39 silly get     age: '19',
+39 silly get     connection: 'keep-alive',
+39 silly get     'x-served-by': 'cache-gru7123-GRU',
+39 silly get     'x-cache': 'HIT',
+39 silly get     'x-cache-hits': '1',
+39 silly get     'x-timer': 'S1489537146.184903,VS0,VE0',
+39 silly get     vary: 'Accept-Encoding' } ]
+40 verbose etag https://registry.npmjs.org/pg-native from cache
+41 verbose get saving pg-native to /home/rafaelf/.npm/registry.npmjs.org/pg-native/.cache.json
+42 silly install normalizeTree
+43 silly loadCurrentTree Finishing
+44 silly loadIdealTree Starting
+45 silly install loadIdealTree
+46 silly cloneCurrentTree Starting
+47 silly install cloneCurrentTreeToIdealTree
+48 silly cloneCurrentTree Finishing
+49 silly loadShrinkwrap Starting
+50 silly install loadShrinkwrap
+51 silly loadShrinkwrap Finishing
+52 silly loadAllDepsIntoIdealTree Starting
+53 silly install loadAllDepsIntoIdealTree
+54 silly resolveWithNewModule pg@6.1.4 checking installable status
+55 silly cache add args [ 'pg', null ]
+56 verbose cache add spec pg
+57 silly resolveWithNewModule pg-native@1.10.0 checking installable status
+58 silly cache add args [ 'pg-native', null ]
+59 verbose cache add spec pg-native
+60 silly cache add parsed spec Result {
+60 silly cache add   raw: 'pg',
+60 silly cache add   scope: null,
+60 silly cache add   name: 'pg',
+60 silly cache add   rawSpec: '',
+60 silly cache add   spec: 'latest',
+60 silly cache add   type: 'tag' }
+61 silly addNamed pg@latest
+62 verbose addNamed "latest" is being treated as a dist-tag for pg
+63 info addNameTag [ 'pg', 'latest' ]
+64 silly mapToRegistry name pg
+65 silly mapToRegistry using default registry
+66 silly mapToRegistry registry https://registry.npmjs.org/
+67 silly mapToRegistry uri https://registry.npmjs.org/pg
+68 verbose addNameTag registry:https://registry.npmjs.org/pg not in flight; fetching
+69 silly cache add parsed spec Result {
+69 silly cache add   raw: 'pg-native',
+69 silly cache add   scope: null,
+69 silly cache add   name: 'pg-native',
+69 silly cache add   rawSpec: '',
+69 silly cache add   spec: 'latest',
+69 silly cache add   type: 'tag' }
+70 silly addNamed pg-native@latest
+71 verbose addNamed "latest" is being treated as a dist-tag for pg-native
+72 info addNameTag [ 'pg-native', 'latest' ]
+73 silly mapToRegistry name pg-native
+74 silly mapToRegistry using default registry
+75 silly mapToRegistry registry https://registry.npmjs.org/
+76 silly mapToRegistry uri https://registry.npmjs.org/pg-native
+77 verbose addNameTag registry:https://registry.npmjs.org/pg-native not in flight; fetching
+78 verbose get https://registry.npmjs.org/pg not expired, no request
+79 silly addNameTag next cb for pg with tag latest
+80 silly addNamed pg@6.1.4
+81 verbose addNamed "6.1.4" is a plain semver version for pg
+82 verbose get https://registry.npmjs.org/pg-native not expired, no request
+83 silly addNameTag next cb for pg-native with tag latest
+84 silly addNamed pg-native@1.10.0
+85 verbose addNamed "1.10.0" is a plain semver version for pg-native
+86 silly cache afterAdd pg@6.1.4
+87 verbose afterAdd /home/rafaelf/.npm/pg/6.1.4/package/package.json not in flight; writing
+88 silly cache afterAdd pg-native@1.10.0
+89 verbose afterAdd /home/rafaelf/.npm/pg-native/1.10.0/package/package.json not in flight; writing
+90 verbose afterAdd /home/rafaelf/.npm/pg/6.1.4/package/package.json written
+91 verbose afterAdd /home/rafaelf/.npm/pg-native/1.10.0/package/package.json written
+92 silly fetchNamedPackageData buffer-writer
+93 silly mapToRegistry name buffer-writer
+94 silly mapToRegistry using default registry
+95 silly mapToRegistry registry https://registry.npmjs.org/
+96 silly mapToRegistry uri https://registry.npmjs.org/buffer-writer
+97 silly fetchNamedPackageData packet-reader
+98 silly mapToRegistry name packet-reader
+99 silly mapToRegistry using default registry
+100 silly mapToRegistry registry https://registry.npmjs.org/
+101 silly mapToRegistry uri https://registry.npmjs.org/packet-reader
+102 silly fetchNamedPackageData pg-connection-string
+103 silly mapToRegistry name pg-connection-string
+104 silly mapToRegistry using default registry
+105 silly mapToRegistry registry https://registry.npmjs.org/
+106 silly mapToRegistry uri https://registry.npmjs.org/pg-connection-string
+107 silly fetchNamedPackageData pg-pool
+108 silly mapToRegistry name pg-pool
+109 silly mapToRegistry using default registry
+110 silly mapToRegistry registry https://registry.npmjs.org/
+111 silly mapToRegistry uri https://registry.npmjs.org/pg-pool
+112 silly fetchNamedPackageData pg-types
+113 silly mapToRegistry name pg-types
+114 silly mapToRegistry using default registry
+115 silly mapToRegistry registry https://registry.npmjs.org/
+116 silly mapToRegistry uri https://registry.npmjs.org/pg-types
+117 silly fetchNamedPackageData pgpass
+118 silly mapToRegistry name pgpass
+119 silly mapToRegistry using default registry
+120 silly mapToRegistry registry https://registry.npmjs.org/
+121 silly mapToRegistry uri https://registry.npmjs.org/pgpass
+122 silly fetchNamedPackageData semver
+123 silly mapToRegistry name semver
+124 silly mapToRegistry using default registry
+125 silly mapToRegistry registry https://registry.npmjs.org/
+126 silly mapToRegistry uri https://registry.npmjs.org/semver
+127 verbose request uri https://registry.npmjs.org/buffer-writer
+128 verbose request no auth needed
+129 info attempt registry request try #1 at 21:19:06
+130 verbose etag W/"56c2003a-125d"
+131 verbose lastModified Mon, 15 Feb 2016 16:43:38 GMT
+132 http request GET https://registry.npmjs.org/buffer-writer
+133 verbose request uri https://registry.npmjs.org/packet-reader
+134 verbose request no auth needed
+135 info attempt registry request try #1 at 21:19:06
+136 verbose etag W/"583ef4ab-1fe1"
+137 verbose lastModified Wed, 30 Nov 2016 15:47:55 GMT
+138 http request GET https://registry.npmjs.org/packet-reader
+139 verbose request uri https://registry.npmjs.org/pg-connection-string
+140 verbose request no auth needed
+141 info attempt registry request try #1 at 21:19:06
+142 verbose etag W/"5693f76b-16cb"
+143 verbose lastModified Mon, 11 Jan 2016 18:41:47 GMT
+144 http request GET https://registry.npmjs.org/pg-connection-string
+145 verbose request uri https://registry.npmjs.org/pg-pool
+146 verbose request no auth needed
+147 info attempt registry request try #1 at 21:19:06
+148 verbose etag W/"58be2d5a-889d"
+149 verbose lastModified Tue, 07 Mar 2017 03:47:38 GMT
+150 http request GET https://registry.npmjs.org/pg-pool
+151 verbose request uri https://registry.npmjs.org/pg-types
+152 verbose request no auth needed
+153 info attempt registry request try #1 at 21:19:06
+154 verbose etag W/"571a65ca-4149"
+155 verbose lastModified Fri, 22 Apr 2016 17:56:26 GMT
+156 http request GET https://registry.npmjs.org/pg-types
+157 verbose request uri https://registry.npmjs.org/pgpass
+158 verbose request no auth needed
+159 info attempt registry request try #1 at 21:19:06
+160 verbose etag W/"579f9aaf-37e3"
+161 verbose lastModified Mon, 01 Aug 2016 18:53:35 GMT
+162 http request GET https://registry.npmjs.org/pgpass
+163 verbose request uri https://registry.npmjs.org/semver
+164 verbose request no auth needed
+165 info attempt registry request try #1 at 21:19:06
+166 verbose etag W/"58b9b542-11b7d"
+167 verbose lastModified Fri, 03 Mar 2017 18:26:10 GMT
+168 http request GET https://registry.npmjs.org/semver
+169 http 304 https://registry.npmjs.org/buffer-writer
+170 verbose headers { date: 'Wed, 15 Mar 2017 00:19:06 GMT',
+170 verbose headers   via: '1.1 varnish',
+170 verbose headers   'cache-control': 'max-age=300',
+170 verbose headers   etag: 'W/"56c2003a-125d"',
+170 verbose headers   age: '279',
+170 verbose headers   connection: 'keep-alive',
+170 verbose headers   'x-served-by': 'cache-gru7121-GRU',
+170 verbose headers   'x-cache': 'HIT',
+170 verbose headers   'x-cache-hits': '1',
+170 verbose headers   'x-timer': 'S1489537146.585966,VS0,VE0',
+170 verbose headers   vary: 'Accept-Encoding' }
+171 silly get cb [ 304,
+171 silly get   { date: 'Wed, 15 Mar 2017 00:19:06 GMT',
+171 silly get     via: '1.1 varnish',
+171 silly get     'cache-control': 'max-age=300',
+171 silly get     etag: 'W/"56c2003a-125d"',
+171 silly get     age: '279',
+171 silly get     connection: 'keep-alive',
+171 silly get     'x-served-by': 'cache-gru7121-GRU',
+171 silly get     'x-cache': 'HIT',
+171 silly get     'x-cache-hits': '1',
+171 silly get     'x-timer': 'S1489537146.585966,VS0,VE0',
+171 silly get     vary: 'Accept-Encoding' } ]
+172 verbose etag https://registry.npmjs.org/buffer-writer from cache
+173 verbose get saving buffer-writer to /home/rafaelf/.npm/registry.npmjs.org/buffer-writer/.cache.json
+174 silly resolveWithNewModule buffer-writer@1.0.1 checking installable status
+175 silly cache add args [ 'buffer-writer@1.0.1', null ]
+176 verbose cache add spec buffer-writer@1.0.1
+177 silly cache add parsed spec Result {
+177 silly cache add   raw: 'buffer-writer@1.0.1',
+177 silly cache add   scope: null,
+177 silly cache add   name: 'buffer-writer',
+177 silly cache add   rawSpec: '1.0.1',
+177 silly cache add   spec: '1.0.1',
+177 silly cache add   type: 'version' }
+178 silly addNamed buffer-writer@1.0.1
+179 verbose addNamed "1.0.1" is a plain semver version for buffer-writer
+180 silly mapToRegistry name buffer-writer
+181 silly mapToRegistry using default registry
+182 silly mapToRegistry registry https://registry.npmjs.org/
+183 silly mapToRegistry uri https://registry.npmjs.org/buffer-writer
+184 verbose addNameVersion registry:https://registry.npmjs.org/buffer-writer not in flight; fetching
+185 verbose get https://registry.npmjs.org/buffer-writer not expired, no request
+186 silly cache afterAdd buffer-writer@1.0.1
+187 verbose afterAdd /home/rafaelf/.npm/buffer-writer/1.0.1/package/package.json not in flight; writing
+188 verbose afterAdd /home/rafaelf/.npm/buffer-writer/1.0.1/package/package.json written
+189 http 304 https://registry.npmjs.org/packet-reader
+190 verbose headers { date: 'Wed, 15 Mar 2017 00:19:06 GMT',
+190 verbose headers   via: '1.1 varnish',
+190 verbose headers   'cache-control': 'max-age=300',
+190 verbose headers   etag: 'W/"583ef4ab-1fe1"',
+190 verbose headers   age: '278',
+190 verbose headers   connection: 'keep-alive',
+190 verbose headers   'x-served-by': 'cache-gru7124-GRU',
+190 verbose headers   'x-cache': 'HIT',
+190 verbose headers   'x-cache-hits': '1',
+190 verbose headers   'x-timer': 'S1489537146.671740,VS0,VE0',
+190 verbose headers   vary: 'Accept-Encoding' }
+191 silly get cb [ 304,
+191 silly get   { date: 'Wed, 15 Mar 2017 00:19:06 GMT',
+191 silly get     via: '1.1 varnish',
+191 silly get     'cache-control': 'max-age=300',
+191 silly get     etag: 'W/"583ef4ab-1fe1"',
+191 silly get     age: '278',
+191 silly get     connection: 'keep-alive',
+191 silly get     'x-served-by': 'cache-gru7124-GRU',
+191 silly get     'x-cache': 'HIT',
+191 silly get     'x-cache-hits': '1',
+191 silly get     'x-timer': 'S1489537146.671740,VS0,VE0',
+191 silly get     vary: 'Accept-Encoding' } ]
+192 verbose etag https://registry.npmjs.org/packet-reader from cache
+193 verbose get saving packet-reader to /home/rafaelf/.npm/registry.npmjs.org/packet-reader/.cache.json
+194 silly resolveWithNewModule packet-reader@0.2.0 checking installable status
+195 silly cache add args [ 'packet-reader@0.2.0', null ]
+196 verbose cache add spec packet-reader@0.2.0
+197 silly cache add parsed spec Result {
+197 silly cache add   raw: 'packet-reader@0.2.0',
+197 silly cache add   scope: null,
+197 silly cache add   name: 'packet-reader',
+197 silly cache add   rawSpec: '0.2.0',
+197 silly cache add   spec: '0.2.0',
+197 silly cache add   type: 'version' }
+198 silly addNamed packet-reader@0.2.0
+199 verbose addNamed "0.2.0" is a plain semver version for packet-reader
+200 silly mapToRegistry name packet-reader
+201 silly mapToRegistry using default registry
+202 silly mapToRegistry registry https://registry.npmjs.org/
+203 silly mapToRegistry uri https://registry.npmjs.org/packet-reader
+204 verbose addNameVersion registry:https://registry.npmjs.org/packet-reader not in flight; fetching
+205 verbose get https://registry.npmjs.org/packet-reader not expired, no request
+206 silly cache afterAdd packet-reader@0.2.0
+207 verbose afterAdd /home/rafaelf/.npm/packet-reader/0.2.0/package/package.json not in flight; writing
+208 verbose afterAdd /home/rafaelf/.npm/packet-reader/0.2.0/package/package.json written
+209 http 304 https://registry.npmjs.org/pg-connection-string
+210 verbose headers { date: 'Wed, 15 Mar 2017 00:19:06 GMT',
+210 verbose headers   via: '1.1 varnish',
+210 verbose headers   'cache-control': 'max-age=300',
+210 verbose headers   etag: 'W/"5693f76b-16cb"',
+210 verbose headers   age: '296',
+210 verbose headers   connection: 'keep-alive',
+210 verbose headers   'x-served-by': 'cache-gru7124-GRU',
+210 verbose headers   'x-cache': 'HIT',
+210 verbose headers   'x-cache-hits': '2',
+210 verbose headers   'x-timer': 'S1489537146.767278,VS0,VE0',
+210 verbose headers   vary: 'Accept-Encoding' }
+211 silly get cb [ 304,
+211 silly get   { date: 'Wed, 15 Mar 2017 00:19:06 GMT',
+211 silly get     via: '1.1 varnish',
+211 silly get     'cache-control': 'max-age=300',
+211 silly get     etag: 'W/"5693f76b-16cb"',
+211 silly get     age: '296',
+211 silly get     connection: 'keep-alive',
+211 silly get     'x-served-by': 'cache-gru7124-GRU',
+211 silly get     'x-cache': 'HIT',
+211 silly get     'x-cache-hits': '2',
+211 silly get     'x-timer': 'S1489537146.767278,VS0,VE0',
+211 silly get     vary: 'Accept-Encoding' } ]
+212 verbose etag https://registry.npmjs.org/pg-connection-string from cache
+213 verbose get saving pg-connection-string to /home/rafaelf/.npm/registry.npmjs.org/pg-connection-string/.cache.json
+214 silly resolveWithNewModule pg-connection-string@0.1.3 checking installable status
+215 silly cache add args [ 'pg-connection-string@0.1.3', null ]
+216 verbose cache add spec pg-connection-string@0.1.3
+217 silly cache add parsed spec Result {
+217 silly cache add   raw: 'pg-connection-string@0.1.3',
+217 silly cache add   scope: null,
+217 silly cache add   name: 'pg-connection-string',
+217 silly cache add   rawSpec: '0.1.3',
+217 silly cache add   spec: '0.1.3',
+217 silly cache add   type: 'version' }
+218 silly addNamed pg-connection-string@0.1.3
+219 verbose addNamed "0.1.3" is a plain semver version for pg-connection-string
+220 silly mapToRegistry name pg-connection-string
+221 silly mapToRegistry using default registry
+222 silly mapToRegistry registry https://registry.npmjs.org/
+223 silly mapToRegistry uri https://registry.npmjs.org/pg-connection-string
+224 verbose addNameVersion registry:https://registry.npmjs.org/pg-connection-string not in flight; fetching
+225 verbose get https://registry.npmjs.org/pg-connection-string not expired, no request
+226 silly cache afterAdd pg-connection-string@0.1.3
+227 verbose afterAdd /home/rafaelf/.npm/pg-connection-string/0.1.3/package/package.json not in flight; writing
+228 verbose afterAdd /home/rafaelf/.npm/pg-connection-string/0.1.3/package/package.json written
+229 http 304 https://registry.npmjs.org/pg-pool
+230 verbose headers { date: 'Wed, 15 Mar 2017 00:19:06 GMT',
+230 verbose headers   via: '1.1 varnish',
+230 verbose headers   'cache-control': 'max-age=300',
+230 verbose headers   etag: 'W/"58be2d5a-889d"',
+230 verbose headers   age: '279',
+230 verbose headers   connection: 'keep-alive',
+230 verbose headers   'x-served-by': 'cache-gru7127-GRU',
+230 verbose headers   'x-cache': 'HIT',
+230 verbose headers   'x-cache-hits': '1',
+230 verbose headers   'x-timer': 'S1489537146.814629,VS0,VE0',
+230 verbose headers   vary: 'Accept-Encoding' }
+231 silly get cb [ 304,
+231 silly get   { date: 'Wed, 15 Mar 2017 00:19:06 GMT',
+231 silly get     via: '1.1 varnish',
+231 silly get     'cache-control': 'max-age=300',
+231 silly get     etag: 'W/"58be2d5a-889d"',
+231 silly get     age: '279',
+231 silly get     connection: 'keep-alive',
+231 silly get     'x-served-by': 'cache-gru7127-GRU',
+231 silly get     'x-cache': 'HIT',
+231 silly get     'x-cache-hits': '1',
+231 silly get     'x-timer': 'S1489537146.814629,VS0,VE0',
+231 silly get     vary: 'Accept-Encoding' } ]
+232 verbose etag https://registry.npmjs.org/pg-pool from cache
+233 verbose get saving pg-pool to /home/rafaelf/.npm/registry.npmjs.org/pg-pool/.cache.json
+234 silly resolveWithNewModule pg-pool@1.6.0 checking installable status
+235 silly cache add args [ 'pg-pool@1.*', null ]
+236 verbose cache add spec pg-pool@1.*
+237 silly cache add parsed spec Result {
+237 silly cache add   raw: 'pg-pool@1.*',
+237 silly cache add   scope: null,
+237 silly cache add   name: 'pg-pool',
+237 silly cache add   rawSpec: '1.*',
+237 silly cache add   spec: '>=1.0.0 <2.0.0',
+237 silly cache add   type: 'range' }
+238 silly addNamed pg-pool@>=1.0.0 <2.0.0
+239 verbose addNamed ">=1.0.0 <2.0.0" is a valid semver range for pg-pool
+240 silly addNameRange { name: 'pg-pool', range: '>=1.0.0 <2.0.0', hasData: false }
+241 silly mapToRegistry name pg-pool
+242 silly mapToRegistry using default registry
+243 silly mapToRegistry registry https://registry.npmjs.org/
+244 silly mapToRegistry uri https://registry.npmjs.org/pg-pool
+245 verbose addNameRange registry:https://registry.npmjs.org/pg-pool not in flight; fetching
+246 verbose get https://registry.npmjs.org/pg-pool not expired, no request
+247 silly addNameRange number 2 { name: 'pg-pool', range: '>=1.0.0 <2.0.0', hasData: true }
+248 silly addNameRange versions [ 'pg-pool',
+248 silly addNameRange   [ '0.0.1',
+248 silly addNameRange     '0.1.0',
+248 silly addNameRange     '0.2.0',
+248 silly addNameRange     '1.0.0',
+248 silly addNameRange     '1.0.1',
+248 silly addNameRange     '1.0.2',
+248 silly addNameRange     '1.0.3',
+248 silly addNameRange     '1.1.0',
+248 silly addNameRange     '1.2.0',
+248 silly addNameRange     '1.2.1',
+248 silly addNameRange     '1.3.0',
+248 silly addNameRange     '1.3.1',
+248 silly addNameRange     '1.4.0',
+248 silly addNameRange     '1.4.2',
+248 silly addNameRange     '1.4.3',
+248 silly addNameRange     '1.5.0',
+248 silly addNameRange     '1.6.0' ] ]
+249 silly addNamed pg-pool@1.6.0
+250 verbose addNamed "1.6.0" is a plain semver version for pg-pool
+251 http 304 https://registry.npmjs.org/pg-types
+252 verbose headers { date: 'Wed, 15 Mar 2017 00:19:06 GMT',
+252 verbose headers   via: '1.1 varnish',
+252 verbose headers   'cache-control': 'max-age=300',
+252 verbose headers   etag: 'W/"571a65ca-4149"',
+252 verbose headers   age: '278',
+252 verbose headers   connection: 'keep-alive',
+252 verbose headers   'x-served-by': 'cache-gru7122-GRU',
+252 verbose headers   'x-cache': 'HIT',
+252 verbose headers   'x-cache-hits': '1',
+252 verbose headers   'x-timer': 'S1489537146.819857,VS0,VE0',
+252 verbose headers   vary: 'Accept-Encoding' }
+253 silly get cb [ 304,
+253 silly get   { date: 'Wed, 15 Mar 2017 00:19:06 GMT',
+253 silly get     via: '1.1 varnish',
+253 silly get     'cache-control': 'max-age=300',
+253 silly get     etag: 'W/"571a65ca-4149"',
+253 silly get     age: '278',
+253 silly get     connection: 'keep-alive',
+253 silly get     'x-served-by': 'cache-gru7122-GRU',
+253 silly get     'x-cache': 'HIT',
+253 silly get     'x-cache-hits': '1',
+253 silly get     'x-timer': 'S1489537146.819857,VS0,VE0',
+253 silly get     vary: 'Accept-Encoding' } ]
+254 verbose etag https://registry.npmjs.org/pg-types from cache
+255 verbose get saving pg-types to /home/rafaelf/.npm/registry.npmjs.org/pg-types/.cache.json
+256 silly cache afterAdd pg-pool@1.6.0
+257 verbose afterAdd /home/rafaelf/.npm/pg-pool/1.6.0/package/package.json not in flight; writing
+258 http 304 https://registry.npmjs.org/pgpass
+259 verbose headers { date: 'Wed, 15 Mar 2017 00:19:06 GMT',
+259 verbose headers   via: '1.1 varnish',
+259 verbose headers   'cache-control': 'max-age=300',
+259 verbose headers   etag: 'W/"579f9aaf-37e3"',
+259 verbose headers   age: '279',
+259 verbose headers   connection: 'keep-alive',
+259 verbose headers   'x-served-by': 'cache-gru7127-GRU',
+259 verbose headers   'x-cache': 'HIT',
+259 verbose headers   'x-cache-hits': '1',
+259 verbose headers   'x-timer': 'S1489537146.826030,VS0,VE0',
+259 verbose headers   vary: 'Accept-Encoding' }
+260 silly get cb [ 304,
+260 silly get   { date: 'Wed, 15 Mar 2017 00:19:06 GMT',
+260 silly get     via: '1.1 varnish',
+260 silly get     'cache-control': 'max-age=300',
+260 silly get     etag: 'W/"579f9aaf-37e3"',
+260 silly get     age: '279',
+260 silly get     connection: 'keep-alive',
+260 silly get     'x-served-by': 'cache-gru7127-GRU',
+260 silly get     'x-cache': 'HIT',
+260 silly get     'x-cache-hits': '1',
+260 silly get     'x-timer': 'S1489537146.826030,VS0,VE0',
+260 silly get     vary: 'Accept-Encoding' } ]
+261 verbose etag https://registry.npmjs.org/pgpass from cache
+262 verbose get saving pgpass to /home/rafaelf/.npm/registry.npmjs.org/pgpass/.cache.json
+263 silly resolveWithNewModule pg-types@1.11.0 checking installable status
+264 silly cache add args [ 'pg-types@1.*', null ]
+265 verbose cache add spec pg-types@1.*
+266 silly cache add parsed spec Result {
+266 silly cache add   raw: 'pg-types@1.*',
+266 silly cache add   scope: null,
+266 silly cache add   name: 'pg-types',
+266 silly cache add   rawSpec: '1.*',
+266 silly cache add   spec: '>=1.0.0 <2.0.0',
+266 silly cache add   type: 'range' }
+267 silly addNamed pg-types@>=1.0.0 <2.0.0
+268 verbose addNamed ">=1.0.0 <2.0.0" is a valid semver range for pg-types
+269 silly addNameRange { name: 'pg-types', range: '>=1.0.0 <2.0.0', hasData: false }
+270 silly mapToRegistry name pg-types
+271 silly mapToRegistry using default registry
+272 silly mapToRegistry registry https://registry.npmjs.org/
+273 silly mapToRegistry uri https://registry.npmjs.org/pg-types
+274 verbose addNameRange registry:https://registry.npmjs.org/pg-types not in flight; fetching
+275 verbose afterAdd /home/rafaelf/.npm/pg-pool/1.6.0/package/package.json written
+276 verbose get https://registry.npmjs.org/pg-types not expired, no request
+277 silly addNameRange number 2 { name: 'pg-types', range: '>=1.0.0 <2.0.0', hasData: true }
+278 silly addNameRange versions [ 'pg-types',
+278 silly addNameRange   [ '1.0.0',
+278 silly addNameRange     '1.1.0',
+278 silly addNameRange     '1.2.0',
+278 silly addNameRange     '1.3.0',
+278 silly addNameRange     '1.4.0',
+278 silly addNameRange     '1.5.0',
+278 silly addNameRange     '1.6.0',
+278 silly addNameRange     '1.7.0',
+278 silly addNameRange     '1.8.0',
+278 silly addNameRange     '1.9.0',
+278 silly addNameRange     '1.10.0',
+278 silly addNameRange     '1.11.0' ] ]
+279 silly addNamed pg-types@1.11.0
+280 verbose addNamed "1.11.0" is a plain semver version for pg-types
+281 silly resolveWithNewModule pgpass@1.0.1 checking installable status
+282 silly cache add args [ 'pgpass@1.x', null ]
+283 verbose cache add spec pgpass@1.x
+284 silly cache add parsed spec Result {
+284 silly cache add   raw: 'pgpass@1.x',
+284 silly cache add   scope: null,
+284 silly cache add   name: 'pgpass',
+284 silly cache add   rawSpec: '1.x',
+284 silly cache add   spec: '>=1.0.0 <2.0.0',
+284 silly cache add   type: 'range' }
+285 silly addNamed pgpass@>=1.0.0 <2.0.0
+286 verbose addNamed ">=1.0.0 <2.0.0" is a valid semver range for pgpass
+287 silly addNameRange { name: 'pgpass', range: '>=1.0.0 <2.0.0', hasData: false }
+288 silly mapToRegistry name pgpass
+289 silly mapToRegistry using default registry
+290 silly mapToRegistry registry https://registry.npmjs.org/
+291 silly mapToRegistry uri https://registry.npmjs.org/pgpass
+292 verbose addNameRange registry:https://registry.npmjs.org/pgpass not in flight; fetching
+293 http 304 https://registry.npmjs.org/semver
+294 verbose headers { date: 'Wed, 15 Mar 2017 00:19:06 GMT',
+294 verbose headers   via: '1.1 varnish',
+294 verbose headers   'cache-control': 'max-age=300',
+294 verbose headers   etag: 'W/"58b9b542-11b7d"',
+294 verbose headers   age: '27',
+294 verbose headers   connection: 'keep-alive',
+294 verbose headers   'x-served-by': 'cache-gru7121-GRU',
+294 verbose headers   'x-cache': 'HIT',
+294 verbose headers   'x-cache-hits': '2',
+294 verbose headers   'x-timer': 'S1489537146.836947,VS0,VE0',
+294 verbose headers   vary: 'Accept-Encoding' }
+295 silly get cb [ 304,
+295 silly get   { date: 'Wed, 15 Mar 2017 00:19:06 GMT',
+295 silly get     via: '1.1 varnish',
+295 silly get     'cache-control': 'max-age=300',
+295 silly get     etag: 'W/"58b9b542-11b7d"',
+295 silly get     age: '27',
+295 silly get     connection: 'keep-alive',
+295 silly get     'x-served-by': 'cache-gru7121-GRU',
+295 silly get     'x-cache': 'HIT',
+295 silly get     'x-cache-hits': '2',
+295 silly get     'x-timer': 'S1489537146.836947,VS0,VE0',
+295 silly get     vary: 'Accept-Encoding' } ]
+296 verbose etag https://registry.npmjs.org/semver from cache
+297 verbose get saving semver to /home/rafaelf/.npm/registry.npmjs.org/semver/.cache.json
+298 silly cache afterAdd pg-types@1.11.0
+299 verbose afterAdd /home/rafaelf/.npm/pg-types/1.11.0/package/package.json not in flight; writing
+300 verbose get https://registry.npmjs.org/pgpass not expired, no request
+301 silly addNameRange number 2 { name: 'pgpass', range: '>=1.0.0 <2.0.0', hasData: true }
+302 silly addNameRange versions [ 'pgpass',
+302 silly addNameRange   [ '0.0.1', '0.0.2', '0.0.3', '0.0.5', '0.0.6', '1.0.0', '1.0.1' ] ]
+303 silly addNamed pgpass@1.0.1
+304 verbose addNamed "1.0.1" is a plain semver version for pgpass
+305 silly resolveWithNewModule semver@4.3.2 checking installable status
+306 silly cache add args [ 'semver@4.3.2', null ]
+307 verbose cache add spec semver@4.3.2
+308 silly cache add parsed spec Result {
+308 silly cache add   raw: 'semver@4.3.2',
+308 silly cache add   scope: null,
+308 silly cache add   name: 'semver',
+308 silly cache add   rawSpec: '4.3.2',
+308 silly cache add   spec: '4.3.2',
+308 silly cache add   type: 'version' }
+309 silly addNamed semver@4.3.2
+310 verbose addNamed "4.3.2" is a plain semver version for semver
+311 silly mapToRegistry name semver
+312 silly mapToRegistry using default registry
+313 silly mapToRegistry registry https://registry.npmjs.org/
+314 silly mapToRegistry uri https://registry.npmjs.org/semver
+315 verbose addNameVersion registry:https://registry.npmjs.org/semver not in flight; fetching
+316 verbose afterAdd /home/rafaelf/.npm/pg-types/1.11.0/package/package.json written
+317 silly cache afterAdd pgpass@1.0.1
+318 verbose afterAdd /home/rafaelf/.npm/pgpass/1.0.1/package/package.json not in flight; writing
+319 verbose get https://registry.npmjs.org/semver not expired, no request
+320 verbose afterAdd /home/rafaelf/.npm/pgpass/1.0.1/package/package.json written
+321 silly cache afterAdd semver@4.3.2
+322 verbose afterAdd /home/rafaelf/.npm/semver/4.3.2/package/package.json not in flight; writing
+323 verbose afterAdd /home/rafaelf/.npm/semver/4.3.2/package/package.json written
+324 silly fetchNamedPackageData generic-pool
+325 silly mapToRegistry name generic-pool
+326 silly mapToRegistry using default registry
+327 silly mapToRegistry registry https://registry.npmjs.org/
+328 silly mapToRegistry uri https://registry.npmjs.org/generic-pool
+329 silly fetchNamedPackageData object-assign
+330 silly mapToRegistry name object-assign
+331 silly mapToRegistry using default registry
+332 silly mapToRegistry registry https://registry.npmjs.org/
+333 silly mapToRegistry uri https://registry.npmjs.org/object-assign
+334 verbose request uri https://registry.npmjs.org/object-assign
+335 verbose request no auth needed
+336 info attempt registry request try #1 at 21:19:06
+337 verbose etag W/"58bcfc82-5d14"
+338 verbose lastModified Mon, 06 Mar 2017 06:06:58 GMT
+339 http request GET https://registry.npmjs.org/object-assign
+340 verbose request uri https://registry.npmjs.org/generic-pool
+341 verbose request no auth needed
+342 info attempt registry request try #1 at 21:19:06
+343 verbose etag W/"589c7126-1bbd3"
+344 verbose lastModified Thu, 09 Feb 2017 13:39:50 GMT
+345 http request GET https://registry.npmjs.org/generic-pool
+346 http 304 https://registry.npmjs.org/object-assign
+347 verbose headers { date: 'Wed, 15 Mar 2017 00:19:07 GMT',
+347 verbose headers   via: '1.1 varnish',
+347 verbose headers   'cache-control': 'max-age=300',
+347 verbose headers   etag: 'W/"58bcfc82-5d14"',
+347 verbose headers   age: '196',
+347 verbose headers   connection: 'keep-alive',
+347 verbose headers   'x-served-by': 'cache-gru7125-GRU',
+347 verbose headers   'x-cache': 'HIT',
+347 verbose headers   'x-cache-hits': '8',
+347 verbose headers   'x-timer': 'S1489537147.153900,VS0,VE0',
+347 verbose headers   vary: 'Accept-Encoding' }
+348 silly get cb [ 304,
+348 silly get   { date: 'Wed, 15 Mar 2017 00:19:07 GMT',
+348 silly get     via: '1.1 varnish',
+348 silly get     'cache-control': 'max-age=300',
+348 silly get     etag: 'W/"58bcfc82-5d14"',
+348 silly get     age: '196',
+348 silly get     connection: 'keep-alive',
+348 silly get     'x-served-by': 'cache-gru7125-GRU',
+348 silly get     'x-cache': 'HIT',
+348 silly get     'x-cache-hits': '8',
+348 silly get     'x-timer': 'S1489537147.153900,VS0,VE0',
+348 silly get     vary: 'Accept-Encoding' } ]
+349 verbose etag https://registry.npmjs.org/object-assign from cache
+350 verbose get saving object-assign to /home/rafaelf/.npm/registry.npmjs.org/object-assign/.cache.json
+351 silly resolveWithNewModule object-assign@4.1.0 checking installable status
+352 silly cache add args [ 'object-assign@4.1.0', null ]
+353 verbose cache add spec object-assign@4.1.0
+354 silly cache add parsed spec Result {
+354 silly cache add   raw: 'object-assign@4.1.0',
+354 silly cache add   scope: null,
+354 silly cache add   name: 'object-assign',
+354 silly cache add   rawSpec: '4.1.0',
+354 silly cache add   spec: '4.1.0',
+354 silly cache add   type: 'version' }
+355 silly addNamed object-assign@4.1.0
+356 verbose addNamed "4.1.0" is a plain semver version for object-assign
+357 silly mapToRegistry name object-assign
+358 silly mapToRegistry using default registry
+359 silly mapToRegistry registry https://registry.npmjs.org/
+360 silly mapToRegistry uri https://registry.npmjs.org/object-assign
+361 verbose addNameVersion registry:https://registry.npmjs.org/object-assign not in flight; fetching
+362 verbose get https://registry.npmjs.org/object-assign not expired, no request
+363 silly cache afterAdd object-assign@4.1.0
+364 verbose afterAdd /home/rafaelf/.npm/object-assign/4.1.0/package/package.json not in flight; writing
+365 verbose afterAdd /home/rafaelf/.npm/object-assign/4.1.0/package/package.json written
+366 http 304 https://registry.npmjs.org/generic-pool
+367 verbose headers { date: 'Wed, 15 Mar 2017 00:19:07 GMT',
+367 verbose headers   via: '1.1 varnish',
+367 verbose headers   'cache-control': 'max-age=300',
+367 verbose headers   etag: 'W/"589c7126-1bbd3"',
+367 verbose headers   age: '278',
+367 verbose headers   connection: 'keep-alive',
+367 verbose headers   'x-served-by': 'cache-gru7121-GRU',
+367 verbose headers   'x-cache': 'HIT',
+367 verbose headers   'x-cache-hits': '20',
+367 verbose headers   'x-timer': 'S1489537147.284990,VS0,VE0',
+367 verbose headers   vary: 'Accept-Encoding' }
+368 silly get cb [ 304,
+368 silly get   { date: 'Wed, 15 Mar 2017 00:19:07 GMT',
+368 silly get     via: '1.1 varnish',
+368 silly get     'cache-control': 'max-age=300',
+368 silly get     etag: 'W/"589c7126-1bbd3"',
+368 silly get     age: '278',
+368 silly get     connection: 'keep-alive',
+368 silly get     'x-served-by': 'cache-gru7121-GRU',
+368 silly get     'x-cache': 'HIT',
+368 silly get     'x-cache-hits': '20',
+368 silly get     'x-timer': 'S1489537147.284990,VS0,VE0',
+368 silly get     vary: 'Accept-Encoding' } ]
+369 verbose etag https://registry.npmjs.org/generic-pool from cache
+370 verbose get saving generic-pool to /home/rafaelf/.npm/registry.npmjs.org/generic-pool/.cache.json
+371 silly resolveWithNewModule generic-pool@2.4.2 checking installable status
+372 silly cache add args [ 'generic-pool@2.4.2', null ]
+373 verbose cache add spec generic-pool@2.4.2
+374 silly cache add parsed spec Result {
+374 silly cache add   raw: 'generic-pool@2.4.2',
+374 silly cache add   scope: null,
+374 silly cache add   name: 'generic-pool',
+374 silly cache add   rawSpec: '2.4.2',
+374 silly cache add   spec: '2.4.2',
+374 silly cache add   type: 'version' }
+375 silly addNamed generic-pool@2.4.2
+376 verbose addNamed "2.4.2" is a plain semver version for generic-pool
+377 silly mapToRegistry name generic-pool
+378 silly mapToRegistry using default registry
+379 silly mapToRegistry registry https://registry.npmjs.org/
+380 silly mapToRegistry uri https://registry.npmjs.org/generic-pool
+381 verbose addNameVersion registry:https://registry.npmjs.org/generic-pool not in flight; fetching
+382 verbose get https://registry.npmjs.org/generic-pool not expired, no request
+383 silly cache afterAdd generic-pool@2.4.2
+384 verbose afterAdd /home/rafaelf/.npm/generic-pool/2.4.2/package/package.json not in flight; writing
+385 verbose afterAdd /home/rafaelf/.npm/generic-pool/2.4.2/package/package.json written
+386 silly fetchNamedPackageData ap
+387 silly mapToRegistry name ap
+388 silly mapToRegistry using default registry
+389 silly mapToRegistry registry https://registry.npmjs.org/
+390 silly mapToRegistry uri https://registry.npmjs.org/ap
+391 silly fetchNamedPackageData postgres-array
+392 silly mapToRegistry name postgres-array
+393 silly mapToRegistry using default registry
+394 silly mapToRegistry registry https://registry.npmjs.org/
+395 silly mapToRegistry uri https://registry.npmjs.org/postgres-array
+396 silly fetchNamedPackageData postgres-bytea
+397 silly mapToRegistry name postgres-bytea
+398 silly mapToRegistry using default registry
+399 silly mapToRegistry registry https://registry.npmjs.org/
+400 silly mapToRegistry uri https://registry.npmjs.org/postgres-bytea
+401 silly fetchNamedPackageData postgres-date
+402 silly mapToRegistry name postgres-date
+403 silly mapToRegistry using default registry
+404 silly mapToRegistry registry https://registry.npmjs.org/
+405 silly mapToRegistry uri https://registry.npmjs.org/postgres-date
+406 silly fetchNamedPackageData postgres-interval
+407 silly mapToRegistry name postgres-interval
+408 silly mapToRegistry using default registry
+409 silly mapToRegistry registry https://registry.npmjs.org/
+410 silly mapToRegistry uri https://registry.npmjs.org/postgres-interval
+411 verbose request uri https://registry.npmjs.org/ap
+412 verbose request no auth needed
+413 info attempt registry request try #1 at 21:19:07
+414 verbose etag W/"50b2e059-10c9"
+415 verbose lastModified Mon, 26 Nov 2012 03:22:01 GMT
+416 http request GET https://registry.npmjs.org/ap
+417 verbose request uri https://registry.npmjs.org/postgres-array
+418 verbose request no auth needed
+419 info attempt registry request try #1 at 21:19:07
+420 verbose etag W/"584b3615-14da"
+421 verbose lastModified Fri, 09 Dec 2016 22:54:13 GMT
+422 http request GET https://registry.npmjs.org/postgres-array
+423 verbose request uri https://registry.npmjs.org/postgres-bytea
+424 verbose request no auth needed
+425 info attempt registry request try #1 at 21:19:07
+426 verbose etag W/"557d06a2-9b4"
+427 verbose lastModified Sun, 14 Jun 2015 04:44:18 GMT
+428 http request GET https://registry.npmjs.org/postgres-bytea
+429 verbose request uri https://registry.npmjs.org/postgres-date
+430 verbose request no auth needed
+431 info attempt registry request try #1 at 21:19:07
+432 verbose etag W/"577c8637-1d18"
+433 verbose lastModified Wed, 06 Jul 2016 04:16:55 GMT
+434 http request GET https://registry.npmjs.org/postgres-date
+435 verbose request uri https://registry.npmjs.org/postgres-interval
+436 verbose request no auth needed
+437 info attempt registry request try #1 at 21:19:07
+438 verbose etag W/"58c33476-1fdd"
+439 verbose lastModified Fri, 10 Mar 2017 23:19:18 GMT
+440 http request GET https://registry.npmjs.org/postgres-interval
+441 http 304 https://registry.npmjs.org/ap
+442 verbose headers { date: 'Wed, 15 Mar 2017 00:19:07 GMT',
+442 verbose headers   via: '1.1 varnish',
+442 verbose headers   'cache-control': 'max-age=300',
+442 verbose headers   etag: 'W/"50b2e059-10c9"',
+442 verbose headers   age: '278',
+442 verbose headers   connection: 'keep-alive',
+442 verbose headers   'x-served-by': 'cache-gru7120-GRU',
+442 verbose headers   'x-cache': 'HIT',
+442 verbose headers   'x-cache-hits': '1',
+442 verbose headers   'x-timer': 'S1489537147.594280,VS0,VE0',
+442 verbose headers   vary: 'Accept-Encoding' }
+443 silly get cb [ 304,
+443 silly get   { date: 'Wed, 15 Mar 2017 00:19:07 GMT',
+443 silly get     via: '1.1 varnish',
+443 silly get     'cache-control': 'max-age=300',
+443 silly get     etag: 'W/"50b2e059-10c9"',
+443 silly get     age: '278',
+443 silly get     connection: 'keep-alive',
+443 silly get     'x-served-by': 'cache-gru7120-GRU',
+443 silly get     'x-cache': 'HIT',
+443 silly get     'x-cache-hits': '1',
+443 silly get     'x-timer': 'S1489537147.594280,VS0,VE0',
+443 silly get     vary: 'Accept-Encoding' } ]
+444 verbose etag https://registry.npmjs.org/ap from cache
+445 verbose get saving ap to /home/rafaelf/.npm/registry.npmjs.org/ap/.cache.json
+446 silly resolveWithNewModule ap@0.2.0 checking installable status
+447 silly cache add args [ 'ap@~0.2.0', null ]
+448 verbose cache add spec ap@~0.2.0
+449 silly cache add parsed spec Result {
+449 silly cache add   raw: 'ap@~0.2.0',
+449 silly cache add   scope: null,
+449 silly cache add   name: 'ap',
+449 silly cache add   rawSpec: '~0.2.0',
+449 silly cache add   spec: '>=0.2.0 <0.3.0',
+449 silly cache add   type: 'range' }
+450 silly addNamed ap@>=0.2.0 <0.3.0
+451 verbose addNamed ">=0.2.0 <0.3.0" is a valid semver range for ap
+452 silly addNameRange { name: 'ap', range: '>=0.2.0 <0.3.0', hasData: false }
+453 silly mapToRegistry name ap
+454 silly mapToRegistry using default registry
+455 silly mapToRegistry registry https://registry.npmjs.org/
+456 silly mapToRegistry uri https://registry.npmjs.org/ap
+457 verbose addNameRange registry:https://registry.npmjs.org/ap not in flight; fetching
+458 verbose get https://registry.npmjs.org/ap not expired, no request
+459 silly addNameRange number 2 { name: 'ap', range: '>=0.2.0 <0.3.0', hasData: true }
+460 silly addNameRange versions [ 'ap', [ '0.0.1', '0.1.0', '0.2.0' ] ]
+461 silly addNamed ap@0.2.0
+462 verbose addNamed "0.2.0" is a plain semver version for ap
+463 silly cache afterAdd ap@0.2.0
+464 verbose afterAdd /home/rafaelf/.npm/ap/0.2.0/package/package.json not in flight; writing
+465 verbose afterAdd /home/rafaelf/.npm/ap/0.2.0/package/package.json written
+466 http 304 https://registry.npmjs.org/postgres-array
+467 verbose headers { date: 'Wed, 15 Mar 2017 00:19:07 GMT',
+467 verbose headers   via: '1.1 varnish',
+467 verbose headers   'cache-control': 'max-age=300',
+467 verbose headers   etag: 'W/"584b3615-14da"',
+467 verbose headers   age: '278',
+467 verbose headers   connection: 'keep-alive',
+467 verbose headers   'x-served-by': 'cache-gru7124-GRU',
+467 verbose headers   'x-cache': 'HIT',
+467 verbose headers   'x-cache-hits': '28',
+467 verbose headers   'x-timer': 'S1489537147.686035,VS0,VE0',
+467 verbose headers   vary: 'Accept-Encoding' }
+468 silly get cb [ 304,
+468 silly get   { date: 'Wed, 15 Mar 2017 00:19:07 GMT',
+468 silly get     via: '1.1 varnish',
+468 silly get     'cache-control': 'max-age=300',
+468 silly get     etag: 'W/"584b3615-14da"',
+468 silly get     age: '278',
+468 silly get     connection: 'keep-alive',
+468 silly get     'x-served-by': 'cache-gru7124-GRU',
+468 silly get     'x-cache': 'HIT',
+468 silly get     'x-cache-hits': '28',
+468 silly get     'x-timer': 'S1489537147.686035,VS0,VE0',
+468 silly get     vary: 'Accept-Encoding' } ]
+469 verbose etag https://registry.npmjs.org/postgres-array from cache
+470 verbose get saving postgres-array to /home/rafaelf/.npm/registry.npmjs.org/postgres-array/.cache.json
+471 silly resolveWithNewModule postgres-array@1.0.2 checking installable status
+472 silly cache add args [ 'postgres-array@~1.0.0', null ]
+473 verbose cache add spec postgres-array@~1.0.0
+474 silly cache add parsed spec Result {
+474 silly cache add   raw: 'postgres-array@~1.0.0',
+474 silly cache add   scope: null,
+474 silly cache add   name: 'postgres-array',
+474 silly cache add   rawSpec: '~1.0.0',
+474 silly cache add   spec: '>=1.0.0 <1.1.0',
+474 silly cache add   type: 'range' }
+475 silly addNamed postgres-array@>=1.0.0 <1.1.0
+476 verbose addNamed ">=1.0.0 <1.1.0" is a valid semver range for postgres-array
+477 silly addNameRange { name: 'postgres-array',
+477 silly addNameRange   range: '>=1.0.0 <1.1.0',
+477 silly addNameRange   hasData: false }
+478 silly mapToRegistry name postgres-array
+479 silly mapToRegistry using default registry
+480 silly mapToRegistry registry https://registry.npmjs.org/
+481 silly mapToRegistry uri https://registry.npmjs.org/postgres-array
+482 verbose addNameRange registry:https://registry.npmjs.org/postgres-array not in flight; fetching
+483 verbose get https://registry.npmjs.org/postgres-array not expired, no request
+484 silly addNameRange number 2 { name: 'postgres-array',
+484 silly addNameRange   range: '>=1.0.0 <1.1.0',
+484 silly addNameRange   hasData: true }
+485 silly addNameRange versions [ 'postgres-array', [ '1.0.0', '1.0.1', '1.0.2' ] ]
+486 silly addNamed postgres-array@1.0.2
+487 verbose addNamed "1.0.2" is a plain semver version for postgres-array
+488 silly cache afterAdd postgres-array@1.0.2
+489 verbose afterAdd /home/rafaelf/.npm/postgres-array/1.0.2/package/package.json not in flight; writing
+490 verbose afterAdd /home/rafaelf/.npm/postgres-array/1.0.2/package/package.json written
+491 http 304 https://registry.npmjs.org/postgres-bytea
+492 verbose headers { date: 'Wed, 15 Mar 2017 00:19:07 GMT',
+492 verbose headers   via: '1.1 varnish',
+492 verbose headers   'cache-control': 'max-age=300',
+492 verbose headers   etag: 'W/"557d06a2-9b4"',
+492 verbose headers   age: '279',
+492 verbose headers   connection: 'keep-alive',
+492 verbose headers   'x-served-by': 'cache-gru7126-GRU',
+492 verbose headers   'x-cache': 'HIT',
+492 verbose headers   'x-cache-hits': '1',
+492 verbose headers   'x-timer': 'S1489537147.730286,VS0,VE0',
+492 verbose headers   vary: 'Accept-Encoding' }
+493 silly get cb [ 304,
+493 silly get   { date: 'Wed, 15 Mar 2017 00:19:07 GMT',
+493 silly get     via: '1.1 varnish',
+493 silly get     'cache-control': 'max-age=300',
+493 silly get     etag: 'W/"557d06a2-9b4"',
+493 silly get     age: '279',
+493 silly get     connection: 'keep-alive',
+493 silly get     'x-served-by': 'cache-gru7126-GRU',
+493 silly get     'x-cache': 'HIT',
+493 silly get     'x-cache-hits': '1',
+493 silly get     'x-timer': 'S1489537147.730286,VS0,VE0',
+493 silly get     vary: 'Accept-Encoding' } ]
+494 verbose etag https://registry.npmjs.org/postgres-bytea from cache
+495 verbose get saving postgres-bytea to /home/rafaelf/.npm/registry.npmjs.org/postgres-bytea/.cache.json
+496 silly resolveWithNewModule postgres-bytea@1.0.0 checking installable status
+497 silly cache add args [ 'postgres-bytea@~1.0.0', null ]
+498 verbose cache add spec postgres-bytea@~1.0.0
+499 silly cache add parsed spec Result {
+499 silly cache add   raw: 'postgres-bytea@~1.0.0',
+499 silly cache add   scope: null,
+499 silly cache add   name: 'postgres-bytea',
+499 silly cache add   rawSpec: '~1.0.0',
+499 silly cache add   spec: '>=1.0.0 <1.1.0',
+499 silly cache add   type: 'range' }
+500 silly addNamed postgres-bytea@>=1.0.0 <1.1.0
+501 verbose addNamed ">=1.0.0 <1.1.0" is a valid semver range for postgres-bytea
+502 silly addNameRange { name: 'postgres-bytea',
+502 silly addNameRange   range: '>=1.0.0 <1.1.0',
+502 silly addNameRange   hasData: false }
+503 silly mapToRegistry name postgres-bytea
+504 silly mapToRegistry using default registry
+505 silly mapToRegistry registry https://registry.npmjs.org/
+506 silly mapToRegistry uri https://registry.npmjs.org/postgres-bytea
+507 verbose addNameRange registry:https://registry.npmjs.org/postgres-bytea not in flight; fetching
+508 verbose get https://registry.npmjs.org/postgres-bytea not expired, no request
+509 silly addNameRange number 2 { name: 'postgres-bytea',
+509 silly addNameRange   range: '>=1.0.0 <1.1.0',
+509 silly addNameRange   hasData: true }
+510 silly addNameRange versions [ 'postgres-bytea', [ '1.0.0' ] ]
+511 silly addNamed postgres-bytea@1.0.0
+512 verbose addNamed "1.0.0" is a plain semver version for postgres-bytea
+513 http 304 https://registry.npmjs.org/postgres-date
+514 verbose headers { date: 'Wed, 15 Mar 2017 00:19:07 GMT',
+514 verbose headers   via: '1.1 varnish',
+514 verbose headers   'cache-control': 'max-age=300',
+514 verbose headers   etag: 'W/"577c8637-1d18"',
+514 verbose headers   age: '279',
+514 verbose headers   connection: 'keep-alive',
+514 verbose headers   'x-served-by': 'cache-gru7120-GRU',
+514 verbose headers   'x-cache': 'HIT',
+514 verbose headers   'x-cache-hits': '2',
+514 verbose headers   'x-timer': 'S1489537147.738169,VS0,VE0',
+514 verbose headers   vary: 'Accept-Encoding' }
+515 silly get cb [ 304,
+515 silly get   { date: 'Wed, 15 Mar 2017 00:19:07 GMT',
+515 silly get     via: '1.1 varnish',
+515 silly get     'cache-control': 'max-age=300',
+515 silly get     etag: 'W/"577c8637-1d18"',
+515 silly get     age: '279',
+515 silly get     connection: 'keep-alive',
+515 silly get     'x-served-by': 'cache-gru7120-GRU',
+515 silly get     'x-cache': 'HIT',
+515 silly get     'x-cache-hits': '2',
+515 silly get     'x-timer': 'S1489537147.738169,VS0,VE0',
+515 silly get     vary: 'Accept-Encoding' } ]
+516 verbose etag https://registry.npmjs.org/postgres-date from cache
+517 verbose get saving postgres-date to /home/rafaelf/.npm/registry.npmjs.org/postgres-date/.cache.json
+518 silly cache afterAdd postgres-bytea@1.0.0
+519 verbose afterAdd /home/rafaelf/.npm/postgres-bytea/1.0.0/package/package.json not in flight; writing
+520 verbose afterAdd /home/rafaelf/.npm/postgres-bytea/1.0.0/package/package.json written
+521 silly resolveWithNewModule postgres-date@1.0.3 checking installable status
+522 silly cache add args [ 'postgres-date@~1.0.0', null ]
+523 verbose cache add spec postgres-date@~1.0.0
+524 silly cache add parsed spec Result {
+524 silly cache add   raw: 'postgres-date@~1.0.0',
+524 silly cache add   scope: null,
+524 silly cache add   name: 'postgres-date',
+524 silly cache add   rawSpec: '~1.0.0',
+524 silly cache add   spec: '>=1.0.0 <1.1.0',
+524 silly cache add   type: 'range' }
+525 silly addNamed postgres-date@>=1.0.0 <1.1.0
+526 verbose addNamed ">=1.0.0 <1.1.0" is a valid semver range for postgres-date
+527 silly addNameRange { name: 'postgres-date',
+527 silly addNameRange   range: '>=1.0.0 <1.1.0',
+527 silly addNameRange   hasData: false }
+528 silly mapToRegistry name postgres-date
+529 silly mapToRegistry using default registry
+530 silly mapToRegistry registry https://registry.npmjs.org/
+531 silly mapToRegistry uri https://registry.npmjs.org/postgres-date
+532 verbose addNameRange registry:https://registry.npmjs.org/postgres-date not in flight; fetching
+533 http 304 https://registry.npmjs.org/postgres-interval
+534 verbose headers { date: 'Wed, 15 Mar 2017 00:19:07 GMT',
+534 verbose headers   via: '1.1 varnish',
+534 verbose headers   'cache-control': 'max-age=300',
+534 verbose headers   etag: 'W/"58c33476-1fdd"',
+534 verbose headers   age: '279',
+534 verbose headers   connection: 'keep-alive',
+534 verbose headers   'x-served-by': 'cache-gru7126-GRU',
+534 verbose headers   'x-cache': 'HIT',
+534 verbose headers   'x-cache-hits': '2',
+534 verbose headers   'x-timer': 'S1489537147.744932,VS0,VE0',
+534 verbose headers   vary: 'Accept-Encoding' }
+535 silly get cb [ 304,
+535 silly get   { date: 'Wed, 15 Mar 2017 00:19:07 GMT',
+535 silly get     via: '1.1 varnish',
+535 silly get     'cache-control': 'max-age=300',
+535 silly get     etag: 'W/"58c33476-1fdd"',
+535 silly get     age: '279',
+535 silly get     connection: 'keep-alive',
+535 silly get     'x-served-by': 'cache-gru7126-GRU',
+535 silly get     'x-cache': 'HIT',
+535 silly get     'x-cache-hits': '2',
+535 silly get     'x-timer': 'S1489537147.744932,VS0,VE0',
+535 silly get     vary: 'Accept-Encoding' } ]
+536 verbose etag https://registry.npmjs.org/postgres-interval from cache
+537 verbose get saving postgres-interval to /home/rafaelf/.npm/registry.npmjs.org/postgres-interval/.cache.json
+538 verbose get https://registry.npmjs.org/postgres-date not expired, no request
+539 silly addNameRange number 2 { name: 'postgres-date', range: '>=1.0.0 <1.1.0', hasData: true }
+540 silly addNameRange versions [ 'postgres-date',
+540 silly addNameRange   [ '0.0.0', '1.0.0', '1.0.1', '1.0.2', '1.0.3' ] ]
+541 silly addNamed postgres-date@1.0.3
+542 verbose addNamed "1.0.3" is a plain semver version for postgres-date
+543 silly cache afterAdd postgres-date@1.0.3
+544 verbose afterAdd /home/rafaelf/.npm/postgres-date/1.0.3/package/package.json not in flight; writing
+545 silly resolveWithNewModule postgres-interval@1.0.2 checking installable status
+546 silly cache add args [ 'postgres-interval@~1.0.0', null ]
+547 verbose cache add spec postgres-interval@~1.0.0
+548 silly cache add parsed spec Result {
+548 silly cache add   raw: 'postgres-interval@~1.0.0',
+548 silly cache add   scope: null,
+548 silly cache add   name: 'postgres-interval',
+548 silly cache add   rawSpec: '~1.0.0',
+548 silly cache add   spec: '>=1.0.0 <1.1.0',
+548 silly cache add   type: 'range' }
+549 silly addNamed postgres-interval@>=1.0.0 <1.1.0
+550 verbose addNamed ">=1.0.0 <1.1.0" is a valid semver range for postgres-interval
+551 silly addNameRange { name: 'postgres-interval',
+551 silly addNameRange   range: '>=1.0.0 <1.1.0',
+551 silly addNameRange   hasData: false }
+552 silly mapToRegistry name postgres-interval
+553 silly mapToRegistry using default registry
+554 silly mapToRegistry registry https://registry.npmjs.org/
+555 silly mapToRegistry uri https://registry.npmjs.org/postgres-interval
+556 verbose addNameRange registry:https://registry.npmjs.org/postgres-interval not in flight; fetching
+557 verbose get https://registry.npmjs.org/postgres-interval not expired, no request
+558 silly addNameRange number 2 { name: 'postgres-interval',
+558 silly addNameRange   range: '>=1.0.0 <1.1.0',
+558 silly addNameRange   hasData: true }
+559 silly addNameRange versions [ 'postgres-interval',
+559 silly addNameRange   [ '1.0.0', '0.0.1', '1.0.1', '1.0.2', '1.1.0' ] ]
+560 silly addNamed postgres-interval@1.0.2
+561 verbose addNamed "1.0.2" is a plain semver version for postgres-interval
+562 verbose afterAdd /home/rafaelf/.npm/postgres-date/1.0.3/package/package.json written
+563 silly cache afterAdd postgres-interval@1.0.2
+564 verbose afterAdd /home/rafaelf/.npm/postgres-interval/1.0.2/package/package.json not in flight; writing
+565 verbose afterAdd /home/rafaelf/.npm/postgres-interval/1.0.2/package/package.json written
+566 silly fetchNamedPackageData xtend
+567 silly mapToRegistry name xtend
+568 silly mapToRegistry using default registry
+569 silly mapToRegistry registry https://registry.npmjs.org/
+570 silly mapToRegistry uri https://registry.npmjs.org/xtend
+571 verbose request uri https://registry.npmjs.org/xtend
+572 verbose request no auth needed
+573 info attempt registry request try #1 at 21:19:07
+574 verbose etag W/"58633812-51d1"
+575 verbose lastModified Wed, 28 Dec 2016 03:57:06 GMT
+576 http request GET https://registry.npmjs.org/xtend
+577 http 304 https://registry.npmjs.org/xtend
+578 verbose headers { date: 'Wed, 15 Mar 2017 00:19:08 GMT',
+578 verbose headers   via: '1.1 varnish',
+578 verbose headers   'cache-control': 'max-age=300',
+578 verbose headers   etag: 'W/"58633812-51d1"',
+578 verbose headers   age: '53',
+578 verbose headers   connection: 'keep-alive',
+578 verbose headers   'x-served-by': 'cache-gru7120-GRU',
+578 verbose headers   'x-cache': 'HIT',
+578 verbose headers   'x-cache-hits': '2',
+578 verbose headers   'x-timer': 'S1489537148.011461,VS0,VE0',
+578 verbose headers   vary: 'Accept-Encoding' }
+579 silly get cb [ 304,
+579 silly get   { date: 'Wed, 15 Mar 2017 00:19:08 GMT',
+579 silly get     via: '1.1 varnish',
+579 silly get     'cache-control': 'max-age=300',
+579 silly get     etag: 'W/"58633812-51d1"',
+579 silly get     age: '53',
+579 silly get     connection: 'keep-alive',
+579 silly get     'x-served-by': 'cache-gru7120-GRU',
+579 silly get     'x-cache': 'HIT',
+579 silly get     'x-cache-hits': '2',
+579 silly get     'x-timer': 'S1489537148.011461,VS0,VE0',
+579 silly get     vary: 'Accept-Encoding' } ]
+580 verbose etag https://registry.npmjs.org/xtend from cache
+581 verbose get saving xtend to /home/rafaelf/.npm/registry.npmjs.org/xtend/.cache.json
+582 silly resolveWithNewModule xtend@4.0.1 checking installable status
+583 silly cache add args [ 'xtend@^4.0.0', null ]
+584 verbose cache add spec xtend@^4.0.0
+585 silly cache add parsed spec Result {
+585 silly cache add   raw: 'xtend@^4.0.0',
+585 silly cache add   scope: null,
+585 silly cache add   name: 'xtend',
+585 silly cache add   rawSpec: '^4.0.0',
+585 silly cache add   spec: '>=4.0.0 <5.0.0',
+585 silly cache add   type: 'range' }
+586 silly addNamed xtend@>=4.0.0 <5.0.0
+587 verbose addNamed ">=4.0.0 <5.0.0" is a valid semver range for xtend
+588 silly addNameRange { name: 'xtend', range: '>=4.0.0 <5.0.0', hasData: false }
+589 silly mapToRegistry name xtend
+590 silly mapToRegistry using default registry
+591 silly mapToRegistry registry https://registry.npmjs.org/
+592 silly mapToRegistry uri https://registry.npmjs.org/xtend
+593 verbose addNameRange registry:https://registry.npmjs.org/xtend not in flight; fetching
+594 verbose get https://registry.npmjs.org/xtend not expired, no request
+595 silly addNameRange number 2 { name: 'xtend', range: '>=4.0.0 <5.0.0', hasData: true }
+596 silly addNameRange versions [ 'xtend',
+596 silly addNameRange   [ '1.0.0',
+596 silly addNameRange     '1.0.1',
+596 silly addNameRange     '1.0.2',
+596 silly addNameRange     '1.0.3',
+596 silly addNameRange     '2.0.1',
+596 silly addNameRange     '2.0.2',
+596 silly addNameRange     '2.0.3',
+596 silly addNameRange     '2.0.4',
+596 silly addNameRange     '2.0.5',
+596 silly addNameRange     '2.0.6',
+596 silly addNameRange     '2.1.1',
+596 silly addNameRange     '2.1.2',
+596 silly addNameRange     '2.2.0',
+596 silly addNameRange     '3.0.0',
+596 silly addNameRange     '4.0.0',
+596 silly addNameRange     '4.0.1' ] ]
+597 silly addNamed xtend@4.0.1
+598 verbose addNamed "4.0.1" is a plain semver version for xtend
+599 silly cache afterAdd xtend@4.0.1
+600 verbose afterAdd /home/rafaelf/.npm/xtend/4.0.1/package/package.json not in flight; writing
+601 verbose afterAdd /home/rafaelf/.npm/xtend/4.0.1/package/package.json written
+602 silly fetchNamedPackageData split
+603 silly mapToRegistry name split
+604 silly mapToRegistry using default registry
+605 silly mapToRegistry registry https://registry.npmjs.org/
+606 silly mapToRegistry uri https://registry.npmjs.org/split
+607 verbose request uri https://registry.npmjs.org/split
+608 verbose request no auth needed
+609 info attempt registry request try #1 at 21:19:08
+610 verbose etag W/"58c8359c-55c7"
+611 verbose lastModified Tue, 14 Mar 2017 18:25:32 GMT
+612 http request GET https://registry.npmjs.org/split
+613 http 304 https://registry.npmjs.org/split
+614 verbose headers { date: 'Wed, 15 Mar 2017 00:19:08 GMT',
+614 verbose headers   via: '1.1 varnish',
+614 verbose headers   'cache-control': 'max-age=300',
+614 verbose headers   etag: 'W/"58c8359c-55c7"',
+614 verbose headers   age: '19',
+614 verbose headers   connection: 'keep-alive',
+614 verbose headers   'x-served-by': 'cache-gru7122-GRU',
+614 verbose headers   'x-cache': 'HIT',
+614 verbose headers   'x-cache-hits': '1',
+614 verbose headers   'x-timer': 'S1489537148.802327,VS0,VE0',
+614 verbose headers   vary: 'Accept-Encoding' }
+615 silly get cb [ 304,
+615 silly get   { date: 'Wed, 15 Mar 2017 00:19:08 GMT',
+615 silly get     via: '1.1 varnish',
+615 silly get     'cache-control': 'max-age=300',
+615 silly get     etag: 'W/"58c8359c-55c7"',
+615 silly get     age: '19',
+615 silly get     connection: 'keep-alive',
+615 silly get     'x-served-by': 'cache-gru7122-GRU',
+615 silly get     'x-cache': 'HIT',
+615 silly get     'x-cache-hits': '1',
+615 silly get     'x-timer': 'S1489537148.802327,VS0,VE0',
+615 silly get     vary: 'Accept-Encoding' } ]
+616 verbose etag https://registry.npmjs.org/split from cache
+617 verbose get saving split to /home/rafaelf/.npm/registry.npmjs.org/split/.cache.json
+618 silly resolveWithNewModule split@1.0.0 checking installable status
+619 silly cache add args [ 'split@^1.0.0', null ]
+620 verbose cache add spec split@^1.0.0
+621 silly cache add parsed spec Result {
+621 silly cache add   raw: 'split@^1.0.0',
+621 silly cache add   scope: null,
+621 silly cache add   name: 'split',
+621 silly cache add   rawSpec: '^1.0.0',
+621 silly cache add   spec: '>=1.0.0 <2.0.0',
+621 silly cache add   type: 'range' }
+622 silly addNamed split@>=1.0.0 <2.0.0
+623 verbose addNamed ">=1.0.0 <2.0.0" is a valid semver range for split
+624 silly addNameRange { name: 'split', range: '>=1.0.0 <2.0.0', hasData: false }
+625 silly mapToRegistry name split
+626 silly mapToRegistry using default registry
+627 silly mapToRegistry registry https://registry.npmjs.org/
+628 silly mapToRegistry uri https://registry.npmjs.org/split
+629 verbose addNameRange registry:https://registry.npmjs.org/split not in flight; fetching
+630 verbose get https://registry.npmjs.org/split not expired, no request
+631 silly addNameRange number 2 { name: 'split', range: '>=1.0.0 <2.0.0', hasData: true }
+632 silly addNameRange versions [ 'split',
+632 silly addNameRange   [ '0.0.0',
+632 silly addNameRange     '0.1.0',
+632 silly addNameRange     '0.1.1',
+632 silly addNameRange     '0.1.2',
+632 silly addNameRange     '0.2.0',
+632 silly addNameRange     '0.2.1',
+632 silly addNameRange     '0.2.3',
+632 silly addNameRange     '0.2.4',
+632 silly addNameRange     '0.2.5',
+632 silly addNameRange     '0.2.6',
+632 silly addNameRange     '0.2.7',
+632 silly addNameRange     '0.2.8',
+632 silly addNameRange     '0.2.9',
+632 silly addNameRange     '0.2.10',
+632 silly addNameRange     '0.3.0',
+632 silly addNameRange     '0.3.1',
+632 silly addNameRange     '0.3.2',
+632 silly addNameRange     '0.3.3',
+632 silly addNameRange     '1.0.0' ] ]
+633 silly addNamed split@1.0.0
+634 verbose addNamed "1.0.0" is a plain semver version for split
+635 silly cache afterAdd split@1.0.0
+636 verbose afterAdd /home/rafaelf/.npm/split/1.0.0/package/package.json not in flight; writing
+637 verbose afterAdd /home/rafaelf/.npm/split/1.0.0/package/package.json written
+638 silly fetchNamedPackageData through
+639 silly mapToRegistry name through
+640 silly mapToRegistry using default registry
+641 silly mapToRegistry registry https://registry.npmjs.org/
+642 silly mapToRegistry uri https://registry.npmjs.org/through
+643 verbose request uri https://registry.npmjs.org/through
+644 verbose request no auth needed
+645 info attempt registry request try #1 at 21:19:08
+646 verbose etag W/"58bf0d99-74af"
+647 verbose lastModified Tue, 07 Mar 2017 19:44:25 GMT
+648 http request GET https://registry.npmjs.org/through
+649 http 304 https://registry.npmjs.org/through
+650 verbose headers { date: 'Wed, 15 Mar 2017 00:19:09 GMT',
+650 verbose headers   via: '1.1 varnish',
+650 verbose headers   'cache-control': 'max-age=300',
+650 verbose headers   etag: 'W/"58bf0d99-74af"',
+650 verbose headers   age: '122',
+650 verbose headers   connection: 'keep-alive',
+650 verbose headers   'x-served-by': 'cache-gru7127-GRU',
+650 verbose headers   'x-cache': 'HIT',
+650 verbose headers   'x-cache-hits': '3',
+650 verbose headers   'x-timer': 'S1489537149.436291,VS0,VE0',
+650 verbose headers   vary: 'Accept-Encoding' }
+651 silly get cb [ 304,
+651 silly get   { date: 'Wed, 15 Mar 2017 00:19:09 GMT',
+651 silly get     via: '1.1 varnish',
+651 silly get     'cache-control': 'max-age=300',
+651 silly get     etag: 'W/"58bf0d99-74af"',
+651 silly get     age: '122',
+651 silly get     connection: 'keep-alive',
+651 silly get     'x-served-by': 'cache-gru7127-GRU',
+651 silly get     'x-cache': 'HIT',
+651 silly get     'x-cache-hits': '3',
+651 silly get     'x-timer': 'S1489537149.436291,VS0,VE0',
+651 silly get     vary: 'Accept-Encoding' } ]
+652 verbose etag https://registry.npmjs.org/through from cache
+653 verbose get saving through to /home/rafaelf/.npm/registry.npmjs.org/through/.cache.json
+654 silly resolveWithNewModule through@2.3.8 checking installable status
+655 silly cache add args [ 'through@2', null ]
+656 verbose cache add spec through@2
+657 silly cache add parsed spec Result {
+657 silly cache add   raw: 'through@2',
+657 silly cache add   scope: null,
+657 silly cache add   name: 'through',
+657 silly cache add   rawSpec: '2',
+657 silly cache add   spec: '>=2.0.0 <3.0.0',
+657 silly cache add   type: 'range' }
+658 silly addNamed through@>=2.0.0 <3.0.0
+659 verbose addNamed ">=2.0.0 <3.0.0" is a valid semver range for through
+660 silly addNameRange { name: 'through', range: '>=2.0.0 <3.0.0', hasData: false }
+661 silly mapToRegistry name through
+662 silly mapToRegistry using default registry
+663 silly mapToRegistry registry https://registry.npmjs.org/
+664 silly mapToRegistry uri https://registry.npmjs.org/through
+665 verbose addNameRange registry:https://registry.npmjs.org/through not in flight; fetching
+666 verbose get https://registry.npmjs.org/through not expired, no request
+667 silly addNameRange number 2 { name: 'through', range: '>=2.0.0 <3.0.0', hasData: true }
+668 silly addNameRange versions [ 'through',
+668 silly addNameRange   [ '0.0.1',
+668 silly addNameRange     '0.0.2',
+668 silly addNameRange     '0.0.3',
+668 silly addNameRange     '0.0.4',
+668 silly addNameRange     '0.1.0',
+668 silly addNameRange     '0.1.1',
+668 silly addNameRange     '0.1.2',
+668 silly addNameRange     '0.1.3',
+668 silly addNameRange     '0.1.4',
+668 silly addNameRange     '1.0.0',
+668 silly addNameRange     '1.1.0',
+668 silly addNameRange     '1.1.1',
+668 silly addNameRange     '1.1.2',
+668 silly addNameRange     '2.0.0',
+668 silly addNameRange     '2.1.0',
+668 silly addNameRange     '2.2.0',
+668 silly addNameRange     '2.2.1',
+668 silly addNameRange     '2.2.2',
+668 silly addNameRange     '2.2.4',
+668 silly addNameRange     '2.2.5',
+668 silly addNameRange     '2.2.6',
+668 silly addNameRange     '2.2.7',
+668 silly addNameRange     '2.3.1',
+668 silly addNameRange     '2.3.2',
+668 silly addNameRange     '2.3.3',
+668 silly addNameRange     '2.3.4',
+668 silly addNameRange     '2.3.6',
+668 silly addNameRange     '2.3.7',
+668 silly addNameRange     '2.3.8' ] ]
+669 silly addNamed through@2.3.8
+670 verbose addNamed "2.3.8" is a plain semver version for through
+671 silly cache afterAdd through@2.3.8
+672 verbose afterAdd /home/rafaelf/.npm/through/2.3.8/package/package.json not in flight; writing
+673 verbose afterAdd /home/rafaelf/.npm/through/2.3.8/package/package.json written
+674 silly fetchNamedPackageData libpq
+675 silly mapToRegistry name libpq
+676 silly mapToRegistry using default registry
+677 silly mapToRegistry registry https://registry.npmjs.org/
+678 silly mapToRegistry uri https://registry.npmjs.org/libpq
+679 silly fetchNamedPackageData pg-types
+680 silly mapToRegistry name pg-types
+681 silly mapToRegistry using default registry
+682 silly mapToRegistry registry https://registry.npmjs.org/
+683 silly mapToRegistry uri https://registry.npmjs.org/pg-types
+684 silly resolveWithNewModule pg-types@1.6.0 checking installable status
+685 silly cache add args [ 'pg-types@1.6.0', null ]
+686 verbose cache add spec pg-types@1.6.0
+687 silly cache add parsed spec Result {
+687 silly cache add   raw: 'pg-types@1.6.0',
+687 silly cache add   scope: null,
+687 silly cache add   name: 'pg-types',
+687 silly cache add   rawSpec: '1.6.0',
+687 silly cache add   spec: '1.6.0',
+687 silly cache add   type: 'version' }
+688 silly addNamed pg-types@1.6.0
+689 verbose addNamed "1.6.0" is a plain semver version for pg-types
+690 silly mapToRegistry name pg-types
+691 silly mapToRegistry using default registry
+692 silly mapToRegistry registry https://registry.npmjs.org/
+693 silly mapToRegistry uri https://registry.npmjs.org/pg-types
+694 verbose addNameVersion registry:https://registry.npmjs.org/pg-types not in flight; fetching
+695 verbose get https://registry.npmjs.org/pg-types not expired, no request
+696 verbose request uri https://registry.npmjs.org/libpq
+697 verbose request no auth needed
+698 info attempt registry request try #1 at 21:19:09
+699 verbose etag W/"57a20e1d-e371"
+700 verbose lastModified Wed, 03 Aug 2016 15:30:37 GMT
+701 http request GET https://registry.npmjs.org/libpq
+702 silly cache afterAdd pg-types@1.6.0
+703 verbose afterAdd /home/rafaelf/.npm/pg-types/1.6.0/package/package.json not in flight; writing
+704 verbose afterAdd /home/rafaelf/.npm/pg-types/1.6.0/package/package.json written
+705 http 304 https://registry.npmjs.org/libpq
+706 verbose headers { date: 'Wed, 15 Mar 2017 00:19:09 GMT',
+706 verbose headers   via: '1.1 varnish',
+706 verbose headers   'cache-control': 'max-age=300',
+706 verbose headers   etag: 'W/"57a20e1d-e371"',
+706 verbose headers   age: '19',
+706 verbose headers   connection: 'keep-alive',
+706 verbose headers   'x-served-by': 'cache-gru7126-GRU',
+706 verbose headers   'x-cache': 'HIT',
+706 verbose headers   'x-cache-hits': '1',
+706 verbose headers   'x-timer': 'S1489537149.709210,VS0,VE0',
+706 verbose headers   vary: 'Accept-Encoding' }
+707 silly get cb [ 304,
+707 silly get   { date: 'Wed, 15 Mar 2017 00:19:09 GMT',
+707 silly get     via: '1.1 varnish',
+707 silly get     'cache-control': 'max-age=300',
+707 silly get     etag: 'W/"57a20e1d-e371"',
+707 silly get     age: '19',
+707 silly get     connection: 'keep-alive',
+707 silly get     'x-served-by': 'cache-gru7126-GRU',
+707 silly get     'x-cache': 'HIT',
+707 silly get     'x-cache-hits': '1',
+707 silly get     'x-timer': 'S1489537149.709210,VS0,VE0',
+707 silly get     vary: 'Accept-Encoding' } ]
+708 verbose etag https://registry.npmjs.org/libpq from cache
+709 verbose get saving libpq to /home/rafaelf/.npm/registry.npmjs.org/libpq/.cache.json
+710 silly resolveWithNewModule libpq@1.8.5 checking installable status
+711 silly cache add args [ 'libpq@^1.7.0', null ]
+712 verbose cache add spec libpq@^1.7.0
+713 silly cache add parsed spec Result {
+713 silly cache add   raw: 'libpq@^1.7.0',
+713 silly cache add   scope: null,
+713 silly cache add   name: 'libpq',
+713 silly cache add   rawSpec: '^1.7.0',
+713 silly cache add   spec: '>=1.7.0 <2.0.0',
+713 silly cache add   type: 'range' }
+714 silly addNamed libpq@>=1.7.0 <2.0.0
+715 verbose addNamed ">=1.7.0 <2.0.0" is a valid semver range for libpq
+716 silly addNameRange { name: 'libpq', range: '>=1.7.0 <2.0.0', hasData: false }
+717 silly mapToRegistry name libpq
+718 silly mapToRegistry using default registry
+719 silly mapToRegistry registry https://registry.npmjs.org/
+720 silly mapToRegistry uri https://registry.npmjs.org/libpq
+721 verbose addNameRange registry:https://registry.npmjs.org/libpq not in flight; fetching
+722 verbose get https://registry.npmjs.org/libpq not expired, no request
+723 silly addNameRange number 2 { name: 'libpq', range: '>=1.7.0 <2.0.0', hasData: true }
+724 silly addNameRange versions [ 'libpq',
+724 silly addNameRange   [ '0.2.0',
+724 silly addNameRange     '0.2.1',
+724 silly addNameRange     '0.2.2',
+724 silly addNameRange     '0.2.3',
+724 silly addNameRange     '0.2.4',
+724 silly addNameRange     '0.2.5',
+724 silly addNameRange     '0.3.0',
+724 silly addNameRange     '0.4.0',
+724 silly addNameRange     '0.4.1',
+724 silly addNameRange     '0.5.0',
+724 silly addNameRange     '0.5.1',
+724 silly addNameRange     '0.5.2',
+724 silly addNameRange     '0.5.3',
+724 silly addNameRange     '1.0.0',
+724 silly addNameRange     '1.0.1',
+724 silly addNameRange     '1.1.0',
+724 silly addNameRange     '1.2.0',
+724 silly addNameRange     '1.2.1',
+724 silly addNameRange     '1.3.0',
+724 silly addNameRange     '1.3.1',
+724 silly addNameRange     '1.4.0',
+724 silly addNameRange     '1.4.1',
+724 silly addNameRange     '1.4.2',
+724 silly addNameRange     '1.5.1',
+724 silly addNameRange     '1.6.0',
+724 silly addNameRange     '1.6.1',
+724 silly addNameRange     '1.6.2',
+724 silly addNameRange     '1.6.3',
+724 silly addNameRange     '1.6.4',
+724 silly addNameRange     '1.7.0',
+724 silly addNameRange     '1.8.0',
+724 silly addNameRange     '1.8.1',
+724 silly addNameRange     '1.8.2',
+724 silly addNameRange     '1.8.3',
+724 silly addNameRange     '1.8.4',
+724 silly addNameRange     '1.8.5' ] ]
+725 silly addNamed libpq@1.8.5
+726 verbose addNamed "1.8.5" is a plain semver version for libpq
+727 silly cache afterAdd libpq@1.8.5
+728 verbose afterAdd /home/rafaelf/.npm/libpq/1.8.5/package/package.json not in flight; writing
+729 verbose afterAdd /home/rafaelf/.npm/libpq/1.8.5/package/package.json written
+730 silly fetchNamedPackageData nan
+731 silly mapToRegistry name nan
+732 silly mapToRegistry using default registry
+733 silly mapToRegistry registry https://registry.npmjs.org/
+734 silly mapToRegistry uri https://registry.npmjs.org/nan
+735 silly fetchNamedPackageData bindings
+736 silly mapToRegistry name bindings
+737 silly mapToRegistry using default registry
+738 silly mapToRegistry registry https://registry.npmjs.org/
+739 silly mapToRegistry uri https://registry.npmjs.org/bindings
+740 verbose request uri https://registry.npmjs.org/nan
+741 verbose request no auth needed
+742 info attempt registry request try #1 at 21:19:09
+743 verbose etag W/"58a44b6b-1df62"
+744 verbose lastModified Wed, 15 Feb 2017 12:36:59 GMT
+745 http request GET https://registry.npmjs.org/nan
+746 verbose request uri https://registry.npmjs.org/bindings
+747 verbose request no auth needed
+748 info attempt registry request try #1 at 21:19:09
+749 verbose etag W/"580645d3-46f7"
+750 verbose lastModified Tue, 18 Oct 2016 15:54:59 GMT
+751 http request GET https://registry.npmjs.org/bindings
+752 http 304 https://registry.npmjs.org/bindings
+753 verbose headers { date: 'Wed, 15 Mar 2017 00:19:10 GMT',
+753 verbose headers   via: '1.1 varnish',
+753 verbose headers   'cache-control': 'max-age=300',
+753 verbose headers   etag: 'W/"580645d3-46f7"',
+753 verbose headers   age: '18',
+753 verbose headers   connection: 'keep-alive',
+753 verbose headers   'x-served-by': 'cache-gru7122-GRU',
+753 verbose headers   'x-cache': 'HIT',
+753 verbose headers   'x-cache-hits': '1',
+753 verbose headers   'x-timer': 'S1489537150.020882,VS0,VE0',
+753 verbose headers   vary: 'Accept-Encoding' }
+754 silly get cb [ 304,
+754 silly get   { date: 'Wed, 15 Mar 2017 00:19:10 GMT',
+754 silly get     via: '1.1 varnish',
+754 silly get     'cache-control': 'max-age=300',
+754 silly get     etag: 'W/"580645d3-46f7"',
+754 silly get     age: '18',
+754 silly get     connection: 'keep-alive',
+754 silly get     'x-served-by': 'cache-gru7122-GRU',
+754 silly get     'x-cache': 'HIT',
+754 silly get     'x-cache-hits': '1',
+754 silly get     'x-timer': 'S1489537150.020882,VS0,VE0',
+754 silly get     vary: 'Accept-Encoding' } ]
+755 verbose etag https://registry.npmjs.org/bindings from cache
+756 verbose get saving bindings to /home/rafaelf/.npm/registry.npmjs.org/bindings/.cache.json
+757 silly resolveWithNewModule bindings@1.2.1 checking installable status
+758 silly cache add args [ 'bindings@1.2.1', null ]
+759 verbose cache add spec bindings@1.2.1
+760 silly cache add parsed spec Result {
+760 silly cache add   raw: 'bindings@1.2.1',
+760 silly cache add   scope: null,
+760 silly cache add   name: 'bindings',
+760 silly cache add   rawSpec: '1.2.1',
+760 silly cache add   spec: '1.2.1',
+760 silly cache add   type: 'version' }
+761 silly addNamed bindings@1.2.1
+762 verbose addNamed "1.2.1" is a plain semver version for bindings
+763 silly mapToRegistry name bindings
+764 silly mapToRegistry using default registry
+765 silly mapToRegistry registry https://registry.npmjs.org/
+766 silly mapToRegistry uri https://registry.npmjs.org/bindings
+767 verbose addNameVersion registry:https://registry.npmjs.org/bindings not in flight; fetching
+768 verbose get https://registry.npmjs.org/bindings not expired, no request
+769 silly cache afterAdd bindings@1.2.1
+770 verbose afterAdd /home/rafaelf/.npm/bindings/1.2.1/package/package.json not in flight; writing
+771 verbose afterAdd /home/rafaelf/.npm/bindings/1.2.1/package/package.json written
+772 http 304 https://registry.npmjs.org/nan
+773 verbose headers { date: 'Wed, 15 Mar 2017 00:19:10 GMT',
+773 verbose headers   via: '1.1 varnish',
+773 verbose headers   'cache-control': 'max-age=300',
+773 verbose headers   etag: 'W/"58a44b6b-1df62"',
+773 verbose headers   age: '177',
+773 verbose headers   connection: 'keep-alive',
+773 verbose headers   'x-served-by': 'cache-gru7123-GRU',
+773 verbose headers   'x-cache': 'HIT',
+773 verbose headers   'x-cache-hits': '2',
+773 verbose headers   'x-timer': 'S1489537150.130883,VS0,VE0',
+773 verbose headers   vary: 'Accept-Encoding' }
+774 silly get cb [ 304,
+774 silly get   { date: 'Wed, 15 Mar 2017 00:19:10 GMT',
+774 silly get     via: '1.1 varnish',
+774 silly get     'cache-control': 'max-age=300',
+774 silly get     etag: 'W/"58a44b6b-1df62"',
+774 silly get     age: '177',
+774 silly get     connection: 'keep-alive',
+774 silly get     'x-served-by': 'cache-gru7123-GRU',
+774 silly get     'x-cache': 'HIT',
+774 silly get     'x-cache-hits': '2',
+774 silly get     'x-timer': 'S1489537150.130883,VS0,VE0',
+774 silly get     vary: 'Accept-Encoding' } ]
+775 verbose etag https://registry.npmjs.org/nan from cache
+776 verbose get saving nan to /home/rafaelf/.npm/registry.npmjs.org/nan/.cache.json
+777 silly resolveWithNewModule nan@2.5.1 checking installable status
+778 silly cache add args [ 'nan@^2.3.0', null ]
+779 verbose cache add spec nan@^2.3.0
+780 silly cache add parsed spec Result {
+780 silly cache add   raw: 'nan@^2.3.0',
+780 silly cache add   scope: null,
+780 silly cache add   name: 'nan',
+780 silly cache add   rawSpec: '^2.3.0',
+780 silly cache add   spec: '>=2.3.0 <3.0.0',
+780 silly cache add   type: 'range' }
+781 silly addNamed nan@>=2.3.0 <3.0.0
+782 verbose addNamed ">=2.3.0 <3.0.0" is a valid semver range for nan
+783 silly addNameRange { name: 'nan', range: '>=2.3.0 <3.0.0', hasData: false }
+784 silly mapToRegistry name nan
+785 silly mapToRegistry using default registry
+786 silly mapToRegistry registry https://registry.npmjs.org/
+787 silly mapToRegistry uri https://registry.npmjs.org/nan
+788 verbose addNameRange registry:https://registry.npmjs.org/nan not in flight; fetching
+789 verbose get https://registry.npmjs.org/nan not expired, no request
+790 silly addNameRange number 2 { name: 'nan', range: '>=2.3.0 <3.0.0', hasData: true }
+791 silly addNameRange versions [ 'nan',
+791 silly addNameRange   [ '0.3.0-wip',
+791 silly addNameRange     '0.3.0-wip2',
+791 silly addNameRange     '0.3.0',
+791 silly addNameRange     '0.3.1',
+791 silly addNameRange     '0.3.2',
+791 silly addNameRange     '0.4.0',
+791 silly addNameRange     '0.4.1',
+791 silly addNameRange     '0.4.2',
+791 silly addNameRange     '0.4.3',
+791 silly addNameRange     '0.4.4',
+791 silly addNameRange     '0.5.0',
+791 silly addNameRange     '0.5.1',
+791 silly addNameRange     '0.5.2',
+791 silly addNameRange     '0.6.0',
+791 silly addNameRange     '0.7.0',
+791 silly addNameRange     '0.7.1',
+791 silly addNameRange     '0.8.0',
+791 silly addNameRange     '1.0.0',
+791 silly addNameRange     '1.1.0',
+791 silly addNameRange     '1.1.1',
+791 silly addNameRange     '1.1.2',
+791 silly addNameRange     '1.2.0',
+791 silly addNameRange     '1.3.0',
+791 silly addNameRange     '1.4.0',
+791 silly addNameRange     '1.4.1',
+791 silly addNameRange     '1.5.0',
+791 silly addNameRange     '1.4.2',
+791 silly addNameRange     '1.4.3',
+791 silly addNameRange     '1.5.1',
+791 silly addNameRange     '1.5.2',
+791 silly addNameRange     '1.6.0',
+791 silly addNameRange     '1.5.3',
+791 silly addNameRange     '1.6.1',
+791 silly addNameRange     '1.6.2',
+791 silly addNameRange     '1.7.0',
+791 silly addNameRange     '1.8.0',
+791 silly addNameRange     '1.8.1',
+791 silly addNameRange     '1.8.2',
+791 silly addNameRange     '1.8.3',
+791 silly addNameRange     '1.8.4',
+791 silly addNameRange     '1.9.0',
+791 silly addNameRange     '2.0.0',
+791 silly addNameRange     '2.0.1',
+791 silly addNameRange     '2.0.2',
+791 silly addNameRange     '2.0.3',
+791 silly addNameRange     '2.0.4',
+791 silly addNameRange     '2.0.5',
+791 silly addNameRange     '2.0.6',
+791 silly addNameRange     '2.0.7',
+791 silly addNameRange     '2.0.8',
+791 silly addNameRange     '2.0.9',
+791 silly addNameRange     '2.1.0',
+791 silly addNameRange     '2.2.0',
+791 silly addNameRange     '2.2.1',
+791 silly addNameRange     '2.3.0',
+791 silly addNameRange     '2.3.1',
+791 silly addNameRange     '2.3.2',
+791 silly addNameRange     '2.3.3',
+791 silly addNameRange     '2.3.4',
+791 silly addNameRange     '2.3.5',
+791 silly addNameRange     '2.4.0',
+791 silly addNameRange     '2.5.0',
+791 silly addNameRange     '2.5.1' ] ]
+792 silly addNamed nan@2.5.1
+793 verbose addNamed "2.5.1" is a plain semver version for nan
+794 silly cache afterAdd nan@2.5.1
+795 verbose afterAdd /home/rafaelf/.npm/nan/2.5.1/package/package.json not in flight; writing
+796 verbose afterAdd /home/rafaelf/.npm/nan/2.5.1/package/package.json written
+797 silly loadAllDepsIntoIdealTree Finishing
+798 silly idealTree:prePrune Project-SI1-
+798 silly idealTree:prePrune ├── ap@0.2.0
+798 silly idealTree:prePrune ├── bindings@1.2.1
+798 silly idealTree:prePrune ├── buffer-writer@1.0.1
+798 silly idealTree:prePrune ├── core-util-is@1.0.2
+798 silly idealTree:prePrune ├── generic-pool@2.4.2
+798 silly idealTree:prePrune ├── inherits@2.0.3
+798 silly idealTree:prePrune ├── isarray@0.0.1
+798 silly idealTree:prePrune ├── libpq@1.8.5
+798 silly idealTree:prePrune ├── nan@2.5.1
+798 silly idealTree:prePrune ├── object-assign@4.1.0
+798 silly idealTree:prePrune ├── packet-reader@0.2.0
+798 silly idealTree:prePrune ├── pg-connection-string@0.1.3
+798 silly idealTree:prePrune ├─┬ pg-native@1.10.0
+798 silly idealTree:prePrune │ └── pg-types@1.6.0
+798 silly idealTree:prePrune ├── pg-pool@1.6.0
+798 silly idealTree:prePrune ├── pg-types@1.11.0
+798 silly idealTree:prePrune ├── pg@6.1.4
+798 silly idealTree:prePrune ├── pgpass@1.0.1
+798 silly idealTree:prePrune ├── postgres-array@1.0.2
+798 silly idealTree:prePrune ├── postgres-bytea@1.0.0
+798 silly idealTree:prePrune ├── postgres-date@1.0.3
+798 silly idealTree:prePrune ├── postgres-interval@1.0.2
+798 silly idealTree:prePrune ├── readable-stream@1.0.31
+798 silly idealTree:prePrune ├── semver@4.3.2
+798 silly idealTree:prePrune ├── split@1.0.0
+798 silly idealTree:prePrune ├── string_decoder@0.10.31
+798 silly idealTree:prePrune ├── through@2.3.8
+798 silly idealTree:prePrune └── xtend@4.0.1
+799 silly loadIdealTree Finishing
+800 silly currentTree Project-SI1-
+800 silly currentTree ├── ap@0.2.0
+800 silly currentTree ├── buffer-writer@1.0.1
+800 silly currentTree ├── core-util-is@1.0.2
+800 silly currentTree ├── generic-pool@2.4.2
+800 silly currentTree ├── inherits@2.0.3
+800 silly currentTree ├── isarray@0.0.1
+800 silly currentTree ├── object-assign@4.1.0
+800 silly currentTree ├── packet-reader@0.2.0
+800 silly currentTree ├── pg-connection-string@0.1.3
+800 silly currentTree ├── pg-pool@1.6.0
+800 silly currentTree ├── pg-types@1.11.0
+800 silly currentTree ├── pg@6.1.4
+800 silly currentTree ├── pgpass@1.0.1
+800 silly currentTree ├── postgres-array@1.0.2
+800 silly currentTree ├── postgres-bytea@1.0.0
+800 silly currentTree ├── postgres-date@1.0.3
+800 silly currentTree ├── postgres-interval@1.0.2
+800 silly currentTree ├── readable-stream@1.0.31
+800 silly currentTree ├── semver@4.3.2
+800 silly currentTree ├── split@1.0.0
+800 silly currentTree ├── string_decoder@0.10.31
+800 silly currentTree ├── through@2.3.8
+800 silly currentTree └── xtend@4.0.1
+801 silly idealTree Project-SI1-
+801 silly idealTree ├── ap@0.2.0
+801 silly idealTree ├── bindings@1.2.1
+801 silly idealTree ├── buffer-writer@1.0.1
+801 silly idealTree ├── core-util-is@1.0.2
+801 silly idealTree ├── generic-pool@2.4.2
+801 silly idealTree ├── inherits@2.0.3
+801 silly idealTree ├── isarray@0.0.1
+801 silly idealTree ├── libpq@1.8.5
+801 silly idealTree ├── nan@2.5.1
+801 silly idealTree ├── object-assign@4.1.0
+801 silly idealTree ├── packet-reader@0.2.0
+801 silly idealTree ├── pg-connection-string@0.1.3
+801 silly idealTree ├─┬ pg-native@1.10.0
+801 silly idealTree │ └── pg-types@1.6.0
+801 silly idealTree ├── pg-pool@1.6.0
+801 silly idealTree ├── pg-types@1.11.0
+801 silly idealTree ├── pg@6.1.4
+801 silly idealTree ├── pgpass@1.0.1
+801 silly idealTree ├── postgres-array@1.0.2
+801 silly idealTree ├── postgres-bytea@1.0.0
+801 silly idealTree ├── postgres-date@1.0.3
+801 silly idealTree ├── postgres-interval@1.0.2
+801 silly idealTree ├── readable-stream@1.0.31
+801 silly idealTree ├── semver@4.3.2
+801 silly idealTree ├── split@1.0.0
+801 silly idealTree ├── string_decoder@0.10.31
+801 silly idealTree ├── through@2.3.8
+801 silly idealTree └── xtend@4.0.1
+802 silly generateActionsToTake Starting
+803 silly install generateActionsToTake
+804 silly generateActionsToTake Finishing
+805 silly diffTrees action count 6
+806 silly diffTrees add bindings@1.2.1
+807 silly diffTrees add nan@2.5.1
+808 silly diffTrees add libpq@1.8.5
+809 silly diffTrees add pg-types@1.6.0
+810 silly diffTrees update pg@6.1.4
+811 silly diffTrees add pg-native@1.10.0
+812 silly decomposeActions action count 48
+813 silly decomposeActions fetch bindings@1.2.1
+814 silly decomposeActions extract bindings@1.2.1
+815 silly decomposeActions test bindings@1.2.1
+816 silly decomposeActions preinstall bindings@1.2.1
+817 silly decomposeActions build bindings@1.2.1
+818 silly decomposeActions install bindings@1.2.1
+819 silly decomposeActions postinstall bindings@1.2.1
+820 silly decomposeActions finalize bindings@1.2.1
+821 silly decomposeActions fetch nan@2.5.1
+822 silly decomposeActions extract nan@2.5.1
+823 silly decomposeActions test nan@2.5.1
+824 silly decomposeActions preinstall nan@2.5.1
+825 silly decomposeActions build nan@2.5.1
+826 silly decomposeActions install nan@2.5.1
+827 silly decomposeActions postinstall nan@2.5.1
+828 silly decomposeActions finalize nan@2.5.1
+829 silly decomposeActions fetch libpq@1.8.5
+830 silly decomposeActions extract libpq@1.8.5
+831 silly decomposeActions test libpq@1.8.5
+832 silly decomposeActions preinstall libpq@1.8.5
+833 silly decomposeActions build libpq@1.8.5
+834 silly decomposeActions install libpq@1.8.5
+835 silly decomposeActions postinstall libpq@1.8.5
+836 silly decomposeActions finalize libpq@1.8.5
+837 silly decomposeActions fetch pg-types@1.6.0
+838 silly decomposeActions extract pg-types@1.6.0
+839 silly decomposeActions test pg-types@1.6.0
+840 silly decomposeActions preinstall pg-types@1.6.0
+841 silly decomposeActions build pg-types@1.6.0
+842 silly decomposeActions install pg-types@1.6.0
+843 silly decomposeActions postinstall pg-types@1.6.0
+844 silly decomposeActions finalize pg-types@1.6.0
+845 silly decomposeActions fetch pg@6.1.4
+846 silly decomposeActions extract pg@6.1.4
+847 silly decomposeActions test pg@6.1.4
+848 silly decomposeActions preinstall pg@6.1.4
+849 silly decomposeActions build pg@6.1.4
+850 silly decomposeActions install pg@6.1.4
+851 silly decomposeActions postinstall pg@6.1.4
+852 silly decomposeActions finalize pg@6.1.4
+853 silly decomposeActions fetch pg-native@1.10.0
+854 silly decomposeActions extract pg-native@1.10.0
+855 silly decomposeActions test pg-native@1.10.0
+856 silly decomposeActions preinstall pg-native@1.10.0
+857 silly decomposeActions build pg-native@1.10.0
+858 silly decomposeActions install pg-native@1.10.0
+859 silly decomposeActions postinstall pg-native@1.10.0
+860 silly decomposeActions finalize pg-native@1.10.0
+861 silly executeActions Starting
+862 silly install executeActions
+863 silly doSerial global-install 0
+864 silly doParallel fetch 6
+865 verbose lock using /home/rafaelf/.npm/_locks/staging-b8df69b02d03e1cf.lock for /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging
+866 silly doParallel extract 6
+867 silly extract bindings@1.2.1
+868 silly extract nan@2.5.1
+869 silly extract libpq@1.8.5
+870 silly extract pg-types@1.6.0
+871 silly extract pg@6.1.4
+872 silly extract pg-native@1.10.0
+873 verbose unbuild node_modules/.staging/bindings-b2121da0
+874 verbose unbuild node_modules/.staging/pg-types-1e00c283
+875 verbose unbuild node_modules/.staging/libpq-e25fca2a
+876 verbose unbuild node_modules/.staging/nan-1b2d66c8
+877 verbose unbuild node_modules/.staging/pg-326e18ae
+878 verbose unbuild node_modules/.staging/pg-native-7883650e
+879 silly gentlyRm /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/bindings-b2121da0 is being purged from base /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-
+880 verbose gentlyRm don't care about contents; nuking /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/bindings-b2121da0
+881 silly gentlyRm /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/pg-types-1e00c283 is being purged from base /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-
+882 verbose gentlyRm don't care about contents; nuking /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/pg-types-1e00c283
+883 silly gentlyRm /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/libpq-e25fca2a is being purged from base /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-
+884 verbose gentlyRm don't care about contents; nuking /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/libpq-e25fca2a
+885 silly gentlyRm /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/nan-1b2d66c8 is being purged from base /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-
+886 verbose gentlyRm don't care about contents; nuking /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/nan-1b2d66c8
+887 silly gentlyRm /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/pg-326e18ae is being purged from base /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-
+888 verbose gentlyRm don't care about contents; nuking /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/pg-326e18ae
+889 silly gentlyRm /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/pg-native-7883650e is being purged from base /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-
+890 verbose gentlyRm don't care about contents; nuking /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/pg-native-7883650e
+891 verbose tar unpack /home/rafaelf/.npm/bindings/1.2.1/package.tgz
+892 verbose tar unpacking to /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/bindings-b2121da0
+893 silly gentlyRm /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/bindings-b2121da0 is being purged
+894 verbose gentlyRm don't care about contents; nuking /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/bindings-b2121da0
+895 verbose tar unpack /home/rafaelf/.npm/pg-types/1.6.0/package.tgz
+896 verbose tar unpacking to /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/pg-types-1e00c283
+897 silly gentlyRm /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/pg-types-1e00c283 is being purged
+898 verbose gentlyRm don't care about contents; nuking /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/pg-types-1e00c283
+899 verbose tar unpack /home/rafaelf/.npm/libpq/1.8.5/package.tgz
+900 verbose tar unpacking to /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/libpq-e25fca2a
+901 silly gentlyRm /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/libpq-e25fca2a is being purged
+902 verbose gentlyRm don't care about contents; nuking /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/libpq-e25fca2a
+903 verbose tar unpack /home/rafaelf/.npm/nan/2.5.1/package.tgz
+904 verbose tar unpacking to /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/nan-1b2d66c8
+905 silly gentlyRm /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/nan-1b2d66c8 is being purged
+906 verbose gentlyRm don't care about contents; nuking /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/nan-1b2d66c8
+907 verbose tar unpack /home/rafaelf/.npm/pg/6.1.4/package.tgz
+908 verbose tar unpacking to /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/pg-326e18ae
+909 silly gentlyRm /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/pg-326e18ae is being purged
+910 verbose gentlyRm don't care about contents; nuking /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/pg-326e18ae
+911 verbose tar unpack /home/rafaelf/.npm/pg-native/1.10.0/package.tgz
+912 verbose tar unpacking to /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/pg-native-7883650e
+913 silly gentlyRm /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/pg-native-7883650e is being purged
+914 verbose gentlyRm don't care about contents; nuking /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/pg-native-7883650e
+915 silly gunzTarPerm modes [ '755', '644' ]
+916 silly gunzTarPerm modes [ '755', '644' ]
+917 silly gunzTarPerm modes [ '755', '644' ]
+918 silly gunzTarPerm modes [ '755', '644' ]
+919 silly gunzTarPerm modes [ '755', '644' ]
+920 silly gunzTarPerm modes [ '755', '644' ]
+921 silly gunzTarPerm extractEntry package.json
+922 silly gunzTarPerm extractEntry package.json
+923 silly gunzTarPerm extractEntry package.json
+924 silly gunzTarPerm extractEntry package.json
+925 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+926 silly gunzTarPerm extractEntry package.json
+927 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+928 silly gunzTarPerm extractEntry package.json
+929 silly gunzTarPerm extractEntry README.md
+930 silly gunzTarPerm extractEntry bindings.js
+931 silly gunzTarPerm extractEntry .npmignore
+932 silly gunzTarPerm extractEntry README.md
+933 silly gunzTarPerm extractEntry .npmignore
+934 silly gunzTarPerm extractEntry README.md
+935 silly gunzTarPerm extractEntry README.md
+936 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+937 silly gunzTarPerm extractEntry .npmignore
+938 silly gunzTarPerm modified mode [ '.npmignore', 436, 420 ]
+939 silly gunzTarPerm extractEntry README.md
+940 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+941 silly gunzTarPerm extractEntry .npmignore
+942 silly gunzTarPerm extractEntry README.md
+943 silly gunzTarPerm extractEntry include_dirs.js
+944 silly gunzTarPerm modified mode [ 'include_dirs.js', 436, 420 ]
+945 silly gunzTarPerm extractEntry index.js
+946 silly gunzTarPerm extractEntry .travis.yml
+947 silly gunzTarPerm extractEntry index.js
+948 silly gunzTarPerm extractEntry nan_converters.h
+949 silly gunzTarPerm modified mode [ 'nan_converters.h', 436, 420 ]
+950 silly gunzTarPerm extractEntry CHANGELOG.md
+951 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 420 ]
+952 silly gunzTarPerm extractEntry LICENSE.md
+953 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 420 ]
+954 silly gunzTarPerm extractEntry .travis.yml
+955 silly gunzTarPerm modified mode [ '.travis.yml', 436, 420 ]
+956 silly gunzTarPerm extractEntry CHANGELOG.md
+957 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 420 ]
+958 silly gunzTarPerm extractEntry Makefile
+959 silly gunzTarPerm modified mode [ 'Makefile', 436, 420 ]
+960 silly gunzTarPerm extractEntry .jshintrc
+961 silly gunzTarPerm modified mode [ '.jshintrc', 436, 420 ]
+962 silly gunzTarPerm extractEntry lib/client.js
+963 silly gunzTarPerm modified mode [ 'lib/client.js', 436, 420 ]
+964 silly gunzTarPerm extractEntry lib/connection.js
+965 silly gunzTarPerm modified mode [ 'lib/connection.js', 436, 420 ]
+966 silly gunzTarPerm extractEntry lib/defaults.js
+967 silly gunzTarPerm modified mode [ 'lib/defaults.js', 436, 420 ]
+968 silly gunzTarPerm extractEntry lib/index.js
+969 silly gunzTarPerm modified mode [ 'lib/index.js', 436, 420 ]
+970 silly gunzTarPerm extractEntry lib/connection-parameters.js
+971 silly gunzTarPerm modified mode [ 'lib/connection-parameters.js', 436, 420 ]
+972 silly gunzTarPerm extractEntry lib/pool-factory.js
+973 silly gunzTarPerm modified mode [ 'lib/pool-factory.js', 436, 420 ]
+974 silly gunzTarPerm extractEntry lib/query.js
+975 silly gunzTarPerm modified mode [ 'lib/query.js', 436, 420 ]
+976 silly gunzTarPerm extractEntry lib/result.js
+977 silly gunzTarPerm modified mode [ 'lib/result.js', 436, 420 ]
+978 silly gunzTarPerm extractEntry lib/type-overrides.js
+979 silly gunzTarPerm modified mode [ 'lib/type-overrides.js', 436, 420 ]
+980 silly gunzTarPerm extractEntry lib/utils.js
+981 silly gunzTarPerm modified mode [ 'lib/utils.js', 436, 420 ]
+982 silly gunzTarPerm extractEntry lib/native/index.js
+983 silly gunzTarPerm modified mode [ 'lib/native/index.js', 436, 420 ]
+984 silly gunzTarPerm extractEntry lib/native/query.js
+985 silly gunzTarPerm modified mode [ 'lib/native/query.js', 436, 420 ]
+986 silly gunzTarPerm extractEntry lib/native/result.js
+987 silly gunzTarPerm modified mode [ 'lib/native/result.js', 436, 420 ]
+988 silly gunzTarPerm extractEntry index.js
+989 silly gunzTarPerm extractEntry bench/index.js
+990 silly gunzTarPerm extractEntry bench/leaks.js
+991 silly gunzTarPerm extractEntry .travis.yml
+992 silly gunzTarPerm extractEntry Makefile
+993 silly gunzTarPerm extractEntry lib/copy-stream.js
+994 silly gunzTarPerm extractEntry test/array-mode.js
+995 silly gunzTarPerm extractEntry test/custom-types.js
+996 silly gunzTarPerm extractEntry test/domains.js
+997 silly gunzTarPerm extractEntry test/huge-query.js
+998 silly gunzTarPerm extractEntry test/copy-to.js
+999 silly gunzTarPerm extractEntry test/async-workflow.js
+1000 silly gunzTarPerm extractEntry test/many-connections.js
+1001 silly gunzTarPerm extractEntry test/many-errors.js
+1002 silly gunzTarPerm extractEntry test/query-sync.js
+1003 silly gunzTarPerm extractEntry test/multiple-queries.js
+1004 silly gunzTarPerm extractEntry test/copy-from.js
+1005 silly gunzTarPerm extractEntry test/notify.js
+1006 silly gunzTarPerm extractEntry test/connection.js
+1007 silly gunzTarPerm extractEntry test/prepare.js
+1008 silly gunzTarPerm extractEntry test/cancel.js
+1009 silly gunzTarPerm extractEntry test/query-async.js
+1010 silly gunzTarPerm extractEntry test/index.js
+1011 silly gunzTarPerm extractEntry test/version.js
+1012 silly gunzTarPerm extractEntry test/load.js
+1013 silly gunzTarPerm extractEntry test/mocha.opts
+1014 silly gunzTarPerm extractEntry doc/node_misc.md
+1015 silly gunzTarPerm modified mode [ 'doc/node_misc.md', 436, 420 ]
+1016 silly gunzTarPerm extractEntry Makefile
+1017 silly gunzTarPerm extractEntry lib/arrayParser.js
+1018 silly gunzTarPerm extractEntry binding.gyp
+1019 silly gunzTarPerm extractEntry .travis.yml
+1020 silly gunzTarPerm extractEntry Makefile
+1021 silly gunzTarPerm extractEntry src/addon.cc
+1022 silly gunzTarPerm extractEntry doc/asyncworker.md
+1023 silly gunzTarPerm modified mode [ 'doc/asyncworker.md', 436, 420 ]
+1024 silly gunzTarPerm extractEntry doc/callback.md
+1025 silly gunzTarPerm modified mode [ 'doc/callback.md', 436, 420 ]
+1026 silly gunzTarPerm extractEntry lib/binaryParsers.js
+1027 silly gunzTarPerm extractEntry lib/textParsers.js
+1028 silly gunzTarPerm extractEntry test/array.js
+1029 silly gunzTarPerm extractEntry test/assert.js
+1030 silly gunzTarPerm extractEntry test/dates.js
+1031 silly gunzTarPerm extractEntry test/index.js
+1032 silly gunzTarPerm extractEntry src/addon.h
+1033 silly gunzTarPerm extractEntry src/connect-async-worker.cc
+1034 silly gunzTarPerm extractEntry doc/converters.md
+1035 silly gunzTarPerm modified mode [ 'doc/converters.md', 436, 420 ]
+1036 silly gunzTarPerm extractEntry doc/errors.md
+1037 silly gunzTarPerm modified mode [ 'doc/errors.md', 436, 420 ]
+1038 silly gunzTarPerm extractEntry src/connect-async-worker.h
+1039 silly gunzTarPerm extractEntry src/connection.cc
+1040 silly gunzTarPerm extractEntry doc/maybe_types.md
+1041 silly gunzTarPerm modified mode [ 'doc/maybe_types.md', 436, 420 ]
+1042 silly gunzTarPerm extractEntry doc/methods.md
+1043 silly gunzTarPerm modified mode [ 'doc/methods.md', 436, 420 ]
+1044 silly gunzTarPerm extractEntry doc/new.md
+1045 silly gunzTarPerm modified mode [ 'doc/new.md', 436, 420 ]
+1046 silly gentlyRm /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/bindings-b2121da0/node_modules is being purged
+1047 verbose gentlyRm don't care about contents; nuking /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/bindings-b2121da0/node_modules
+1048 silly gunzTarPerm extractEntry src/connection.h
+1049 silly gunzTarPerm extractEntry test/async-connection.js
+1050 silly gunzTarPerm extractEntry doc/buffers.md
+1051 silly gunzTarPerm modified mode [ 'doc/buffers.md', 436, 420 ]
+1052 silly gunzTarPerm extractEntry doc/object_wrappers.md
+1053 silly gunzTarPerm modified mode [ 'doc/object_wrappers.md', 436, 420 ]
+1054 silly gunzTarPerm extractEntry test/escaping.js
+1055 silly gunzTarPerm extractEntry test/helper.js
+1056 silly gunzTarPerm extractEntry doc/persistent.md
+1057 silly gunzTarPerm modified mode [ 'doc/persistent.md', 436, 420 ]
+1058 silly gunzTarPerm extractEntry doc/scopes.md
+1059 silly gunzTarPerm modified mode [ 'doc/scopes.md', 436, 420 ]
+1060 silly gunzTarPerm extractEntry test/index.js
+1061 silly gunzTarPerm extractEntry test/error-info.js
+1062 silly gunzTarPerm extractEntry doc/script.md
+1063 silly gunzTarPerm modified mode [ 'doc/script.md', 436, 420 ]
+1064 silly gunzTarPerm extractEntry doc/string_bytes.md
+1065 silly gunzTarPerm modified mode [ 'doc/string_bytes.md', 436, 420 ]
+1066 silly gunzTarPerm extractEntry test/async-socket.js
+1067 silly gunzTarPerm extractEntry test/sync-prepare.js
+1068 silly gunzTarPerm extractEntry doc/v8_internals.md
+1069 silly gunzTarPerm modified mode [ 'doc/v8_internals.md', 436, 420 ]
+1070 silly gunzTarPerm extractEntry doc/v8_misc.md
+1071 silly gunzTarPerm modified mode [ 'doc/v8_misc.md', 436, 420 ]
+1072 silly gunzTarPerm extractEntry test/multiple-queries.js
+1073 silly gunzTarPerm extractEntry test/non-blocking-controls.js
+1074 silly gunzTarPerm extractEntry nan.h
+1075 silly gunzTarPerm modified mode [ 'nan.h', 436, 420 ]
+1076 silly gunzTarPerm extractEntry nan_callbacks.h
+1077 silly gunzTarPerm modified mode [ 'nan_callbacks.h', 436, 420 ]
+1078 silly gunzTarPerm extractEntry test/notification.js
+1079 silly gunzTarPerm extractEntry test/error-conditions.js
+1080 silly gunzTarPerm extractEntry nan_callbacks_12_inl.h
+1081 silly gunzTarPerm modified mode [ 'nan_callbacks_12_inl.h', 436, 420 ]
+1082 silly gunzTarPerm extractEntry nan_callbacks_pre_12_inl.h
+1083 silly gunzTarPerm modified mode [ 'nan_callbacks_pre_12_inl.h', 436, 420 ]
+1084 silly gunzTarPerm extractEntry test/result-accessors.js
+1085 silly gunzTarPerm extractEntry test/copy-out.js
+1086 silly gunzTarPerm extractEntry test/server-version.js
+1087 silly gunzTarPerm extractEntry test/copy-in.js
+1088 silly gunzTarPerm extractEntry nan_converters_43_inl.h
+1089 silly gunzTarPerm modified mode [ 'nan_converters_43_inl.h', 436, 420 ]
+1090 silly gunzTarPerm extractEntry nan_converters_pre_43_inl.h
+1091 silly gunzTarPerm modified mode [ 'nan_converters_pre_43_inl.h', 436, 420 ]
+1092 silly gunzTarPerm extractEntry nan_implementation_12_inl.h
+1093 silly gunzTarPerm modified mode [ 'nan_implementation_12_inl.h', 436, 420 ]
+1094 silly gunzTarPerm extractEntry nan_implementation_pre_12_inl.h
+1095 silly gunzTarPerm modified mode [ 'nan_implementation_pre_12_inl.h', 436, 420 ]
+1096 silly gunzTarPerm extractEntry test/socket.js
+1097 silly gunzTarPerm extractEntry test/construction.js
+1098 silly gunzTarPerm extractEntry nan_maybe_43_inl.h
+1099 silly gunzTarPerm modified mode [ 'nan_maybe_43_inl.h', 436, 420 ]
+1100 silly gunzTarPerm extractEntry nan_maybe_pre_43_inl.h
+1101 silly gunzTarPerm modified mode [ 'nan_maybe_pre_43_inl.h', 436, 420 ]
+1102 silly gunzTarPerm extractEntry nan_new.h
+1103 silly gunzTarPerm modified mode [ 'nan_new.h', 436, 420 ]
+1104 silly gunzTarPerm extractEntry nan_object_wrap.h
+1105 silly gunzTarPerm modified mode [ 'nan_object_wrap.h', 436, 420 ]
+1106 silly gunzTarPerm extractEntry test/sync-integration.js
+1107 silly gunzTarPerm extractEntry test/cancel.js
+1108 silly gunzTarPerm extractEntry nan_persistent_12_inl.h
+1109 silly gunzTarPerm modified mode [ 'nan_persistent_12_inl.h', 436, 420 ]
+1110 silly gunzTarPerm extractEntry nan_persistent_pre_12_inl.h
+1111 silly gunzTarPerm modified mode [ 'nan_persistent_pre_12_inl.h', 436, 420 ]
+1112 silly gunzTarPerm extractEntry test/sync-parameters.js
+1113 silly gunzTarPerm extractEntry test/load.js
+1114 silly gentlyRm /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/pg-types-1e00c283/node_modules is being purged
+1115 verbose gentlyRm don't care about contents; nuking /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/pg-types-1e00c283/node_modules
+1116 silly gunzTarPerm extractEntry nan_private.h
+1117 silly gunzTarPerm modified mode [ 'nan_private.h', 436, 420 ]
+1118 silly gunzTarPerm extractEntry nan_string_bytes.h
+1119 silly gunzTarPerm modified mode [ 'nan_string_bytes.h', 436, 420 ]
+1120 silly gunzTarPerm extractEntry test/sync.js
+1121 silly gunzTarPerm extractEntry test/many-connections.js
+1122 silly gunzTarPerm extractEntry nan_typedarray_contents.h
+1123 silly gunzTarPerm modified mode [ 'nan_typedarray_contents.h', 436, 420 ]
+1124 silly gunzTarPerm extractEntry nan_weak.h
+1125 silly gunzTarPerm modified mode [ 'nan_weak.h', 436, 420 ]
+1126 silly gunzTarPerm extractEntry test/mocha.opts
+1127 silly gunzTarPerm extractEntry tools/package.json
+1128 silly gunzTarPerm modified mode [ 'tools/package.json', 436, 420 ]
+1129 silly gunzTarPerm extractEntry tools/README.md
+1130 silly gunzTarPerm modified mode [ 'tools/README.md', 436, 420 ]
+1131 silly gunzTarPerm extractEntry tools/1to2.js
+1132 silly gunzTarPerm modified mode [ 'tools/1to2.js', 509, 493 ]
+1133 silly gentlyRm /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/pg-326e18ae/node_modules is being purged
+1134 verbose gentlyRm don't care about contents; nuking /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/pg-326e18ae/node_modules
+1135 silly gentlyRm /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/pg-native-7883650e/node_modules is being purged
+1136 verbose gentlyRm don't care about contents; nuking /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/pg-native-7883650e/node_modules
+1137 silly gentlyRm /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/libpq-e25fca2a/node_modules is being purged
+1138 verbose gentlyRm don't care about contents; nuking /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/libpq-e25fca2a/node_modules
+1139 silly gentlyRm /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/nan-1b2d66c8/node_modules is being purged
+1140 verbose gentlyRm don't care about contents; nuking /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/nan-1b2d66c8/node_modules
+1141 silly doParallel preinstall 6
+1142 silly preinstall bindings@1.2.1 /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/bindings-b2121da0
+1143 info lifecycle bindings@1.2.1~preinstall: bindings@1.2.1
+1144 silly preinstall nan@2.5.1 /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/nan-1b2d66c8
+1145 info lifecycle nan@2.5.1~preinstall: nan@2.5.1
+1146 silly preinstall libpq@1.8.5 /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/libpq-e25fca2a
+1147 info lifecycle libpq@1.8.5~preinstall: libpq@1.8.5
+1148 silly preinstall pg-types@1.6.0 /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/pg-types-1e00c283
+1149 info lifecycle pg-types@1.6.0~preinstall: pg-types@1.6.0
+1150 silly preinstall pg@6.1.4 /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/pg-326e18ae
+1151 info lifecycle pg@6.1.4~preinstall: pg@6.1.4
+1152 silly preinstall pg-native@1.10.0 /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/pg-native-7883650e
+1153 info lifecycle pg-native@1.10.0~preinstall: pg-native@1.10.0
+1154 silly lifecycle bindings@1.2.1~preinstall: no script for preinstall, continuing
+1155 silly lifecycle nan@2.5.1~preinstall: no script for preinstall, continuing
+1156 silly lifecycle libpq@1.8.5~preinstall: no script for preinstall, continuing
+1157 silly lifecycle pg-types@1.6.0~preinstall: no script for preinstall, continuing
+1158 silly lifecycle pg@6.1.4~preinstall: no script for preinstall, continuing
+1159 silly lifecycle pg-native@1.10.0~preinstall: no script for preinstall, continuing
+1160 silly doReverseSerial remove 0
+1161 silly doSerial move 0
+1162 silly doSerial finalize 6
+1163 silly finalize /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/bindings
+1164 silly finalize /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/nan
+1165 silly finalize /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/libpq
+1166 silly finalize /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/pg-native/node_modules/pg-types
+1167 silly finalize /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/pg
+1168 silly finalize /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/pg-native
+1169 silly doSerial build 6
+1170 silly build bindings@1.2.1
+1171 info linkStuff bindings@1.2.1
+1172 silly linkStuff bindings@1.2.1 has /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules as its parent node_modules
+1173 verbose linkBins bindings@1.2.1
+1174 verbose linkMans bindings@1.2.1
+1175 silly build nan@2.5.1
+1176 info linkStuff nan@2.5.1
+1177 silly linkStuff nan@2.5.1 has /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules as its parent node_modules
+1178 verbose linkBins nan@2.5.1
+1179 verbose linkMans nan@2.5.1
+1180 silly build libpq@1.8.5
+1181 info linkStuff libpq@1.8.5
+1182 silly linkStuff libpq@1.8.5 has /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules as its parent node_modules
+1183 verbose linkBins libpq@1.8.5
+1184 verbose linkMans libpq@1.8.5
+1185 silly build pg-types@1.6.0
+1186 info linkStuff pg-types@1.6.0
+1187 silly linkStuff pg-types@1.6.0 has /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/pg-native/node_modules as its parent node_modules
+1188 verbose linkBins pg-types@1.6.0
+1189 verbose linkMans pg-types@1.6.0
+1190 silly build pg@6.1.4
+1191 info linkStuff pg@6.1.4
+1192 silly linkStuff pg@6.1.4 has /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules as its parent node_modules
+1193 verbose linkBins pg@6.1.4
+1194 verbose linkMans pg@6.1.4
+1195 silly build pg-native@1.10.0
+1196 info linkStuff pg-native@1.10.0
+1197 silly linkStuff pg-native@1.10.0 has /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules as its parent node_modules
+1198 verbose linkBins pg-native@1.10.0
+1199 verbose linkMans pg-native@1.10.0
+1200 silly doSerial global-link 0
+1201 silly doParallel update-linked 0
+1202 silly doSerial install 6
+1203 silly install bindings@1.2.1 /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/bindings-b2121da0
+1204 info lifecycle bindings@1.2.1~install: bindings@1.2.1
+1205 silly lifecycle bindings@1.2.1~install: no script for install, continuing
+1206 silly install nan@2.5.1 /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/nan-1b2d66c8
+1207 info lifecycle nan@2.5.1~install: nan@2.5.1
+1208 silly lifecycle nan@2.5.1~install: no script for install, continuing
+1209 silly install libpq@1.8.5 /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging/libpq-e25fca2a
+1210 info lifecycle libpq@1.8.5~install: libpq@1.8.5
+1211 verbose lifecycle libpq@1.8.5~install: unsafe-perm in lifecycle false
+1212 verbose lifecycle libpq@1.8.5~install: PATH: /usr/share/npm/bin/node-gyp-bin:/home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/libpq/node_modules/.bin:/home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+1213 verbose lifecycle libpq@1.8.5~install: CWD: /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/libpq
+1214 silly lifecycle libpq@1.8.5~install: Args: [ '-c', 'node-gyp rebuild' ]
+1215 silly lifecycle libpq@1.8.5~install: Returned: code: 1  signal: null
+1216 info lifecycle libpq@1.8.5~install: Failed to exec install script
+1217 verbose unlock done using /home/rafaelf/.npm/_locks/staging-b8df69b02d03e1cf.lock for /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/node_modules/.staging
+1218 silly rollbackFailedOptional Starting
+1219 silly rollbackFailedOptional Finishing
+1220 silly runTopLevelLifecycles Starting
+1221 silly runTopLevelLifecycles Finishing
+1222 silly install printInstalled
+1223 warn enoent ENOENT: no such file or directory, open '/home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/package.json'
+1224 warn Project-SI1- No description
+1225 warn Project-SI1- No repository field.
+1226 warn Project-SI1- No README data
+1227 warn Project-SI1- No license field.
+1228 verbose stack Error: libpq@1.8.5 install: `node-gyp rebuild`
+1228 verbose stack Exit status 1
+1228 verbose stack     at EventEmitter.<anonymous> (/usr/share/npm/lib/utils/lifecycle.js:232:16)
+1228 verbose stack     at emitTwo (events.js:87:13)
+1228 verbose stack     at EventEmitter.emit (events.js:172:7)
+1228 verbose stack     at ChildProcess.<anonymous> (/usr/share/npm/lib/utils/spawn.js:24:14)
+1228 verbose stack     at emitTwo (events.js:87:13)
+1228 verbose stack     at ChildProcess.emit (events.js:172:7)
+1228 verbose stack     at maybeClose (internal/child_process.js:821:16)
+1228 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+1229 verbose pkgid libpq@1.8.5
+1230 verbose cwd /home/rafaelf/Documents/2016.2/Sistemas de Informação I/Project/Project-SI1-/ad-extreme-master/src/main/resources/static/js
+1231 error Linux 4.4.0-59-generic
+1232 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install" "pg" "pg-native"
+1233 error node v4.2.6
+1234 error npm  v3.5.2
+1235 error code ELIFECYCLE
+1236 error libpq@1.8.5 install: `node-gyp rebuild`
+1236 error Exit status 1
+1237 error Failed at the libpq@1.8.5 install script 'node-gyp rebuild'.
+1237 error Make sure you have the latest version of node.js and npm installed.
+1237 error If you do, this is most likely a problem with the libpq package,
+1237 error not with npm itself.
+1237 error Tell the author that this fails on your system:
+1237 error     node-gyp rebuild
+1237 error You can get information on how to open an issue for this project with:
+1237 error     npm bugs libpq
+1237 error Or if that isn't available, you can get their info via:
+1237 error     npm owner ls libpq
+1237 error There is likely additional logging output above.
+1238 verbose exit [ 1, true ]

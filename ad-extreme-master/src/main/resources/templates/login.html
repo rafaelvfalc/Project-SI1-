@@ -5,6 +5,8 @@
         layout:decorator="layout/layout">
 <head>
     <title>.:: ad-extreme ::. - login</title>
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <th:block layout:fragment="conteudo">
     <div class="container">
@@ -38,7 +40,7 @@
                         </div>
                         <div style="margin-top:10px" class="form-group">
                             <div class="col-sm-offset-1 col-sm-11 controls">
-                                <button id="btn-login" type="submit" class="btn btn-success">
+                                <button id="btn-login" type="submit" class="btn btn-success" onclick="getLoggedIn()">
                                     <i class="fa fa-sign-in" aria-hidden="true"></i> Login
                                 </button>
                             </div>
