@@ -15,8 +15,12 @@ function getBalanceLoggedIn() {
 			for (var i = 0; i < allUsers.length; i++) {
 				if(allUsers[i].email === userLoggedIn) {
 					var $spanSaldo = $("#saldoUser");
-				
-					$spanSaldo.append(allUsers[i].saldo + ",00")
+					
+					if(parseInt(allUsers[i].saldo) != parseFloat(allUsers[i].saldo)) {
+						$spanSaldo.append(allUsers[i].saldo)
+					} else {
+						$spanSaldo.append(allUsers[i].saldo  + ".00")
+					}
 				}
 			}
 		});
