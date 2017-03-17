@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorator="layout/layout_company">
+<head>
+    <title>.:: ad-extreme ::. - user</title>
+</head>
+<th:block layout:fragment="conteudo">
+    <div class="col-md-offset-2 col-md-8">
+        <h1>Todos os Anunciantes</h1>
+        <!-- Text input-->
+        <div th:if="${anuncios != null}" class="table-responsive">
+            <table style="width:100%" class="table table-bordered">
+                <tr>
+                    <th>Anunciante</th>
+                    <th>Contato</th>
+                    <!-- <th>Anuncios</th> 
+                    <th> - </th>-->
+                </tr>
+
+                <th:block th:each="item : ${usuarios}">
+                    <tr>
+                        <td th:text="${item.nome}"></td>
+                        <td th:text="${item.email}"> - </td>
+                       <!--  <td th:text="${item.dataDeCriacao}"> - </td> 
+                        <td align="center" th:switch="${item.favoritos}">
+                        <span th:case=true>&#10004;</span>
+                        <span th:case=false>&#10008;</span>
+                        </td> -->
+                    </tr>
+                </th:block>
+            </table>
+        </div>
+    </div>
+</th:block>
+</html>
