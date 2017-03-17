@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html
+<html	ng-app="AD-Extreme" 
         xmlns:th="http://www.thymeleaf.org"
         xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
         lang="pt-br">
@@ -12,12 +12,13 @@
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}" media="screen"/>
     <link rel="stylesheet" th:href="@{/webjars/font-awesome/4.7.0/css/font-awesome.min.css}" media="screen"/>
     <link rel="stylesheet" th:href="@{/css/style.css}" media="screen"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
 </head>
 <body>
 <!-- init menu -->
 <div id="menu" class="navbar navbar-default " role="navigation">
     <div class="container-fluid">
-        <div class="navbar-header"><a class="navbar-brand" th:href="@{/}"><i class="fa fa-usd" aria-hidden="true"></i>
+        <div class="navbar-header"><a class="navbar-brand" th:href="@{/company}"><i class="fa fa-usd" aria-hidden="true"></i>
             ad-extreme</a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder">
                 <span class="sr-only">Toggle navigation</span>
@@ -34,6 +35,7 @@
                     <ul class="dropdown-menu">
                         <li><a th:href="@{/company/cadastrar/anuncio}">Cadastrar</a></li>
                         <li><a th:href="@{/company/listar/anuncios}">Todos os Anúncios</a></li>
+                        <li><a th:href="@{/company/listar/anunciantes}">Todos os Anunciantes</a></li>
                     </ul>
                 </li>
             </ul>
@@ -82,6 +84,7 @@
 <!-- end footer -->
 <script th:src="@{/webjars/jquery/1.12.1/jquery.min.js}"></script>
 <script th:src="@{/webjars/bootstrap/3.3.5/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/angular.js}"></script>
 <th:block layout:fragment="js-extra"></th:block>
 </body>
 </html>

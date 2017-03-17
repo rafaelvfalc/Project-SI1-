@@ -39,4 +39,22 @@ public class WebPagesController {
 
         return model;
     }
+    
+    
+    
+    @RequestMapping(value ="company/listar/anunciantes", method = RequestMethod.GET)
+    public ModelAndView getPageAnunciantesCompany(){
+    	ModelAndView model = new ModelAndView();
+    	model.setViewName("/company/anunciantes");
+    	
+    	return model;
+    }
+    
+    @RequestMapping(value ="user/listar/anunciantes", method = RequestMethod.GET)
+    public ModelAndView getPageAnunciantesUser(){
+    	ModelAndView model = new ModelAndView();
+    	model.setViewName("/user/anunciantes");
+    	
+    	return model;
+    }
 }
