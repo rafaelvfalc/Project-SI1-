@@ -36,8 +36,6 @@ public class Anuncio {
     @Column(name = "tipo", nullable = false)
     private String tipo;
     
-    private Usuario donoAnuncio;
-
     public Anuncio(String titulo, Date dataDeCriacao, double preco, String nota, String tipo) {
         this.titulo = titulo;
         this.dataDeCriacao = dataDeCriacao;
@@ -149,13 +147,5 @@ public class Anuncio {
                 ", nota=" + nota +
                 ", tipo='" + tipo + '\'' +
                 '}';
-    }
-    
-    public void setDonoAnuncio(Usuario usuario){
-    	donoAnuncio = usuario;
-    }
-    
-    public Usuario getDonoAnuncio(){
-    	return donoAnuncio;
     }
 }
