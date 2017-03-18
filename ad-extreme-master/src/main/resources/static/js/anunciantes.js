@@ -1,12 +1,10 @@
-var users= [];
+var users = [];
 
 function getUsers(){
 	$.get("/users", function(data, status){
 		users = data;
-		console.log(status);
-		removeLogged();
-	});
-};
+	})
+}
 
 function removeLogged(){
 	var logged = {};
@@ -19,15 +17,16 @@ function removeLogged(){
 			users.splice(i, 1);
 		}
 	}
-};
+}
 
 $(document).ready(function(){
 	getUsers();
+	removeLogged();
+	
 	for(user in users){
 		$("#anunciante")
 		.append("<td>"+user.name+"</td>" +
 				"<td>"+user.email+"</td>" +
-				"<td>&#10008;</td>");
-	};
-	
-});
+		"<td>&#10008;</td>");
+	}
+})
