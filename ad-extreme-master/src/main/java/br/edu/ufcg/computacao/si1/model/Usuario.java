@@ -1,6 +1,10 @@
 package br.edu.ufcg.computacao.si1.model;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -24,7 +28,9 @@ public class Usuario extends org.springframework.security.core.userdetails.User{
 	@Column
 	private String role;
 	@Column
-	private double saldo = 0.0;
+	private double saldo;
+	@ElementCollection
+	private Collection<String> favoritos;
 
 	public Usuario() {
 		super("default", "default", AuthorityUtils.createAuthorityList("USER"));
@@ -45,6 +51,8 @@ public class Usuario extends org.springframework.security.core.userdetails.User{
 		this.email = email;
 		this.senha = senha;
 		this.role = role;
+		favoritos = new ArrayList<>();
+		saldo = 0.00;
 	}
 
 	public Long getId() {
@@ -97,6 +105,18 @@ public class Usuario extends org.springframework.security.core.userdetails.User{
 
 	public String toString(){
 		return String.format("%s{Nome=%s, Contato='%s'}", role, nome, email);
+	}
+	
+	public Collection<String> getFavoritos(){
+		return favoritos;
+	}
+	
+	public void addFavorito(String emailDoFavorito){
+		favoritos.add(emailDoFavorito);
+	}
+	
+	public void removeFavorito(String emailDoFavorito){
+		favoritos.remove(emailDoFavorito);
 	}
 
 }

@@ -26,7 +26,23 @@ $(document).ready(function(){
 	for(user in users){
 		$("#anunciante")
 		.append("<td>"+user.name+"</td>" +
-				"<td>"+user.email+"</td>" +
-		"<td>&#10008;</td>");
+				"<td>"+user.email+"</td>"+
+				"<td>&#10008;</td>" 
+				/* 
+				if(logged.favoritos contain user.email){
+					+"<td onClick(function(user.email){
+						$.post("/user/favoritos"+user.id), function(){
+							//atualizar a pagina
+						}
+					}>&#10008;</td>"
+				} else {
+					+"<td onClick(function(user.email){
+						$.delete("/user/favoritos"+user.id), function(){
+							//atualizar a pagina
+						}
+					}>&#10004;</td>"
+				}
+				*/
+		);
 	}
 })
