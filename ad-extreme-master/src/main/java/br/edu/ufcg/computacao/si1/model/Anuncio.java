@@ -11,9 +11,7 @@ import java.util.Date;
 @Entity
 @Table(name="tb_anuncio")
 public class Anuncio {
-
-	//adicao do tipo de anuncio servico @filipe
-    private static final String[] tipos = new String[] {"movel", "imovel", "emprego", "servico"};
+    private static final String[] tipos = new String[] {"movel", "imovel", "emprego"};
 
 
     private final static DateFormat DATE_FORMAT = new SimpleDateFormat("dd-MMM-yyyy HH:mm:ss");
@@ -37,6 +35,8 @@ public class Anuncio {
 
     @Column(name = "tipo", nullable = false)
     private String tipo;
+    
+    private Usuario donoAnuncio;
 
     public Anuncio(String titulo, Date dataDeCriacao, double preco, String nota, String tipo) {
         this.titulo = titulo;
@@ -149,5 +149,13 @@ public class Anuncio {
                 ", nota=" + nota +
                 ", tipo='" + tipo + '\'' +
                 '}';
+    }
+    
+    public void setDonoAnuncio(Usuario usuario){
+    	donoAnuncio = usuario;
+    }
+    
+    public Usuario getDonoAnuncio(){
+    	return donoAnuncio;
     }
 }

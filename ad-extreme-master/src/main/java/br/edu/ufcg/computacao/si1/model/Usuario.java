@@ -24,7 +24,9 @@ public class Usuario extends org.springframework.security.core.userdetails.User{
     @Column
     private String role;
     @Column
-    private double saldo;
+    private double saldo = 0.0;
+    
+    private String anuncios = "";
 
     public Usuario() {
         super("default", "default", AuthorityUtils.createAuthorityList("USER"));
@@ -38,16 +40,13 @@ public class Usuario extends org.springframework.security.core.userdetails.User{
      * @param role
      * @param saldo foi alterado, pois originalmente o saldo não era um atributo do usuario
      */
-    // alteracao, usuario nao sera passado com saldo, sera 0 ao criar o usuario @filipe
     public Usuario(String nome, String email, String senha, String role) {
-
         super(email, senha, AuthorityUtils.createAuthorityList(role));
 
         this.nome = nome;
         this.email = email;
         this.senha = senha;
         this.role = role;
-        this.saldo = 0.0;
     }
 
     public Long getId() {
@@ -98,16 +97,17 @@ public class Usuario extends org.springframework.security.core.userdetails.User{
     	this.saldo = novoSaldo;
     }
     
-    //Criei metodo debitar para ser discutido @Filipe
-    public void debitarSaldo(double debito) {
-    	if(this.saldo >= debito ){
-    		this.saldo = this.saldo - debito;
-    	}
+    public void cadastrarAnuncio(Anuncio anuncio){
+    	anuncio.setDonoAnuncio(this);
+    	anuncios += anuncio;
     }
-
-    //Criei metodo creditar para ser discutido @Filipe
-    public void creditarSaldo(double credito) {
-    	this.saldo = this.saldo + credito;
+    
+    public String getAnuncios(){
+    	return anuncios;
+    }   
+    
+    public String toString(){
+    	return String.format("%s{Nome=%s, Contato='%s'}", role, nome, email);
     }
     
 }
