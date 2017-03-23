@@ -29,6 +29,51 @@ function getBalanceLoggedIn() {
 
 }
 
+function searchAd() {
+	
+	//Terminar de implementar
+	
+	$("#results").html("")
+	$("#results").append("<h2> Resultados </h2>");
+	
+	$.get( "/anuncios", function( allAds ) {
+		$( ".result" ).html( allAds );
+		
+		console.log(allAds)
+		
+		for (var i = 0; i < allAds.length; i++) {
+			
+			if($("#nome").val() != "" && allAds[i].titulo.includes($("#nome").val())) {
+				$("#results").append(allAds[i].titulo)
+			}
+			
+			if($('#emprego').is(':checked')) {
+				if(allAds[i].tipo == "emprego") {
+					$("#results").append(allAds[i].titulo)
+				}
+			}
+			
+			if($('#imovel').is(':checked')) {
+				if(allAds[i].tipo == "imovel") {
+					$("#results").append(allAds[i].titulo)
+				}
+			}
+			
+			if($('#movel').is(':checked')) {
+				if(allAds[i].tipo == "movel") {
+					$("#results").append(allAds[i].titulo)
+				}
+			}
+			
+			if($('#servico').is(':checked')) {
+				if(allAds[i].tipo == "servico") {
+					$("#results").append(allAds[i].titulo)
+				}
+			}			
+		}
+	});
+}
+
 $(document).ready(function(){
 	
 getBalanceLoggedIn()

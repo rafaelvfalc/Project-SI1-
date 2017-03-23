@@ -11,13 +11,11 @@
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"  media="screen"/>
     <link rel="stylesheet" th:href="@{/webjars/font-awesome/4.7.0/css/font-awesome.min.css}" media="screen"/>
     <link rel="stylesheet" th:href="@{/css/style.css}" media="screen"/>
-    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
-    <script src="http://localhost:8080/js/showBalance.js"></script>
 </head>
 <body>
 <!-- init menu -->
 <div id="menu" class="navbar navbar-default " role="navigation">
-    <div class="container-fluid" >
+    <div class="container-fluid">
         <div class="navbar-header"><a class="navbar-brand" th:href="@{/}"><i class="fa fa-usd" aria-hidden="true"></i> ad-extreme</a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder">
                 <span class="sr-only">Toggle navigation</span>
@@ -33,7 +31,6 @@
                     <ul class="dropdown-menu">
                         <li><a th:href="@{/user/cadastrar/anuncio}">Cadastrar</a></li>
                         <li><a th:href="@{/user/listar/anuncios}">Todos os Anúncios</a></li>
-                        <li><a th:href="@{/user/pesquisar/anuncios}">Pesquisar Anúncios</a></li>
                     </ul>
                 </li>
             </ul>
@@ -44,9 +41,6 @@
                         <input type="submit" value="Logout"/>
                     </form>
                 </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <p>Saldo: R$<span id="saldoUser" style="color:green"></span></p>
             </ul>
         </div>
     </div>
