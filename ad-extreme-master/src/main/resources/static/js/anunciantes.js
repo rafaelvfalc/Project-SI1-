@@ -19,8 +19,8 @@ $(document).ready(function(){
 				resp += "<tr><td>"+allUsers[i].nome+"</td>" +
 				"<td>"+allUsers[i].email+"</td>";
 				if($userLogged.email != allUsers[i].email){
-					resp += "<td onclick= mudarFavorito(allUsers[i].id) " +
-					"style='cursor:pointer'> xxx";
+					resp += "<td><p onclick= mudarFavorito(allUsers[i].id) " +
+					"style='cursor:pointer'> xxx</p>";
 					// verifica se o usuario acessado esta nos favoritos do usuario logado
 					// dai adiciona uma string, se estiver, senao adiciona outro
 					/*if( allUsers[i].email in $loggedFavoritos ){
