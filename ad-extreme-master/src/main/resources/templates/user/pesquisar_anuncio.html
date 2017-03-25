@@ -6,8 +6,11 @@
 <title>.:: ad-extreme ::. - user [pesquisar anúncio ]</title>
 </head>
 <th:block layout:fragment="conteudo">
+	<!-- Form Name -->
 	<div class="col-md-offset-2 col-md-8">
-		<h1>Pesquisar Anúncios</h1>
+		<legend>
+			<h1>Pesquisar Anúncios</h1>
+		</legend>
 	</div>
 	<div class="col-md-offset-2 col-md-8">
 		<form class="form-horizontal" method="post">
@@ -22,13 +25,13 @@
 				<div class="form-group">
 					<label class="col-md-4 control-label">Tipo</label>
 					<div class="col-md-4">
-						<label class="radio-inline"> <input type="radio"
+						<label class="radio-inline"> <input type="checkbox"
 							name="role" id="movel" /> Móvel
-						</label> <label class="radio-inline"> <input type="radio"
+						</label> <label class="radio-inline"> <input type="checkbox"
 							name="role" id="imovel" /> Imóvel
-						</label> <label class="radio-inline"> <input type="radio"
+						</label> <label class="radio-inline"> <input type="checkbox"
 							name="role" id="servico" /> Serviço
-						</label> <label class="radio-inline"> <input type="radio"
+						</label> <label class="radio-inline"> <input type="checkbox"
 							name="role" id="emprego" /> Emprego
 						</label>
 					</div>
@@ -36,7 +39,7 @@
 				<div class="form-group">
 					<label class="col-md-4 control-label">Data</label>
 					<div class="col-md-4">
-						<div class='input-group date' id='date'>
+						<div class='input-group date'>
 							<input type='date' id='date' class="form-control" /> <span
 								class="input-group-addon"> <span
 								class="glyphicon glyphicon-calendar"></span>
@@ -46,13 +49,19 @@
 				</div>
 				<div class="form-group">
 					<div class="col-md-8 col-md-offset-4">
-						<button id="pesquisar" class="btn btn-success"
-							type="button" onclick="searchAd()">Pesquisar</button>
+						<button id="pesquisar" class="btn btn-success" type="button"
+							onclick="searchAd()">Pesquisar</button>
 					</div>
 				</div>
 			</fieldset>
 		</form>
 	</div>
-	<div class="col-md-offset-2 col-md-8" id="results"></div>
+
+	<div class="col-md-offset-2 col-md-8">
+		<h2>Resultados</h2>
+		<table style="width: 100%" class="table table-bordered" id="results">
+		</table>
+	</div>
+
 </th:block>
 </html>
