@@ -23,13 +23,9 @@ public class RestUsuarioController {
 	private UsuarioServiceImpl usuarioService;
 
 	@RequestMapping(value = "/favoritos", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Collection<String>> getFavoritos(String emailUserLogged) {
-		Usuario userLogged = usuarioService.getByEmail(emailUserLogged).get();
-		if (userLogged.getFavoritos().size() > 0) {
-			return new ResponseEntity<>(userLogged.getFavoritos(), HttpStatus.OK);
-		} else {
-			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-		}
+	public ResponseEntity<Collection<String>> getFavoritos() {
+		Usuario userLogged = getUserLogged().getBody();
+		return new ResponseEntity<>(userLogged.getFavoritos(), HttpStatus.OK);
 
 	}
 
