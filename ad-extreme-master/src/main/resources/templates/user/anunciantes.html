@@ -4,25 +4,25 @@
 	layout:decorator="layout/layout_user">
 <head>
 <title>.:: ad-extreme ::. - Anunciantes</title>
-<script th:src="@{/js/anunciantes.js}"></script>
+<script th:src="@{/js/favAnunciantes.js}"></script>
 </head>
 <th:block layout:fragment="conteudo">
 	<div class="col-md-offset-2 col-md-8">
 		<h1>Todos os Anunciantes</h1>
 		<!-- Text input-->
 		<div style="text-align: center;">
-			<table style="width: 80%" class="table table-bordered">
-				<tr>
+			<table id ="anunciante" style="width: 80%" class="table table-bordered">
+				<!--<tr>
 					<th style="width: 15%; text-align: center">Anunciante</th>
 					<th style="width: 20%; text-align: center">Contato</th>
 					<th style="width: 5%; text-align: center"></th>
 				</tr>
 
-				<tr id="anunciante">
-					<!-- <td>sem nome</td>
+				 <tr id="anunciante">
+					 <td>sem nome</td>
 					<td>sem email</td>
-					<td>&#10008;</td> -->
-				</tr>
+					<td>&#10008;</td> 
+				</tr>-->
 
 			</table>
 		</div>

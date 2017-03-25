@@ -17,49 +17,49 @@ import javax.validation.Valid;
 @Controller
 public class AnuncioController {
 
-    @Autowired
-    private AnuncioServiceImpl anuncioService;
+	@Autowired
+	private AnuncioServiceImpl anuncioService;
 
-    @Autowired
-    private AnuncioRepository anuncioRep;
+	@Autowired
+	private AnuncioRepository anuncioRep;
 
-    @RequestMapping(value = "/user/cadastrar/anuncio", method = RequestMethod.GET)
-    public ModelAndView getPageCadastrarAnuncio(AnuncioForm anuncioForm){
-        ModelAndView model = new ModelAndView();
+	@RequestMapping(value = "/user/cadastrar/anuncio", method = RequestMethod.GET)
+	public ModelAndView getPageCadastrarAnuncio(AnuncioForm anuncioForm) {
+		ModelAndView model = new ModelAndView();
 
-        model.addObject("tipos", anuncioForm.getTipos());
-        model.setViewName("user/cadastrar_anuncio");
+		model.addObject("tipos", anuncioForm.getTipos());
+		model.setViewName("user/cadastrar_anuncio");
 
-        return model;
-    }
+		return model;
+	}
 
-    @RequestMapping(value = "/user/listar/anuncios", method = RequestMethod.GET)
-    public ModelAndView getPageListarAnuncios(){
-        ModelAndView model = new ModelAndView();
+	@RequestMapping(value = "/user/listar/anuncios", method = RequestMethod.GET)
+	public ModelAndView getPageListarAnuncios() {
+		ModelAndView model = new ModelAndView();
 
-        model.addObject("anuncios", anuncioRep.findAll());
+		model.addObject("anuncios", anuncioRep.findAll());
 
-        model.setViewName("user/listar_anuncios");
+		model.setViewName("user/listar_anuncios");
 
-        return model;
-    }
+		return model;
+	}
 
-    @RequestMapping(value = "/user/cadastrar/anuncio", method = RequestMethod.POST)
-    public ModelAndView cadastroAnuncio(@Valid AnuncioForm anuncioForm, BindingResult result, RedirectAttributes attributes){
-        if(result.hasErrors()){
-            return getPageCadastrarAnuncio(anuncioForm);
-        }
+	@RequestMapping(value = "/user/cadastrar/anuncio", method = RequestMethod.POST)
+	public ModelAndView cadastroAnuncio(@Valid AnuncioForm anuncioForm, BindingResult result,
+			RedirectAttributes attributes) {
+		if (result.hasErrors()) {
+			return getPageCadastrarAnuncio(anuncioForm);
+		}
 
-        Anuncio anuncio = new Anuncio();
-        anuncio.setTitulo(anuncioForm.getTitulo());
-        anuncio.setPreco(anuncioForm.getPreco());
-        anuncio.setTipo(anuncioForm.getTipo());
+		Anuncio anuncio = new Anuncio();
+		anuncio.setTitulo(anuncioForm.getTitulo());
+		anuncio.setPreco(anuncioForm.getPreco());
+		anuncio.setTipo(anuncioForm.getTipo());
 
-        anuncioService.create(anuncio);
+		anuncioService.create(anuncio);
 
-        attributes.addFlashAttribute("mensagem", "Anúncio cadastrado com sucesso!");
-        return new ModelAndView("redirect:/user/cadastrar/anuncio");
-    }
-
+		attributes.addFlashAttribute("mensagem", "Anúncio cadastrado com sucesso!");
+		return new ModelAndView("redirect:/user/cadastrar/anuncio");
+	}
 
 }

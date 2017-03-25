@@ -17,72 +17,67 @@ import java.util.Collection;
 
 public class CustomAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
 
-    protected Log logger = LogFactory.getLog(this.getClass());
+	protected Log logger = LogFactory.getLog(this.getClass());
 
-    private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
+	private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
 
-    @Override
-    public void onAuthenticationSuccess(HttpServletRequest request,
-                                        HttpServletResponse response, Authentication authentication)
-            throws IOException {
+	@Override
+	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
+			Authentication authentication) throws IOException {
 
-        handle(request, response, authentication);
-        clearAuthenticationAttributes(request);
-    }
+		handle(request, response, authentication);
+		clearAuthenticationAttributes(request);
+	}
 
-    protected void handle(final HttpServletRequest request,
-                          final HttpServletResponse response,
-                          final Authentication authentication)
-            throws IOException {
+	protected void handle(final HttpServletRequest request, final HttpServletResponse response,
+			final Authentication authentication) throws IOException {
 
-        String targetUrl = determineTargetUrl(authentication);
+		String targetUrl = determineTargetUrl(authentication);
 
-        if (response.isCommitted()) {
-            logger.debug("Não foi possível redirecionar para" + targetUrl);
-            return;
-        }
+		if (response.isCommitted()) {
+			logger.debug("Não foi possível redirecionar para" + targetUrl);
+			return;
+		}
 
-        redirectStrategy.sendRedirect(request, response, targetUrl);
-    }
+		redirectStrategy.sendRedirect(request, response, targetUrl);
+	}
 
-    protected String determineTargetUrl(final Authentication authentication) {
-        boolean isUser = false;
-        boolean isAdmin = false;
-        Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
+	protected String determineTargetUrl(final Authentication authentication) {
+		boolean isUser = false;
+		boolean isAdmin = false;
+		Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
 
-        for (GrantedAuthority grantedAuthority : authorities) {
-            if (grantedAuthority.getAuthority().equals("USER")) {
-                isUser = true;
-                break;
-            } else if (grantedAuthority.getAuthority().equals("COMPANY")) {
-                isAdmin = true;
-            }
-        }
+		for (GrantedAuthority grantedAuthority : authorities) {
+			if (grantedAuthority.getAuthority().equals("USER")) {
+				isUser = true;
+				break;
+			} else if (grantedAuthority.getAuthority().equals("COMPANY")) {
+				isAdmin = true;
+			}
+		}
 
-        if (isUser) {
-            return "/user";
-        } else if (isAdmin) {
-            return "/company";
-        } else {
-            throw new IllegalStateException();
-        }
-    }
+		if (isUser) {
+			return "/user";
+		} else if (isAdmin) {
+			return "/company";
+		} else {
+			throw new IllegalStateException();
+		}
+	}
 
-    protected void clearAuthenticationAttributes(final HttpServletRequest
-                                                         request) {
-        HttpSession session = request.getSession(false);
-        if (session == null) {
-            return;
-        }
-        session.removeAttribute(WebAttributes.AUTHENTICATION_EXCEPTION);
-    }
+	protected void clearAuthenticationAttributes(final HttpServletRequest request) {
+		HttpSession session = request.getSession(false);
+		if (session == null) {
+			return;
+		}
+		session.removeAttribute(WebAttributes.AUTHENTICATION_EXCEPTION);
+	}
 
+	public void setRedirectStrategy(final RedirectStrategy redirectStrategyIn) {
+		this.redirectStrategy = redirectStrategyIn;
+	}
 
-    public void setRedirectStrategy(final RedirectStrategy redirectStrategyIn) {
-        this.redirectStrategy = redirectStrategyIn;
-    }
-
-    protected RedirectStrategy getRedirectStrategy() {
-        return redirectStrategy;
-    }
+	protected RedirectStrategy getRedirectStrategy() {
+		return redirectStrategy;
+	}
 }

@@ -15,7 +15,7 @@ import org.springframework.security.core.authority.AuthorityUtils;
 
 @Entity(name = "Usuario")
 @Table(name = "tb_usuario")
-public class Usuario extends org.springframework.security.core.userdetails.User{
+public class Usuario extends org.springframework.security.core.userdetails.User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
@@ -42,7 +42,9 @@ public class Usuario extends org.springframework.security.core.userdetails.User{
 	 * @param email
 	 * @param senha
 	 * @param role
-	 * @param saldo foi alterado, pois originalmente o saldo não era um atributo do usuario
+	 * @param saldo
+	 *            foi alterado, pois originalmente o saldo não era um atributo
+	 *            do usuario
 	 */
 	public Usuario(String nome, String email, String senha, String role) {
 		super(email, senha, AuthorityUtils.createAuthorityList(role));
@@ -103,19 +105,23 @@ public class Usuario extends org.springframework.security.core.userdetails.User{
 		this.saldo = novoSaldo;
 	}
 
-	public String toString(){
+	public String toString() {
 		return String.format("%s{Nome=%s, Contato='%s'}", role, nome, email);
 	}
-	
-	public Collection<String> getFavoritos(){
+
+	public Collection<String> getFavoritos() {
 		return favoritos;
 	}
-	
-	public void addFavorito(String emailDoFavorito){
+
+	public void setFavoritos(Collection<String> favoritos) {
+		this.favoritos = favoritos;
+	}
+
+	public void addFavorito(String emailDoFavorito) {
 		favoritos.add(emailDoFavorito);
 	}
-	
-	public void removeFavorito(String emailDoFavorito){
+
+	public void removeFavorito(String emailDoFavorito) {
 		favoritos.remove(emailDoFavorito);
 	}
 

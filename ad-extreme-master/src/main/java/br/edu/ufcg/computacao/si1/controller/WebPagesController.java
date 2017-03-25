@@ -8,53 +8,51 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class WebPagesController {
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public ModelAndView getPageIndex(){
-        ModelAndView model = new ModelAndView();
-        model.setViewName("index");
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public ModelAndView getPageIndex() {
+		ModelAndView model = new ModelAndView();
+		model.setViewName("index");
 
-        return model;
-    }
+		return model;
+	}
 
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public ModelAndView getPageLogin(){
-        ModelAndView model = new ModelAndView();
-        model.setViewName("login");
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public ModelAndView getPageLogin() {
+		ModelAndView model = new ModelAndView();
+		model.setViewName("login");
 
-        return model;
-    }
+		return model;
+	}
 
-    @RequestMapping(value = "/user", method = RequestMethod.GET)
-    public ModelAndView getPageIndexUser(){
-        ModelAndView model = new ModelAndView();
-        model.setViewName("user/index");
+	@RequestMapping(value = "/user", method = RequestMethod.GET)
+	public ModelAndView getPageIndexUser() {
+		ModelAndView model = new ModelAndView();
+		model.setViewName("user/index");
 
-        return model;
-    }
+		return model;
+	}
 
-    @RequestMapping(value = "/company", method = RequestMethod.GET)
-    public ModelAndView getPageIndexCompany(){
-        ModelAndView model = new ModelAndView();
-        model.setViewName("company/index");
+	@RequestMapping(value = "/company", method = RequestMethod.GET)
+	public ModelAndView getPageIndexCompany() {
+		ModelAndView model = new ModelAndView();
+		model.setViewName("company/index");
 
-        return model;
-    }
-    
-    
-    
-    @RequestMapping(value ="company/listar/anunciantes", method = RequestMethod.GET)
-    public ModelAndView getPageAnunciantesCompany(){
-    	ModelAndView model = new ModelAndView();
-    	model.setViewName("/company/anunciantes");
-    	
-    	return model;
-    }
-    
-    @RequestMapping(value ="user/listar/anunciantes", method = RequestMethod.GET)
-    public ModelAndView getPageAnunciantesUser(){
-    	ModelAndView model = new ModelAndView();
-    	model.setViewName("/user/anunciantes");
-    	
-    	return model;
-    }
+		return model;
+	}
+
+	@RequestMapping(value = "company/listar/anunciantes", method = RequestMethod.GET)
+	public ModelAndView getPageAnunciantesCompany() {
+		ModelAndView model = new ModelAndView();
+		model.setViewName("/company/anunciantes");
+
+		return model;
+	}
+
+	@RequestMapping(value = "user/listar/anunciantes", method = RequestMethod.GET)
+	public ModelAndView getPageAnunciantesUser() {
+		ModelAndView model = new ModelAndView();
+		model.setViewName("/user/anunciantes");
+
+		return model;
+	}
 }
