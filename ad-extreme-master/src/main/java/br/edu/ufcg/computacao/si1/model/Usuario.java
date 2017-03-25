@@ -29,6 +29,7 @@ public class Usuario extends org.springframework.security.core.userdetails.User 
 	private String role;
 	@Column
 	private double saldo;
+	@Column
 	@ElementCollection
 	private Collection<String> favoritos;
 
