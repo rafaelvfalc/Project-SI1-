@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import javax.persistence.Column;
-import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -28,9 +27,9 @@ public class Usuario extends org.springframework.security.core.userdetails.User 
 	@Column
 	private String role;
 	@Column
-	private double saldo = 0;
+	private double saldo;
 	@Column
-	private String favoritos = "";
+	private String favoritos;
 
 	public Usuario() {
 		super("default", "default", AuthorityUtils.createAuthorityList("USER"));
@@ -43,6 +42,7 @@ public class Usuario extends org.springframework.security.core.userdetails.User 
 	 * @param senha
 	 * @param role
 	 * @param saldo
+	 * @param favoritos
 	 *            foi alterado, pois originalmente o saldo não era um atributo
 	 *            do usuario
 	 */
@@ -53,6 +53,9 @@ public class Usuario extends org.springframework.security.core.userdetails.User 
 		this.email = email;
 		this.senha = senha;
 		this.role = role;
+		saldo = 0;
+		favoritos = "";
+		
 	}
 
 	public Long getId() {
