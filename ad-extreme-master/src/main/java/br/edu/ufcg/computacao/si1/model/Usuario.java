@@ -31,6 +31,8 @@ public class Usuario extends org.springframework.security.core.userdetails.User 
 	private double saldo;
 	@Column
 	private String favoritos;
+    @Column
+    private String anuncios;
 
     public Usuario() {
         super("default", "default", AuthorityUtils.createAuthorityList("USER"));
@@ -42,7 +44,8 @@ public class Usuario extends org.springframework.security.core.userdetails.User 
      * @param email
      * @param senha
      * @param role
-     * @param saldo foi alterado, pois originalmente o saldo não era um atributo do usuario
+     * @param saldo / foi alterado, pois originalmente o saldo não era um atributo do usuario
+     * @param anuncios / ID dos anuncios que o usuario cadastrou
      */
     // alteracao, usuario nao sera passado com saldo, sera 0 ao criar o usuario @filipe
     public Usuario(String nome, String email, String senha, String role) {
@@ -55,7 +58,8 @@ public class Usuario extends org.springframework.security.core.userdetails.User 
         this.role = role;
         this.saldo = 0.0;
         favoritos = "";
-	}
+        this.anuncios = "";
+    }
 
 	public Long getId() {
 		return id;
@@ -94,10 +98,25 @@ public class Usuario extends org.springframework.security.core.userdetails.User 
 	}
 
 	public void setRole(String novoRole) {
-		this.role = novoRole;
-	}
+        this.role = novoRole;
+    }
+    
+    public String getAnuncios() {
+    	return anuncios;
+    }
+    
+    public void addAnuncios(String idDoAnuncio) {
+    	anuncios = anuncios + " " + idDoAnuncio;
+    }
+    
+    //Criei metodo debitar para ser discutido @Filipe
+    public void debitarSaldo(double debito) {
+    	if(this.saldo >= debito ){
+    		this.saldo = this.saldo - debito;
+    	}
+    }
 
-	public double getSaldo() {
+    public double getSaldo() {
 		return saldo;
 	}
 

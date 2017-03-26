@@ -17,6 +17,7 @@
 <script th:src="@{/js/showBalance.js}"></script>
 </head>
 <body>
+	<<<<<<< HEAD
 	<!-- init menu -->
 	<div id="menu" class="navbar navbar-default " role="navigation">
 		<div class="container-fluid">
@@ -42,12 +43,15 @@
 									Anúncios</a></li>
 							<li><a th:href="@{/company/pesquisar/anuncios}">Pesquisar
 									Anúncios</a></li>
+							<li><a th:href="@{/company/listar/meusanuncios}">Meus
+									Anúncios</a></li>
 							<li><a th:href="@{/company/listar/anunciantes}">Todos os
 									Anunciantes</a></li>
 						</ul></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-				<li>Saldo: R$<span id="saldoUser" style="color: green"> </span></li>
+					<li>Saldo: R$<span id="saldoUser" style="color: green">
+					</span></li>
 					<li><a href="javascript:document.logout.submit()"><i
 							class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
 						<form name="logout" th:action="@{/logout}" method="post"

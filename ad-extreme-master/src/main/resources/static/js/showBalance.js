@@ -14,6 +14,7 @@ function getBalanceLoggedIn() {
 			$( ".result" ).html( allUsers );
 			for (var i = 0; i < allUsers.length; i++) {
 				if(allUsers[i].email === userLoggedIn) {
+					console.log(allUsers[i])
 					var $spanSaldo = $("#saldoUser");
 					
 					if(parseInt(allUsers[i].saldo) != parseFloat(allUsers[i].saldo)) {
@@ -127,6 +128,10 @@ function searchAd() {
 			
 		}
 	});
+}
+
+function addAdToUser() {
+	console.log("AQUI")
 }
 
 $(document).ready(function(){
