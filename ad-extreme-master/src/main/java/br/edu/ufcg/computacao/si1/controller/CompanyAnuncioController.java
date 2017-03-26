@@ -57,5 +57,17 @@ public class CompanyAnuncioController {
 		attributes.addFlashAttribute("mensagem", "Anúncio cadastrado com sucesso!");
 		return new ModelAndView("redirect:/company/cadastrar/anuncio");
 	}
+<<<<<<< HEAD
+=======
+
+	@RequestMapping(value = "/company/pesquisar/anuncios", method = RequestMethod.GET)
+	public ModelAndView getPagePesquisarAnuncio() {
+		ModelAndView model = new ModelAndView();
+
+		model.setViewName("company/pesquisar_anuncio");
+
+		return model;
+	}
+>>>>>>> refs/remotes/origin/master
 
 }

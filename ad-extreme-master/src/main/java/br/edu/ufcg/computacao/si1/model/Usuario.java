@@ -15,6 +15,7 @@ import org.springframework.security.core.authority.AuthorityUtils;
 
 @Entity(name = "Usuario")
 @Table(name = "tb_usuario")
+<<<<<<< HEAD
 public class Usuario extends org.springframework.security.core.userdetails.User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -31,11 +32,47 @@ public class Usuario extends org.springframework.security.core.userdetails.User 
 	private double saldo = 0;
 	@Column
 	private String favoritos = "";
+=======
+public class Usuario extends org.springframework.security.core.userdetails.User{
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    @Column
+    private String nome;
+    @Column(unique = true)
+    private String email;
+    @Column
+    private String senha;
+    @Column
+    private String role;
+    @Column
+    private double saldo;
+>>>>>>> refs/remotes/origin/master
 
+<<<<<<< HEAD
 	public Usuario() {
 		super("default", "default", AuthorityUtils.createAuthorityList("USER"));
 	}
+=======
+    public Usuario() {
+        super("default", "default", AuthorityUtils.createAuthorityList("USER"));
+    }
+    
+    /**
+     * 
+     * @param nome
+     * @param email
+     * @param senha
+     * @param role
+     * @param saldo foi alterado, pois originalmente o saldo não era um atributo do usuario
+     */
+    // alteracao, usuario nao sera passado com saldo, sera 0 ao criar o usuario @filipe
+    public Usuario(String nome, String email, String senha, String role) {
 
+        super(email, senha, AuthorityUtils.createAuthorityList(role));
+>>>>>>> refs/remotes/origin/master
+
+<<<<<<< HEAD
 	/**
 	 * 
 	 * @param nome
@@ -48,6 +85,14 @@ public class Usuario extends org.springframework.security.core.userdetails.User 
 	 */
 	public Usuario(String nome, String email, String senha, String role) {
 		super(email, senha, AuthorityUtils.createAuthorityList(role));
+=======
+        this.nome = nome;
+        this.email = email;
+        this.senha = senha;
+        this.role = role;
+        this.saldo = 0.0;
+    }
+>>>>>>> refs/remotes/origin/master
 
 		this.nome = nome;
 		this.email = email;
@@ -87,6 +132,7 @@ public class Usuario extends org.springframework.security.core.userdetails.User 
 		this.senha = senha;
 	}
 
+<<<<<<< HEAD
 	public String getRole() {
 		return role;
 	}
@@ -139,4 +185,30 @@ public class Usuario extends org.springframework.security.core.userdetails.User 
 		}
 	}
 
+=======
+    public void setRole(String novoRole) {
+        this.role = novoRole;
+    }
+    
+    public double getSaldo() {
+    	return saldo;
+    }
+    
+    public void setSaldo(double novoSaldo) {
+    	this.saldo = novoSaldo;
+    }
+    
+    //Criei metodo debitar para ser discutido @Filipe
+    public void debitarSaldo(double debito) {
+    	if(this.saldo >= debito ){
+    		this.saldo = this.saldo - debito;
+    	}
+    }
+
+    //Criei metodo creditar para ser discutido @Filipe
+    public void creditarSaldo(double credito) {
+    	this.saldo = this.saldo + credito;
+    }
+    
+>>>>>>> refs/remotes/origin/master
 }

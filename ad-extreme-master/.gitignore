@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 .project
@@ -7,3 +8,12 @@ mvnw
 mvnw.cmd
 target/
 /notes.txt
+=======
+
+
+.idea/
+ad-extreme.iml
+mvnw
+mvnw.cmd
+target/
+>>>>>>> refs/remotes/origin/master

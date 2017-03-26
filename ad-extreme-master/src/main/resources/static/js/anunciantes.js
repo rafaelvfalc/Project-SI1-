@@ -3,32 +3,28 @@ $(document).ready(function(){
 		$("#anunciante").html ("");
 
 		$.get ("/loggedUser", function( user ){
-			if(allUsers.length > 1){
-				var resp =	"<tr><th style='width: 15%; text-align: center'>Anunciante</th>" +
-				"<th style='width: 20%; text-align: center'>Contato</th>" +
-				"<th style='width: 5%; text-align: center'></th></tr>";
+			var resp =	"<tr><th style='width: 15%; text-align: center'>Anunciante</th>" +
+			"<th style='width: 20%; text-align: center'>Contato</th>" +
+			"<th style='width: 5%; text-align: center' title='favoritos'></th></tr>";
 
-				for (var i = 0; i < allUsers.length; i++) {
-					resp += "<tr><td>"+allUsers[i].nome+"</td>" +
-					"<td>"+allUsers[i].email+"</td>";
-					if(user.email != allUsers[i].email){
-						if((user.favoritos).indexOf(allUsers[i].email) > -1){
-							resp += "<td><span onclick= removerFavorito("+allUsers[i].id+") "
-							+ "style='cursor:pointer' title='retirar favorito'>&#10008";
-						} else {
-							resp += "<td><span onclick= addFavorito("+allUsers[i].id+") "
-							+ "style='cursor:pointer' title='adicionar favorito'>&#10004";
-						}
-						resp += "</span>";
+			for (var i = 0; i < allUsers.length; i++) {
+				resp += "<tr><td>"+allUsers[i].nome+"</td>" +
+				"<td>"+allUsers[i].email+"</td>";
+				if(user.email != allUsers[i].email){
+					if((user.favoritos).indexOf(allUsers[i].email) > -1){
+						resp += "<td><span onclick= removerFavorito("+allUsers[i].id+") "
+						+ "style='cursor:pointer; font-size:17px;' title='retirar favorito'>&#10008";
 					} else {
-						resp += "<td>You";
+						resp += "<td><span onclick= addFavorito("+allUsers[i].id+") "
+						+ "style='cursor:pointer; font-size:17px;' title='adicionar favorito'>&#10004";
 					}
-					resp += "</td></tr>";
+					resp += "</span>";
+				} else {
+					resp += "<td>You";
 				}
-				$("#anunciante").append(resp);
-			} else {
-				$("#anunciante").append("<h2>Nenhum outro usuario cadastrado!</h2>")
+				resp += "</td></tr>";
 			}
+			$("#anunciante").append(resp);
 		})		
 	})
 })
