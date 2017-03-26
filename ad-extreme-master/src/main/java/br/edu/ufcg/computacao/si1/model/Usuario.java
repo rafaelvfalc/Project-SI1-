@@ -131,9 +131,9 @@ public class Usuario extends org.springframework.security.core.userdetails.User 
 	public void removeFavorito(String emailDoFavoritado) {
 		String[] listaFavoritos = favoritos.split(", ");
 
-		favoritos = "";
+		this.favoritos = "";
 		for(String favorito: listaFavoritos){
-			if(favorito != emailDoFavoritado){
+			if(!favorito.equals(emailDoFavoritado)){
 				addFavorito(favorito);				
 			}
 		}

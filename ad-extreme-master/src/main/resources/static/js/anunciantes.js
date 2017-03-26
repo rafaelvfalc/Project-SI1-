@@ -12,9 +12,7 @@ $(document).ready(function(){
 					resp += "<tr><td>"+allUsers[i].nome+"</td>" +
 					"<td>"+allUsers[i].email+"</td>";
 					if(user.email != allUsers[i].email){
-//						var found = allUsers.includes(user.email);
-//						if( found ){
-						if(allUsers[i] in user.favoritos){	//problema nessa comparacao
+						if((user.favoritos).indexOf(allUsers[i].email) > -1){
 							resp += "<td><span onclick= removerFavorito("+allUsers[i].id+") "
 							+ "style='cursor:pointer' title='retirar favorito'>&#10008";
 						} else {

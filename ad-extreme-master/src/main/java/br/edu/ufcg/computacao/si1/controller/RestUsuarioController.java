@@ -24,7 +24,6 @@ public class RestUsuarioController {
 	public ResponseEntity<Collection<String>> meusFavoritos() {
 		Usuario userLogged = getUserLogged().getBody();
 		return new ResponseEntity<>(userLogged.getFavoritos(), HttpStatus.OK);
-
 	}
 
 	@RequestMapping(value = "/favoritos/add/{id}", method = RequestMethod.GET)
@@ -33,21 +32,10 @@ public class RestUsuarioController {
 				.getContext().getAuthentication().getName()).get();
 		String emailFavoritado = usuarioService.getById(id).get().getEmail();
 
-		if(!verificaFavorito(usuarioLogged.getFavoritos(), emailFavoritado)){
 			usuarioLogged.addFavorito(emailFavoritado);
 			usuarioService.update(usuarioLogged);
-		}
 
 		return new ResponseEntity<>(usuarioLogged.getFavoritos(), HttpStatus.OK);
-	}
-
-	private boolean verificaFavorito(Collection<String> array, String email){
-		for(String e: array){
-			if(e == email){
-				return true;
-			}
-		}
-		return false;
 	}
 
 	@RequestMapping(value = "/favoritos/remove/{id}", method = RequestMethod.GET)
@@ -56,10 +44,8 @@ public class RestUsuarioController {
 				.getContext().getAuthentication().getName()).get();
 		String emailFavoritado = usuarioService.getById(id).get().getEmail();
 
-		if(verificaFavorito(usuarioLogged.getFavoritos(), emailFavoritado)){
-			usuarioLogged.removeFavorito(emailFavoritado);
-			usuarioService.update(usuarioLogged);
-		}
+		usuarioLogged.removeFavorito(emailFavoritado);
+		usuarioService.update(usuarioLogged);
 
 		return new ResponseEntity<>(usuarioLogged.getFavoritos(), HttpStatus.OK);
 	}
@@ -76,5 +62,4 @@ public class RestUsuarioController {
 				.getContext().getAuthentication().getName()).get();
 		return new ResponseEntity<>(usuario, HttpStatus.OK);
 	}
-
 }
