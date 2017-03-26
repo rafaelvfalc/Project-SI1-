@@ -58,24 +58,16 @@ public class AnuncioController {
 
 		anuncioService.create(anuncio);
 
-<<<<<<< HEAD
 		attributes.addFlashAttribute("mensagem", "Anúncio cadastrado com sucesso!");
-		return new ModelAndView("redirect:/user/cadastrar/anuncio");
-	}
-=======
-        attributes.addFlashAttribute("mensagem", "Anúncio cadastrado com sucesso!");
         return new ModelAndView("redirect:/user/cadastrar/anuncio");
     }
-    
-    @RequestMapping(value = "/user/pesquisar/anuncios", method = RequestMethod.GET)
-    public ModelAndView getPagePesquisarAnuncio(){
-        ModelAndView model = new ModelAndView();
 
-        model.setViewName("user/pesquisar_anuncio");
+	@RequestMapping(value = "/user/pesquisar/anuncios", method = RequestMethod.GET)
+	public ModelAndView getPagePesquisarAnuncio(){
+		ModelAndView model = new ModelAndView();
 
-        return model;
-    }
+		model.setViewName("user/pesquisar_anuncio");
 
->>>>>>> refs/remotes/origin/master
-
+		return model;
+	}
 }

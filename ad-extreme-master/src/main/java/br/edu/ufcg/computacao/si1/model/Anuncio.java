@@ -11,13 +11,9 @@ import java.util.Date;
 @Entity
 @Table(name = "tb_anuncio")
 public class Anuncio {
-<<<<<<< HEAD
-	private static final String[] tipos = new String[] { "movel", "imovel", "emprego" };
-=======
 
 	//adicao do tipo de anuncio servico @filipe
     private static final String[] tipos = new String[] {"movel", "imovel", "emprego", "servico"};
->>>>>>> refs/remotes/origin/master
 
 	private final static DateFormat DATE_FORMAT = new SimpleDateFormat("dd-MMM-yyyy HH:mm:ss");
 
@@ -41,7 +37,6 @@ public class Anuncio {
 	@Column(name = "tipo", nullable = false)
 	private String tipo;
 
-<<<<<<< HEAD
 	public Anuncio(String titulo, Date dataDeCriacao, double preco, String nota, String tipo) {
 		this.titulo = titulo;
 		this.dataDeCriacao = dataDeCriacao;
@@ -49,10 +44,6 @@ public class Anuncio {
 		this.nota = nota;
 		this.tipo = tipo;
 	}
-=======
-    @Column(name = "tipo", nullable = false)
-    private String tipo;
->>>>>>> refs/remotes/origin/master
 
 	public Anuncio() {
 		titulo = "";
@@ -158,26 +149,6 @@ public class Anuncio {
 		return result;
 	}
 
-<<<<<<< HEAD
-	@Override
-	public String toString() {
-		return "Anuncio{" + "_id=" + _id + ", titulo='" + titulo + '\'' + ", dataDeCriacao=" + getDataDeCriacao()
-				+ ", preco=" + preco + ", nota=" + nota + ", tipo='" + tipo + '\'' + '}';
-	}
-=======
-    @Override
-    public int hashCode() {
-        int result;
-        long temp;
-        result = get_id().hashCode();
-        result = 31 * result + getTitulo().hashCode();
-        result = 31 * result + getDataDeCriacao().hashCode();
-        temp = Double.doubleToLongBits(getPreco());
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        result = 31 * result + (getNota() != null ? getNota().hashCode() : 0);
-        result = 31 * result + getTipo().hashCode();
-        return result;
-    }
 
     @Override
     public String toString() {
@@ -190,5 +161,4 @@ public class Anuncio {
                 ", tipo='" + tipo + '\'' +
                 '}';
     }
->>>>>>> refs/remotes/origin/master
 }
