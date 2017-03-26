@@ -15,7 +15,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import javax.validation.Valid;
 
 @Controller
-public class AnuncioController {
+public class UserAnuncioController {
 
     @Autowired
     private AnuncioServiceImpl anuncioService;
@@ -66,6 +66,15 @@ public class AnuncioController {
         ModelAndView model = new ModelAndView();
 
         model.setViewName("user/pesquisar_anuncio");
+
+        return model;
+    }
+    
+    @RequestMapping(value = "/user/listar/meusanuncios", method = RequestMethod.GET)
+    public ModelAndView getPageMeusAnuncios(){
+        ModelAndView model = new ModelAndView();
+
+        model.setViewName("user/meus_anuncios");
 
         return model;
     }
