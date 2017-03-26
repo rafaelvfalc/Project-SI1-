@@ -28,10 +28,9 @@ public class Usuario extends org.springframework.security.core.userdetails.User 
 	@Column
 	private String role;
 	@Column
-	private double saldo;
+	private double saldo = 0;
 	@Column
-	@ElementCollection
-	private Collection<String> favoritos;
+	private String favoritos = "";
 
 	public Usuario() {
 		super("default", "default", AuthorityUtils.createAuthorityList("USER"));
@@ -54,8 +53,6 @@ public class Usuario extends org.springframework.security.core.userdetails.User 
 		this.email = email;
 		this.senha = senha;
 		this.role = role;
-		favoritos = new ArrayList<>();
-		saldo = 0.00;
 	}
 
 	public Long getId() {
@@ -111,19 +108,35 @@ public class Usuario extends org.springframework.security.core.userdetails.User 
 	}
 
 	public Collection<String> getFavoritos() {
-		return favoritos;
+		String[] favoritos = this.favoritos.split(", ");
+		ArrayList<String> retorno = new ArrayList<String>();
+		for(String email: favoritos){
+			retorno.add(email);
+		}
+		return retorno;
 	}
 
-	public void setFavoritos(Collection<String> favoritos) {
+	public void setFavoritos(String favoritos) {
 		this.favoritos = favoritos;
 	}
 
-	public void addFavorito(String emailDoFavorito) {
-		favoritos.add(emailDoFavorito);
+	public void addFavorito(String emailDoFavoritado) {
+		if(favoritos.isEmpty()){
+			favoritos = emailDoFavoritado;
+		} else {
+			favoritos += ", "+emailDoFavoritado;
+		}
 	}
 
-	public void removeFavorito(String emailDoFavorito) {
-		favoritos.remove(emailDoFavorito);
+	public void removeFavorito(String emailDoFavoritado) {
+		String[] listaFavoritos = favoritos.split(", ");
+
+		favoritos = "";
+		for(String favorito: listaFavoritos){
+			if(favorito != emailDoFavoritado){
+				addFavorito(favorito);				
+			}
+		}
 	}
 
 }

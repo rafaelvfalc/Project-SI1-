@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$.get ("/users", function( allUsers ){
 		$("#anunciante").html ("");
-		
+
 		$.get ("/loggedUser", function( user ){
 			if(allUsers.length > 1){
 				var resp =	"<tr><th style='width: 15%; text-align: center'>Anunciante</th>" +
@@ -9,20 +9,21 @@ $(document).ready(function(){
 				"<th style='width: 5%; text-align: center'></th></tr>";
 
 				for (var i = 0; i < allUsers.length; i++) {
-					console.log(allUsers[i]);
-					resp += "<tr><td>"+allUsers[i].nome+"</td><td>"+allUsers[i].email+"</td>";
+					resp += "<tr><td>"+allUsers[i].nome+"</td>" +
+					"<td>"+allUsers[i].email+"</td>";
 					if(user.email != allUsers[i].email){
-						resp += "<td>"
-						if( allUsers[i].email in user["favoritos"] ){
-							resp += "<p onclick= addFavorito("+allUsers[i].id+") "
-									+ "style='cursor:pointer'>&#10008";
+//						var found = allUsers.includes(user.email);
+//						if( found ){
+						if(allUsers[i] in user.favoritos){	//problema nessa comparacao
+							resp += "<td><span onclick= removerFavorito("+allUsers[i].id+") "
+							+ "style='cursor:pointer' title='retirar favorito'>&#10008";
 						} else {
-							resp += "<p onclick= removeFavorito("+allUsers[i].id+") "
-								+ "style='cursor:pointer'> &#10004";
+							resp += "<td><span onclick= addFavorito("+allUsers[i].id+") "
+							+ "style='cursor:pointer' title='adicionar favorito'>&#10004";
 						}
-						resp += "</p>"
+						resp += "</span>";
 					} else {
-						resp += "<td>You"
+						resp += "<td>You";
 					}
 					resp += "</td></tr>";
 				}
@@ -35,15 +36,13 @@ $(document).ready(function(){
 })
 
 function addFavorito( id ){
-	$.post("/favoritos/add/"+id, function( response ){
-		console.log(response);
-	});
-		location.reload();		
+	$.get("/favoritos/add/"+id, function(user){
+		location.reload();
+	})
 }
 
-function removeFavorito( id ){
-	$.post("/favoritos/remove/"+id, function( response ){
-		console.log(response);
-	});
-		location.reload();		
+function removerFavorito( id ){
+	$.get("/favoritos/remove/"+id, function(user){
+		location.reload();
+	})
 }

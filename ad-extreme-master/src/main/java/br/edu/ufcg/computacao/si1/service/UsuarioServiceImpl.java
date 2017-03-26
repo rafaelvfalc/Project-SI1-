@@ -44,13 +44,16 @@ public class UsuarioServiceImpl implements UsuarioService {
 
 	@Override
 	public Optional<Usuario> getById(Long id) {
-		return Optional.ofNullable(usuarioRepository.findOne(id));
+		Usuario user = usuarioRepository.findOne(id);
+		System.out.println(user + "estah sendo buscado por ID");
+		return Optional.ofNullable(user);
 	}
 
 	@Override
 	public Optional<Usuario> getByEmail(String email) {
-		System.out.println(email + "estah sendo retornado");
-		return Optional.ofNullable(usuarioRepository.findByEmail(email));
+		Usuario user = usuarioRepository.findByEmail(email);
+		System.out.println(user + "estah sendo buscado por email");
+		return Optional.ofNullable(user);
 	}
 
 	@Override
