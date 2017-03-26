@@ -5,6 +5,8 @@ package br.edu.ufcg.computacao.si1.model;
  */
 public class Notas {
 
-	// Constantes
-	public static String[] notas = new String[] { "", "★", "★★", "★★★", "★★★★", "★★★★★" };
+    //Constantes
+    public static String[] notas = new String[] {
+        "", "★", "★★", "★★★", "★★★★", "★★★★★"
+    };
 }

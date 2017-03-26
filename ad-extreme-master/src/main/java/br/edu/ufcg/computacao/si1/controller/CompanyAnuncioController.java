@@ -75,4 +75,5 @@ public class CompanyAnuncioController {
 
         return model;
     }
+
 }
