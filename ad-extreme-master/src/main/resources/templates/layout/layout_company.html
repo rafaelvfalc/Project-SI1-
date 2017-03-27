@@ -4,8 +4,7 @@
 <head>
 <meta charset="UTF-8" />
 <title>.:: ad-extreme ::.</title>
-<!--[if IE]>
-    <link rel="shortcut icon" th:href="@{img/favicon.ico}"/><![endif]-->
+<!--[if IE]><link rel="shortcut icon" th:href="@{img/favicon.ico}"/><![endif]-->
 <link rel="icon" th:href="@{img/favicon.ico}" />
 <link rel="stylesheet"
 	th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
@@ -14,8 +13,8 @@
 	th:href="@{/webjars/font-awesome/4.7.0/css/font-awesome.min.css}"
 	media="screen" />
 <link rel="stylesheet" th:href="@{/css/style.css}" media="screen" />
-<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
-
+<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script src="http://localhost:8080/js/showBalance.js"></script>
 </head>
 <body>
 	<!-- init menu -->
@@ -39,6 +38,10 @@
 						<ul class="dropdown-menu">
 							<li><a th:href="@{/company/cadastrar/anuncio}">Cadastrar</a></li>
 							<li><a th:href="@{/company/listar/anuncios}">Todos os
+									Anúncios</a></li>
+							<li><a th:href="@{/company/pesquisar/anuncios}">Pesquisar
+									Anúncios</a></li>
+							<li><a th:href="@{/company/listar/meusanuncios}">Meus
 									Anúncios</a></li>
 							<li><a th:href="@{/company/listar/anunciantes}">Todos os
 									Anunciantes</a></li>
@@ -67,6 +70,11 @@
 							th:hidden="true">
 							<input type="submit" value="Logout" />
 						</form></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<p>
+						Saldo: R$<span id="saldoUser" style="color: green"></span>
+					</p>
 				</ul>
 			</div>
 		</div>

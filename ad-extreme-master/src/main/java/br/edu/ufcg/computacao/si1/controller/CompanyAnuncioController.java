@@ -58,4 +58,19 @@ public class CompanyAnuncioController {
 		return new ModelAndView("redirect:/company/cadastrar/anuncio");
 	}
 
+	@RequestMapping(value = "/company/pesquisar/anuncios", method = RequestMethod.GET)
+	public ModelAndView getPagePesquisarAnuncio() {
+		ModelAndView model = new ModelAndView();
+
+		model.setViewName("company/pesquisar_anuncio");
+
+		return model;
+	}
+	
+	@RequestMapping(value = "/company/listar/meusanuncios", method = RequestMethod.GET)
+    public ModelAndView getPageMeusAnuncios(){
+        ModelAndView model = new ModelAndView();
+        model.setViewName("company/meus_anuncios");
+        return model;
+    }
 }
