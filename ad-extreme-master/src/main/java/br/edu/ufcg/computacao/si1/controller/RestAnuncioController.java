@@ -42,5 +42,4 @@ public class RestAnuncioController {
 	public ResponseEntity<Collection<Anuncio>> getPageListarAnuncios() {
 		return new ResponseEntity<>(anuncioService.getAll(), HttpStatus.OK);
 	}
-
 }

@@ -11,7 +11,7 @@ import java.util.Date;
 @Entity
 @Table(name = "tb_anuncio")
 public class Anuncio {
-	private static final String[] tipos = new String[] { "movel", "imovel", "emprego" };
+	private static final String[] tipos = new String[] { "movel", "imovel", "emprego" }; //{"movel", "imovel", "emprego", "servico"}
 
 	private final static DateFormat DATE_FORMAT = new SimpleDateFormat("dd-MMM-yyyy HH:mm:ss");
 
@@ -147,9 +147,15 @@ public class Anuncio {
 		return result;
 	}
 
-	@Override
-	public String toString() {
-		return "Anuncio{" + "_id=" + _id + ", titulo='" + titulo + '\'' + ", dataDeCriacao=" + getDataDeCriacao()
-				+ ", preco=" + preco + ", nota=" + nota + ", tipo='" + tipo + '\'' + '}';
-	}
+    @Override
+    public String toString() {
+        return "Anuncio{" +
+                "_id=" + _id +
+                ", titulo='" + titulo + '\'' +
+                ", dataDeCriacao=" + getDataDeCriacao() +
+                ", preco=" + preco +
+                ", nota=" + nota +
+                ", tipo='" + tipo + '\'' +
+                '}';
+    }
 }

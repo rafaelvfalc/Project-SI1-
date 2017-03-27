@@ -13,7 +13,8 @@
 	th:href="@{/webjars/font-awesome/4.7.0/css/font-awesome.min.css}"
 	media="screen" />
 <link rel="stylesheet" th:href="@{/css/style.css}" media="screen" />
-<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script src="http://localhost:8080/js/showBalance.js"></script>
 </head>
 <body>
 	<!-- init menu -->
@@ -38,8 +39,12 @@
 							<li><a th:href="@{/user/cadastrar/anuncio}">Cadastrar</a></li>
 							<li><a th:href="@{/user/listar/anuncios}">Todos os
 									Anúncios</a></li>
+							<li><a th:href="@{/user/pesquisar/anuncios}">Pesquisar
+									Anúncios</a></li>
 							<li><a th:href="@{/user/listar/anunciantes}">Todos os
 									Anunciantes</a></li>
+							<li><a th:href="@{/user/listar/meusanuncios}">Meus
+									Anúncios</a></li>
 						</ul></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
@@ -49,6 +54,11 @@
 							th:hidden="true">
 							<input type="submit" value="Logout" />
 						</form></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<p>
+						Saldo: R$<span id="saldoUser" style="color: green"></span>
+					</p>
 				</ul>
 			</div>
 		</div>

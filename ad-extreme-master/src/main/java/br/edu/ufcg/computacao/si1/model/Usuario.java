@@ -30,33 +30,33 @@ public class Usuario extends org.springframework.security.core.userdetails.User 
 	private double saldo;
 	@Column
 	private String favoritos;
+    @Column
+    private String anuncios;
 
-	public Usuario() {
-		super("default", "default", AuthorityUtils.createAuthorityList("USER"));
-	}
-
+    public Usuario() {
+        super("default", "default", AuthorityUtils.createAuthorityList("USER"));
+    }
+    
 	/**
 	 * 
 	 * @param nome
 	 * @param email
 	 * @param senha
 	 * @param role
-	 * @param saldo
+	 * @param saldo / foi alterado, pois originalmente o saldo não era um atributo do usuario
+     * @param anuncios / ID dos anuncios que o usuario cadastrou
 	 * @param favoritos
-	 *            foi alterado, pois originalmente o saldo não era um atributo
-	 *            do usuario
 	 */
 	public Usuario(String nome, String email, String senha, String role) {
 		super(email, senha, AuthorityUtils.createAuthorityList(role));
-
-		this.nome = nome;
-		this.email = email;
-		this.senha = senha;
-		this.role = role;
-		saldo = 0;
-		favoritos = "";
-		
-	}
+        this.nome = nome;
+        this.email = email;
+        this.senha = senha;
+        this.role = role;
+        this.saldo = 0.0;
+        this.anuncios = "";
+        favoritos = "";
+    }
 
 	public Long getId() {
 		return id;
@@ -142,4 +142,23 @@ public class Usuario extends org.springframework.security.core.userdetails.User 
 		}
 	}
 
+    public String getAnuncios() {
+    	return anuncios;
+    }
+    
+    public void addAnuncios(String idDoAnuncio) {
+    	anuncios = anuncios + " " + idDoAnuncio;
+    }
+    
+    //Criei metodo debitar para ser discutido @Filipe
+    public void debitarSaldo(double debito) {
+    	if(this.saldo >= debito ){
+    		this.saldo = this.saldo - debito;
+    	}
+    }
+
+    //Criei metodo creditar para ser discutido @Filipe
+    public void creditarSaldo(double credito) {
+    	this.saldo = this.saldo + credito;
+    }
 }
