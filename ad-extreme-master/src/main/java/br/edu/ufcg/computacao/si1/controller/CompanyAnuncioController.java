@@ -70,10 +70,7 @@ public class CompanyAnuncioController {
 	@RequestMapping(value = "/company/listar/meusanuncios", method = RequestMethod.GET)
     public ModelAndView getPageMeusAnuncios(){
         ModelAndView model = new ModelAndView();
-
         model.setViewName("company/meus_anuncios");
-
         return model;
     }
-
 }
