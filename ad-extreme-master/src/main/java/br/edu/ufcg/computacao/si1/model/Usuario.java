@@ -144,12 +144,31 @@ public class Usuario extends org.springframework.security.core.userdetails.User 
 		}
 	}
 
-    public String getAnuncios() {
-    	return anuncios;
+    public Collection<String> getAnuncios(){
+    	String[] listaAnuncios = anuncios.split(", ");
+    	ArrayList<String> retorno = new ArrayList<String>();
+    	for(String idAnuncio: listaAnuncios){
+    		retorno.add(idAnuncio);
+    	}
+    	return retorno;
     }
     
-    public void addAnuncios(String idDoAnuncio) {
-    	anuncios = anuncios + " " + idDoAnuncio;
+    public void addAnuncio(String idDoAnuncio){
+    	if(anuncios.isEmpty()){
+    		anuncios += idDoAnuncio;
+    	} else {
+    		anuncios += ", "+idDoAnuncio;
+    	}
+    }
+    
+    public void removeAnuncio(String idDoAnuncio){
+    	String[] listaAnuncios  = anuncios.split(", ");
+    	anuncios ="";
+    	for(String anuncio: listaAnuncios){
+    		if(!anuncio.equals(idDoAnuncio)){
+    			addAnuncio(anuncio);
+    		}
+    	}
     }
     
     //Criei metodo debitar para ser discutido @Filipe
