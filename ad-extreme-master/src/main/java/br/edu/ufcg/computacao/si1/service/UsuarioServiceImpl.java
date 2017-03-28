@@ -38,7 +38,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 			break;
 		}
 
-		System.out.println(usuario + "estah sendo criado");
+//		System.out.println(usuario + "estah sendo criado");
 		return usuarioRepository.save(usuario);
 	}
 
@@ -59,7 +59,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 
 	@Override
 	public boolean update(Usuario usuario) {
-		System.out.println(usuario + "estah sendo atualizado");
+//		System.out.println(usuario + "estah sendo atualizado");
 
 		if (usuarioRepository.exists(usuario.getId())) {
 			usuarioRepository.save(usuario);

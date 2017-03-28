@@ -1,9 +1,15 @@
 package br.edu.ufcg.computacao.si1.model;
 
-import javax.persistence.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * Created by Marcus Oliveira on 08/12/16.
@@ -34,6 +40,9 @@ public class Anuncio {
 
 	@Column(name = "tipo", nullable = false)
 	private String tipo;
+	
+	@Column(name = "dono_anuncio", nullable= false)
+	private String dono;
 
 	public Anuncio(String titulo, Date dataDeCriacao, double preco, String nota, String tipo) {
 		this.titulo = titulo;
@@ -41,6 +50,7 @@ public class Anuncio {
 		this.preco = preco;
 		this.nota = nota;
 		this.tipo = tipo;
+		dono = "";
 	}
 
 	public Anuncio() {
@@ -49,6 +59,7 @@ public class Anuncio {
 		preco = 0;
 		nota = "";
 		tipo = "";
+		dono = "";
 	}
 
 	/**
@@ -109,6 +120,14 @@ public class Anuncio {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
+	
+	public String getDono(){
+		return dono;
+	}
+	
+	public void setDono(String dono){
+		this.dono = dono;
+	}
 
 	@Override
 	public boolean equals(Object o) {
@@ -156,6 +175,7 @@ public class Anuncio {
                 ", preco=" + preco +
                 ", nota=" + nota +
                 ", tipo='" + tipo + '\'' +
+                ", dono='" + dono +
                 '}';
     }
 }

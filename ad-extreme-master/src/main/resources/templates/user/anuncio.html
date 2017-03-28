@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/layout_user">
+<head>
+<title>.:: ad-extreme ::. - Anuncio</title>
+<script th:src="@{/js/anuncios.js}"></script>
+</head>
+<th:block layout:fragment="conteudo">
+	<div class="col-md-offset-2 col-md-8">
+		<legend>
+			<h1 id="titulo"></h1>
+		</legend>
+		<!-- Text input-->
+		<div>
+			<table style="text-align: center;">
+				<tr>
+					<td id="anuncio" style="width: 80%; text-align: left;"></td>
+					<td style="text-align: right;">
+						<h3 id="valor"></h3>
+						<button id="comprar">Comprar</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</th:block>
+</html>

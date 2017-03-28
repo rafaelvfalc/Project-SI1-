@@ -27,7 +27,8 @@ $(document).ready(function(){
 								var	idAnuncio = parseInt(anuncio);
 								for(var j=0; j < allAds.length; j++){
 									if(allAds[j]._id == idAnuncio){
-										respBody += "<tr><td>"+allAds[j].titulo+"</td><td>"+allAds[j].tipo+
+										respBody += "<tr><td><a style='cursor:pointer' onclick='anuncio("+allAds[j]._id+")'>"
+										+allAds[j].titulo+"</a></td><td>"+allAds[j].tipo+
 										"</td><td>"+allAds[j].dataDeCriacao+"</td><td>R$ "+allAds[j].preco+"</td></tr>";
 									}
 								}
@@ -39,6 +40,7 @@ $(document).ready(function(){
 							$("#username").append("Page de "+user.nome);
 							respBody +="";
 							if((logged.favoritos).indexOf(user.email) > -1){
+								// add notas
 								respFooter += "<button type='button' onclick='removerFavorito("
 									+user.id+")'>Desfavoritar</button>"
 							} else {
@@ -59,8 +61,8 @@ $(document).ready(function(){
 									var emailFavorito = user.favoritos[i];
 									for(var j=0; j < allUsers.length; j++){
 										if(allUsers[j].email == emailFavorito){
-											respFooter += "<tr><td><span style='cursor:pointer' onclick='perfilAnunciante("+allUsers[j].id+")'>"
-											+allUsers[j].nome+"</span></td><td>"+allUsers[j].email+"</td><td><span onclick= removerFavorito("
+											respFooter += "<tr><td><a style='cursor:pointer' onclick='perfilAnunciante("+allUsers[j].id+")'>"
+											+allUsers[j].nome+"</a></td><td>"+allUsers[j].email+"</td><td><span onclick= removerFavorito("
 											+allUsers[j].id+") style='cursor:pointer' title='retirar favorito'>&#10008";
 										}
 									}
@@ -90,4 +92,8 @@ function removerFavorito( id ){
 
 function perfilAnunciante( id ){
 	window.location = "perfil?id="+id;
+}
+
+function anuncio( id ){
+	window.location = "anuncio?id="+id;
 }
