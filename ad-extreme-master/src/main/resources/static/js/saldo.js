@@ -129,10 +129,6 @@ function searchAd() {
 	});
 }
 
-function addAdToUser() {
-	console.log("AQUI")
-}
-
 $(document).ready(function(){
 	
 getBalanceLoggedIn()
