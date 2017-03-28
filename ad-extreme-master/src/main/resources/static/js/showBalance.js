@@ -118,9 +118,8 @@ function searchAd() {
 			} else {
 				precoFormatado = resultsDate[i].preco  + ".00"
 			}
-			
 			titulo = "<td><a onclick='anuncio("+resultsDate[i]._id+")' style='cursor:pointer' >"
-			+ resultsDate[i].titulo + "</a></td>"
+						+ resultsDate[i].titulo + "</a></td>"
 			tipo = "<td>" + resultsDate[i].tipo + "</td>"
 			data = "<td>" + resultsDate[i].dataDeCriacao + "</td>"
 			preco = "<td> R$ " + precoFormatado + "</td>"

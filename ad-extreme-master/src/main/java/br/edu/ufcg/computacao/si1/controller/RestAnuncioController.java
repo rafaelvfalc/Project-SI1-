@@ -33,7 +33,7 @@ public class RestAnuncioController {
 	public ResponseEntity<Collection<Usuario>> getUsers() {
 		return new ResponseEntity<>(usuarioService.getAll(), HttpStatus.OK);
 	}
-	
+
 	@RequestMapping(value = "/users/{id}", method = RequestMethod.GET)
 	public ResponseEntity<Usuario> getUser(@PathVariable Long id){
 		return new ResponseEntity<>(usuarioService.getById(id).get(), HttpStatus.OK);
@@ -44,33 +44,34 @@ public class RestAnuncioController {
 		return new ResponseEntity<>(anuncioService.getAll(), HttpStatus.OK);
 	}
 
-    @RequestMapping(value="/user/{id}/anuncios", method=RequestMethod.GET)
-    public ResponseEntity<Collection<String>> getAnunciosUser(@PathVariable Long id){
-    	Usuario usuario = usuarioService.getById(id).get();
-    	return new ResponseEntity<>(usuario.getAnuncios(), HttpStatus.OK);
-    }
-    
-    @RequestMapping(value="/anuncios/{id}", method=RequestMethod.GET)
-    public ResponseEntity<Anuncio> getAnuncio(@PathVariable Long id){
-    	Anuncio anuncio = anuncioService.getById(id).get();
-    	return new ResponseEntity<>(anuncio, HttpStatus.OK);
-    }
-    
-    @RequestMapping(value="/anuncio/{id}/buy", method=RequestMethod.GET)
-    public ResponseEntity<Object> comprarAnuncio(@PathVariable Long id){
-    	Anuncio anuncio = anuncioService.getById(id).get();
+	@RequestMapping(value="/user/{id}/anuncios", method=RequestMethod.GET)
+	public ResponseEntity<Collection<String>> getAnunciosUser(@PathVariable Long id){
+		Usuario usuario = usuarioService.getById(id).get();
+		return new ResponseEntity<>(usuario.getAnuncios(), HttpStatus.OK);
+	}
 
-    	Usuario comprador = usuarioService.getByEmail(SecurityContextHolder
-				.getContext().getAuthentication().getName()).get();
-    	comprador.debitarSaldo(anuncio.getPreco());
-    	usuarioService.update(comprador);
-    	
-    	Usuario vendedor = usuarioService.getByEmail(anuncio.getDono()).get();
-    	vendedor.creditarSaldo(anuncio.getPreco());
-    	usuarioService.update(vendedor);
+	@RequestMapping(value="/anuncios/{id}", method=RequestMethod.GET)
+	public ResponseEntity<Anuncio> getAnuncio(@PathVariable Long id){
+		Anuncio anuncio = anuncioService.getById(id).get();
+		return new ResponseEntity<>(anuncio, HttpStatus.OK);
+	}
 
-    	anuncioService.delete(id);
-    	return new ResponseEntity<>(HttpStatus.OK);
-    }
+	@RequestMapping(value="/anuncio/{id}/buy", method=RequestMethod.GET)
+	public ResponseEntity<Object> comprarAnuncio(@PathVariable Long id){
+		Anuncio anuncio = anuncioService.getById(id).get();
+		if(anuncio.getTipo() == "movel" || anuncio.getTipo() == "imovel"){
+			Usuario comprador = usuarioService.getByEmail(SecurityContextHolder
+					.getContext().getAuthentication().getName()).get();
+			comprador.debitarSaldo(anuncio.getPreco());
+			usuarioService.update(comprador);
+			
+			Usuario vendedor = usuarioService.getByEmail(anuncio.getDono()).get();
+			vendedor.creditarSaldo(anuncio.getPreco());
+			usuarioService.update(vendedor);
+			
+			anuncioService.delete(id);			
+		}
+		return new ResponseEntity<>(HttpStatus.OK);
+	}
 
 }

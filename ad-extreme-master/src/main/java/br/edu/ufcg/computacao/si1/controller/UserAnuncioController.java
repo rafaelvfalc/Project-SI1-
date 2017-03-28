@@ -75,7 +75,7 @@ public class UserAnuncioController {
         return new ModelAndView("redirect:/user/cadastrar/anuncio");
     }
     
-    @RequestMapping(value = "/user/pesquisar/anuncios", method = RequestMethod.GET)
+    @RequestMapping(value = "/user/anuncios", method = RequestMethod.GET)
     public ModelAndView getPagePesquisarAnuncio(){
         ModelAndView model = new ModelAndView();
 
