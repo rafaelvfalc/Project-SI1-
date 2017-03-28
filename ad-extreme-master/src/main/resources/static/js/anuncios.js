@@ -35,7 +35,6 @@ $(document).ready(function(){
 					})
 				}
 
-//				$("#anuncio").append(ads.titulo);
 			})
 		})
 	})
@@ -44,9 +43,5 @@ $(document).ready(function(){
 
 function perfilAnunciante( id ){
 	window.location = "perfil?id="+id;
-}
-
-function comprarAnuncio( id ){
-	
 }
 
