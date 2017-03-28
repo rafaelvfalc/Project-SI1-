@@ -87,13 +87,4 @@ public class UserAnuncioController {
 
         return model;
     }
-    
-    @RequestMapping(value = "/user/listar/meusanuncios", method = RequestMethod.GET)
-    public ModelAndView getPageMeusAnuncios(){
-        ModelAndView model = new ModelAndView();
-
-        model.setViewName("user/meus_anuncios");
-
-        return model;
-    }
 }
