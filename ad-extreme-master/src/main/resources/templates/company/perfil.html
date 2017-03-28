@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/layout_company">
+<head>
+<title>.:: ad-extreme ::. - Anunciante</title>
+<script th:src="@{/js/perfil.js}"></script>
+</head>
+<th:block layout:fragment="conteudo">
+	<div class="col-md-offset-2 col-md-8">
+		<h1 id ="username"></h1>
+		<!-- Text input-->
+		<div style="text-align: center;">
+			<ul id="perfil" style="list-style-type: none;"></ul>
+			<div id="body"></div>
+			<div id="nota"></div>
+			<div id="footer"></div>
+		</div>
+	</div>
+</th:block>
+</html>
