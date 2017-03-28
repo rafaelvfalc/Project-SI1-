@@ -43,4 +43,16 @@ public class RestAnuncioController {
 		return new ResponseEntity<>(anuncioService.getAll(), HttpStatus.OK);
 	}
 
+    @RequestMapping(value="/user/{id}/anuncios", method=RequestMethod.GET)
+    public ResponseEntity<Collection<String>> getAnunciosUser(@PathVariable Long id){
+    	Usuario usuario = usuarioService.getById(id).get();
+    	return new ResponseEntity<>(usuario.getAnuncios(), HttpStatus.OK);
+    }
+    
+    @RequestMapping(value="/anuncios/{id}", method=RequestMethod.GET)
+    public ResponseEntity<Anuncio> getAnuncio(@PathVariable Long id){
+    	Anuncio anuncio = anuncioService.getById(id).get();
+    	return new ResponseEntity<>(anuncio, HttpStatus.OK);
+    }
+
 }

@@ -40,7 +40,7 @@ public class WebPagesController {
 		return model;
 	}
 
-	@RequestMapping(value = "company/listar/anunciantes", method = RequestMethod.GET)
+	@RequestMapping(value = "company/anunciantes", method = RequestMethod.GET)
 	public ModelAndView getPageAnunciantesCompany() {
 		ModelAndView model = new ModelAndView();
 		model.setViewName("/company/anunciantes");
@@ -48,10 +48,25 @@ public class WebPagesController {
 		return model;
 	}
 
-	@RequestMapping(value = "user/listar/anunciantes", method = RequestMethod.GET)
+	@RequestMapping(value = "user/anunciantes", method = RequestMethod.GET)
 	public ModelAndView getPageAnunciantesUser() {
 		ModelAndView model = new ModelAndView();
 		model.setViewName("/user/anunciantes");
+
+		return model;
+	}
+
+	@RequestMapping(value = "user/perfil", method = RequestMethod.GET)
+	public ModelAndView getPageAnuncianteUser() {
+		ModelAndView model = new ModelAndView();
+		model.setViewName("/user/perfil");
+
+		return model;
+	}
+	@RequestMapping(value = "company/perfil", method = RequestMethod.GET)
+	public ModelAndView getPageAnuncianteCompany() {
+		ModelAndView model = new ModelAndView();
+		model.setViewName("/company/perfil");
 
 		return model;
 	}
