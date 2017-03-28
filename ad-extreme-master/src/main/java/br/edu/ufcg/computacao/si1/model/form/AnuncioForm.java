@@ -1,55 +1,58 @@
 package br.edu.ufcg.computacao.si1.model.form;
 
-
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+/** Classe responsavel pelos tratamentos das requisicoes do Anuncio do front end para o back end 
+ * 
+ * @author 
+ *
+ */
+
 public class AnuncioForm {
-	
-	//adicao do anuncio "servico" @ filipe
-    private static final String[] tipos = new String[] {"movel", "imovel", "emprego", "servico"};
 
-    @NotNull(message = "O titulo não pode ser nulo.")
-    @NotEmpty(message = "O titulo não pode esta vazio.")
-    //alteracao da msg de numero minimo de caracteres do titulo @ filipe
-    @Size(min = 10, max = 100, message = "O titulo deve ter entre 10 e 100 caracters")
-    private String titulo;
-    @NotNull(message = "O preçço não pode ser nulo.")
-    @DecimalMin(value = "0.1", message = "O preço minimo é 0.1 para um anúncio.")
-    private Double preco;
-    @NotNull(message = "O tipo de anúncio não pode ser nulo.")
-    @NotEmpty(message = "Escolha um tipo para o anúncio.")
-    private String tipo;
+	private static final String[] tipos = new String[] { "movel", "imovel", "emprego" };
 
-    public String getTitulo() {
-        return titulo;
-    }
+	@NotNull(message = "O titulo não pode ser nulo.")
+	@NotEmpty(message = "O titulo não pode esta vazio.")
+	// alteracao da msg de numero minimo de caracteres do titulo @ filipe
+	@Size(min = 5, max = 100, message = "O titulo deve ter entre 5 e 100 caracters")
+	private String titulo;
+	@NotNull(message = "O preçço não pode ser nulo.")
+	@DecimalMin(value = "0.1", message = "O preço minimo é 0.1 para um anúncio.")
+	private Double preco;
+	@NotNull(message = "O tipo de anúncio não pode ser nulo.")
+	@NotEmpty(message = "Escolha um tipo para o anúncio.")
+	private String tipo;
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
+	public String getTitulo() {
+		return titulo;
+	}
 
-    public Double getPreco() {
-        return preco;
-    }
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
 
-    public void setPreco(Double preco) {
-        this.preco = preco;
-    }
+	public Double getPreco() {
+		return preco;
+	}
 
-    public String getTipo() {
-        return tipo;
-    }
+	public void setPreco(Double preco) {
+		this.preco = preco;
+	}
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
+	public String getTipo() {
+		return tipo;
+	}
 
-    public static String[] getTipos() {
-        return tipos;
-    }
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	public static String[] getTipos() {
+		return tipos;
+	}
 }
-

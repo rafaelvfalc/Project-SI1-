@@ -22,77 +22,60 @@ import javax.sql.DataSource;
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 @Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
-public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
+public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    DataSource dataSource;
+	@Autowired
+	DataSource dataSource;
 
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-            .authorizeRequests()
-                    .antMatchers("/","/cadastrar-se").permitAll()
-                    .antMatchers("/user/**").hasAuthority("USER")
-                    .antMatchers("/company/**").hasAuthority("COMPANY")
-                    .anyRequest().fullyAuthenticated()
-                .and()
-            .formLogin()
-                    .loginPage("/login").permitAll()
-                    .successHandler(new CustomAuthenticationSuccessHandler())
-                    .failureUrl("/login?error")
-                .and()
-            .logout()
-                    .logoutUrl("/logout")
-                    .deleteCookies("remember-me","JSESSIONID")
-                    .logoutSuccessUrl("/login").permitAll()
-                .and()
-                    .rememberMe();
-    }
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		http.authorizeRequests().antMatchers("/", "/cadastrar-se").permitAll().antMatchers("/user/**")
+				.hasAuthority("USER").antMatchers("/company/**").hasAuthority("COMPANY").anyRequest()
+				.fullyAuthenticated().and().formLogin().loginPage("/login").permitAll()
+				.successHandler(new CustomAuthenticationSuccessHandler()).failureUrl("/login?error").and().logout()
+				.logoutUrl("/logout").deleteCookies("remember-me", "JSESSIONID").logoutSuccessUrl("/login").permitAll()
+				.and().rememberMe();
+	}
 
-    /**
-     * TODO colocar para o login ser feito por dados consultados no banco de dados
-     * @param auth
-     * @throws Exception
-     */
-    @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-//        auth
-//            .inMemoryAuthentication()
-//                .withUser("user").password("password").roles("USER")
-//                .and()
-//                .withUser("company").password("password").roles("COMPANY");
+	
+	@Autowired
+	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+		// auth
+		// .inMemoryAuthentication()
+		// .withUser("user").password("password").roles("USER")
+		// .and()
+		// .withUser("company").password("password").roles("COMPANY");
 
+		auth.jdbcAuthentication().dataSource(dataSource)
+				.usersByUsernameQuery(
+						"select email as username,senha as password, true as enabled from tb_usuario where email=?")
+				.authoritiesByUsernameQuery("select email as username, role from tb_usuario where email=?");
+	}
 
-        auth.jdbcAuthentication().dataSource(dataSource)
-                .usersByUsernameQuery(
-                        "select email as username,senha as password, true as enabled from tb_usuario where email=?")
-                .authoritiesByUsernameQuery(
-                        "select email as username, role from tb_usuario where email=?");
-    }
+	// @Autowired
+	// public final void configAuthentication(final AuthenticationManagerBuilder
+	// auth) throws Exception {
+	// auth
+	// .userDetailsService(userDetailsService())
+	// .passwordEncoder(new BasicEncoder());
+	// }
+	//
+	@Bean
+	protected UserDetailsService userDetailsService() {
+		return new UserDetailsService() {
+			@Autowired
+			UsuarioService usuarioService;
 
-//    @Autowired
-//    public final void configAuthentication(final AuthenticationManagerBuilder auth) throws Exception {
-//        auth
-//            .userDetailsService(userDetailsService())
-//            .passwordEncoder(new BasicEncoder());
-//    }
-//
-    @Bean
-    protected UserDetailsService userDetailsService(){
-        return new UserDetailsService() {
-            @Autowired
-            UsuarioService usuarioService;
-
-            @Override
-            public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-                Usuario usuario = usuarioService.getByEmail(email).get();
-                if(usuario != null){
-                    return new User(usuario.getEmail(), usuario.getSenha(), true, true, true, true,
-                            AuthorityUtils.createAuthorityList(usuario.getRole()));
-                }else {
-                    throw new UsernameNotFoundException("Não foi possível localizar o usuário" + usuario);
-                }
-            }
-        };
-    }
+			@Override
+			public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+				Usuario usuario = usuarioService.getByEmail(email).get();
+				if (usuario != null) {
+					return new User(usuario.getEmail(), usuario.getSenha(), true, true, true, true,
+							AuthorityUtils.createAuthorityList(usuario.getRole()));
+				} else {
+					throw new UsernameNotFoundException("Não foi possível localizar o usuário" + usuario);
+				}
+			}
+		};
+	}
 }

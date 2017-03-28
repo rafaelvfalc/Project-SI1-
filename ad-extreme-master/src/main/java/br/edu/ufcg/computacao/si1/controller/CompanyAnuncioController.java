@@ -1,11 +1,18 @@
 package br.edu.ufcg.computacao.si1.controller;
 
 import br.edu.ufcg.computacao.si1.model.Anuncio;
+import br.edu.ufcg.computacao.si1.model.Usuario;
 import br.edu.ufcg.computacao.si1.model.form.AnuncioForm;
 import br.edu.ufcg.computacao.si1.service.AnuncioServiceImpl;
+import br.edu.ufcg.computacao.si1.service.UsuarioServiceImpl;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -13,11 +20,21 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
 
+/** Classe responsavel por controlar os Anuncios do Usuario Pessoa Juridica, contendo metodos e valores p
+ * para o mesmo
+ * 
+ * @author Hector
+ *
+ */
+
 @Controller
 public class CompanyAnuncioController {
 
 	@Autowired
 	private AnuncioServiceImpl anuncioService;
+
+	@Autowired
+	private UsuarioServiceImpl usuarioService;
 
 	@RequestMapping(value = "/company/cadastrar/anuncio", method = RequestMethod.GET)
 	public ModelAndView getPageCadastarAnuncio(AnuncioForm anuncioForm) {
@@ -52,7 +69,13 @@ public class CompanyAnuncioController {
 		anuncio.setPreco(anuncioForm.getPreco());
 		anuncio.setTipo(anuncioForm.getTipo());
 
+		Usuario usuarioLogged = usuarioService.getByEmail(SecurityContextHolder.getContext().getAuthentication().getName()).get();
+		anuncio.setDono(usuarioLogged.getEmail());
 		anuncioService.create(anuncio);
+
+		usuarioLogged.addAnuncio(anuncio.get_id().toString());
+
+		usuarioService.update(usuarioLogged);
 
 		attributes.addFlashAttribute("mensagem", "Anúncio cadastrado com sucesso!");
 		return new ModelAndView("redirect:/company/cadastrar/anuncio");
@@ -67,4 +90,9 @@ public class CompanyAnuncioController {
 		return model;
 	}
 
+	@RequestMapping(value ="/company/anuncio/{id}", method = RequestMethod.GET)
+	public ResponseEntity<Anuncio> getAnuncio(@PathVariable Long id){
+		Anuncio anuncio = anuncioService.getById(id).get();
+		return new ResponseEntity<>(anuncio, HttpStatus.OK);
+	}
 }

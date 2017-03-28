@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html
-        xmlns:th="http://www.thymeleaf.org"
-        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-        layout:decorator="layout/layout_user">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/layout_user">
 <head>
-    <title>.:: ad-extreme ::. - user</title>
+<title>.:: ad-extreme ::. - user</title>
+<script th:src="@{/js/pagina_inicial.js}"></script>
 </head>
 <th:block layout:fragment="conteudo">
+	<div id="welcomeDiv"></div>
+	<div class="col-md-offset-2 col-md-8">
+		<h2>Anúncio mais recente</h2>
+		<table style="width: 100%" class="table table-bordered" id="newestAd">
+		</table>
+		<h2>Recomendação</h2>
+		<table style="width: 100%" class="table table-bordered"
+			id="recommendation">
+		</table>
+	</div>
 </th:block>
 </html>
