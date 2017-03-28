@@ -8,8 +8,8 @@ $(document).ready(function(){
 			"<th style='width: 5%; text-align: center'></th></tr>";
 
 			for (var i = 0; i < allUsers.length; i++) {
-				resp += "<tr><td>"+allUsers[i].nome+"</td>" +
-				"<td>"+allUsers[i].email+"</td>";
+				resp += "<tr><td><span style='cursor:pointer' onclick='perfilAnunciante("+allUsers[i].id+")'>"
+						+allUsers[i].nome+"</span></td><td>"+allUsers[i].email+"</td>";
 				if(user.email != allUsers[i].email){
 					if((user.favoritos).indexOf(allUsers[i].email) > -1){
 						resp += "<td><span onclick= removerFavorito("+allUsers[i].id+") "
@@ -39,4 +39,8 @@ function removerFavorito( id ){
 	$.get("/favoritos/remove/"+id, function(user){
 		location.reload();
 	})
+}
+
+function perfilAnunciante( id ){
+	window.location = "perfil?id="+id;
 }
