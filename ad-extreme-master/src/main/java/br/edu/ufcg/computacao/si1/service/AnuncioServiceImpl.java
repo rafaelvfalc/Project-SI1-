@@ -17,6 +17,7 @@ import java.util.stream.Collectors;
 public class AnuncioServiceImpl implements AnuncioService {
 	// TODO add validity checks
 
+	@Autowired
 	private AnuncioRepository anuncioRepository;
 
 	@Autowired
@@ -32,13 +33,16 @@ public class AnuncioServiceImpl implements AnuncioService {
 	@Override
 	public Anuncio create(Anuncio anuncio) {
 		/* aqui salvamos o anuncio recem criado no repositorio jpa */
+//		System.out.println(anuncio+" estah sendo criado");
 		return anuncioRepository.save(anuncio);
 	}
 
 	@Override
 	public Optional<Anuncio> getById(Long id) {
 		/* aqui recuperamos o anuncio pelo seu id */
-		return Optional.ofNullable(anuncioRepository.findOne(id));
+		Anuncio anuncio = anuncioRepository.findOne(id);
+//		System.out.println(anuncio+" estah sendo buscado");
+		return Optional.ofNullable(anuncio);
 	}
 
 	@Override
@@ -63,6 +67,7 @@ public class AnuncioServiceImpl implements AnuncioService {
 	public boolean update(Anuncio anuncio) {
 		/* a atualizacao do anuncio eh feita apenas se o anuncio ja existir */
 		if (anuncioRepository.exists(anuncio.get_id())) {
+//			System.out.println(anuncio+" estah sendo atualizado");
 			anuncioRepository.save(anuncio);
 			return true;
 		}
