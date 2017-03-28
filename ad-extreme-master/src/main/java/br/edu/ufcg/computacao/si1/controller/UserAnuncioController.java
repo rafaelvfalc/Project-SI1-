@@ -1,11 +1,6 @@
 package br.edu.ufcg.computacao.si1.controller;
 
-import br.edu.ufcg.computacao.si1.model.Anuncio;
-import br.edu.ufcg.computacao.si1.model.Usuario;
-import br.edu.ufcg.computacao.si1.model.form.AnuncioForm;
-import br.edu.ufcg.computacao.si1.repository.AnuncioRepository;
-import br.edu.ufcg.computacao.si1.service.AnuncioServiceImpl;
-import br.edu.ufcg.computacao.si1.service.UsuarioServiceImpl;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,9 +14,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.util.Collection;
-
-import javax.validation.Valid;
+import br.edu.ufcg.computacao.si1.model.Anuncio;
+import br.edu.ufcg.computacao.si1.model.Usuario;
+import br.edu.ufcg.computacao.si1.model.form.AnuncioForm;
+import br.edu.ufcg.computacao.si1.service.AnuncioServiceImpl;
+import br.edu.ufcg.computacao.si1.service.UsuarioServiceImpl;
 
 @Controller
 public class UserAnuncioController {
@@ -31,9 +28,6 @@ public class UserAnuncioController {
     
     @Autowired
     private UsuarioServiceImpl usuarioService;
-
-    @Autowired
-    private AnuncioRepository anuncioRep;
 
     @RequestMapping(value = "/user/cadastrar/anuncio", method = RequestMethod.GET)
     public ModelAndView getPageCadastrarAnuncio(AnuncioForm anuncioForm){
@@ -49,7 +43,7 @@ public class UserAnuncioController {
     public ModelAndView getPageListarAnuncios(){
         ModelAndView model = new ModelAndView();
 
-        model.addObject("anuncios", anuncioRep.findAll());
+        model.addObject("anuncios", anuncioService.getAnuncioRepository().findAll());
 
         model.setViewName("user/listar_anuncios");
 
@@ -67,10 +61,12 @@ public class UserAnuncioController {
         anuncio.setPreco(anuncioForm.getPreco());
         anuncio.setTipo(anuncioForm.getTipo());
         
-        anuncioService.create(anuncio);
-        
         Usuario usuarioLogged = usuarioService.getByEmail(SecurityContextHolder
-				.getContext().getAuthentication().getName()).get();
+        		.getContext().getAuthentication().getName()).get();
+        anuncio.setDono(usuarioLogged.getEmail());
+
+        anuncioService.create(anuncio);
+
         
         usuarioLogged.addAnuncio(anuncio.get_id().toString());
         usuarioService.update(usuarioLogged);
@@ -87,4 +83,10 @@ public class UserAnuncioController {
 
         return model;
     }
+
+	@RequestMapping(value ="/user/anuncio/{id}", method = RequestMethod.GET)
+	public ResponseEntity<Anuncio> getAnuncio(@PathVariable Long id){
+		Anuncio anuncio = anuncioService.getById(id).get();
+		return new ResponseEntity<>(anuncio, HttpStatus.OK);
+	}
 }

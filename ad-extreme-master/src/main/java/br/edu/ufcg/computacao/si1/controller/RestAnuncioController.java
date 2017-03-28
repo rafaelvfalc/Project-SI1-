@@ -5,6 +5,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -53,6 +54,23 @@ public class RestAnuncioController {
     public ResponseEntity<Anuncio> getAnuncio(@PathVariable Long id){
     	Anuncio anuncio = anuncioService.getById(id).get();
     	return new ResponseEntity<>(anuncio, HttpStatus.OK);
+    }
+    
+    @RequestMapping(value="/anuncio/{id}/buy", method=RequestMethod.GET)
+    public ResponseEntity<Object> comprarAnuncio(@PathVariable Long id){
+    	Anuncio anuncio = anuncioService.getById(id).get();
+
+    	Usuario comprador = usuarioService.getByEmail(SecurityContextHolder
+				.getContext().getAuthentication().getName()).get();
+    	comprador.debitarSaldo(anuncio.getPreco());
+    	usuarioService.update(comprador);
+    	
+    	Usuario vendedor = usuarioService.getByEmail(anuncio.getDono()).get();
+    	vendedor.creditarSaldo(anuncio.getPreco());
+    	usuarioService.update(vendedor);
+
+    	anuncioService.delete(id);
+    	return new ResponseEntity<>(HttpStatus.OK);
     }
 
 }
