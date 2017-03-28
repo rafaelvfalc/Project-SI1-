@@ -19,11 +19,10 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
-
 /** Classe responsavel por controlar os Anuncios do Usuario Pessoa Juridica, contendo metodos e valores p
  * para o mesmo
  * 
- * @author Hector
+ * @author 
  *
  */
 
@@ -81,7 +80,7 @@ public class CompanyAnuncioController {
 		return new ModelAndView("redirect:/company/cadastrar/anuncio");
 	}
 
-	@RequestMapping(value = "/company/pesquisar/anuncios", method = RequestMethod.GET)
+	@RequestMapping(value = "/company/anuncios", method = RequestMethod.GET)
 	public ModelAndView getPagePesquisarAnuncio() {
 		ModelAndView model = new ModelAndView();
 

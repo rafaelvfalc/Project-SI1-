@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	layout:decorator="layout/layout_company">
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorator="layout/layout_company">
 <head>
-<title>.:: ad-extreme ::. - company</title>
-<script th:src="@{/js/pagina_inicial.js}"></script>
+    <title>.:: ad-extreme ::. - company</title>
+    <script th:src="@{/js/pagina_inicial.js}"></script>
 </head>
 <th:block layout:fragment="conteudo">
-	<div id="welcomeDiv"></div>
-	<div class="col-md-offset-2 col-md-8">
-		<h2>AnÃºncio mais recente</h2>
+    <div id="welcomeDiv"></div>
+    <div class="col-md-offset-2 col-md-8">
+		<h2> Anúncio mais recente </h2>
 		<table style="width: 100%" class="table table-bordered" id="newestAd">
 		</table>
-		<h2>RecomendaÃ§Ã£o</h2>
-		<table style="width: 100%" class="table table-bordered"
-			id="recommendation">
+		<h2> Recomendação </h2>
+		<table style="width: 100%" class="table table-bordered" id="recommendation">
 		</table>
 	</div>
 </th:block>

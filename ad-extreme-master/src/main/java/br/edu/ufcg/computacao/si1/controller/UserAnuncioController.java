@@ -20,13 +20,6 @@ import br.edu.ufcg.computacao.si1.model.form.AnuncioForm;
 import br.edu.ufcg.computacao.si1.service.AnuncioServiceImpl;
 import br.edu.ufcg.computacao.si1.service.UsuarioServiceImpl;
 
-/**Classe que controla paginas de cadastro de anuncio da pessoa fisica, contendo metodos e valores
- * para o mesmo
- * 
- * @author Hector
- *
- */
-
 @Controller
 public class UserAnuncioController {
 
@@ -82,7 +75,7 @@ public class UserAnuncioController {
         return new ModelAndView("redirect:/user/cadastrar/anuncio");
     }
     
-    @RequestMapping(value = "/user/pesquisar/anuncios", method = RequestMethod.GET)
+    @RequestMapping(value = "/user/anuncios", method = RequestMethod.GET)
     public ModelAndView getPagePesquisarAnuncio(){
         ModelAndView model = new ModelAndView();
 
