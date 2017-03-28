@@ -63,10 +63,27 @@ public class WebPagesController {
 
 		return model;
 	}
+
 	@RequestMapping(value = "company/perfil", method = RequestMethod.GET)
 	public ModelAndView getPageAnuncianteCompany() {
 		ModelAndView model = new ModelAndView();
 		model.setViewName("/company/perfil");
+
+		return model;
+	}
+	
+	@RequestMapping(value = "company/anuncio", method = RequestMethod.GET)
+	public ModelAndView getPageAnuncioCompany() {
+		ModelAndView model = new ModelAndView();
+		model.setViewName("/company/anuncio");
+
+		return model;
+	}
+
+	@RequestMapping(value = "user/anuncio", method = RequestMethod.GET)
+	public ModelAndView getPageAnuncioUser() {
+		ModelAndView model = new ModelAndView();
+		model.setViewName("/user/anuncio");
 
 		return model;
 	}
