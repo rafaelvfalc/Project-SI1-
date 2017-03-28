@@ -173,9 +173,7 @@ public class Usuario extends org.springframework.security.core.userdetails.User 
     
     //Criei metodo debitar para ser discutido @Filipe
     public void debitarSaldo(double debito) {
-    	if(this.saldo >= debito ){
     		this.saldo = this.saldo - debito;
-    	}
     }
 
     //Criei metodo creditar para ser discutido @Filipe
