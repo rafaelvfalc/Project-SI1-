@@ -76,11 +76,11 @@ $(document).ready(function(){
 	})
 })
 
-//function addFavorito( id ){
-//	$.get("/favoritos/add/"+id, function(user){
-//		location.reload();
-//	})
-//}
+function addFavorito( id ){
+	$.get("/favoritos/add/"+id, function(user){
+		location.reload();
+	})
+}
 
 function removerFavorito( id ){
 	$.get("/favoritos/remove/"+id, function(user){
