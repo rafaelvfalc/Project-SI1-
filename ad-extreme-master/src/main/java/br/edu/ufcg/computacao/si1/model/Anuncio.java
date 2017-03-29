@@ -11,13 +11,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- * Created by Marcus Oliveira on 08/12/16.
- */
 @Entity
 @Table(name = "tb_anuncio")
 public class Anuncio {
-	private static final String[] tipos = new String[] { "movel", "imovel", "emprego" }; //{"movel", "imovel", "emprego", "servico"}
+	private static final String[] tipos = new String[] { "movel", "imovel", "emprego" }; // {"movel",
+																							// "imovel",
+																							// "emprego",
+																							// "servico"}
 
 	private final static DateFormat DATE_FORMAT = new SimpleDateFormat("dd-MMM-yyyy HH:mm:ss");
 
@@ -40,8 +40,8 @@ public class Anuncio {
 
 	@Column(name = "tipo", nullable = false)
 	private String tipo;
-	
-	@Column(name = "dono_anuncio", nullable= false)
+
+	@Column(name = "dono_anuncio", nullable = false)
 	private String dono;
 
 	public Anuncio(String titulo, Date dataDeCriacao, double preco, String nota, String tipo) {
@@ -120,12 +120,12 @@ public class Anuncio {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	
-	public String getDono(){
+
+	public String getDono() {
 		return dono;
 	}
-	
-	public void setDono(String dono){
+
+	public void setDono(String dono) {
 		this.dono = dono;
 	}
 
@@ -166,16 +166,9 @@ public class Anuncio {
 		return result;
 	}
 
-    @Override
-    public String toString() {
-        return "Anuncio{" +
-                "_id=" + _id +
-                ", titulo='" + titulo + '\'' +
-                ", dataDeCriacao=" + getDataDeCriacao() +
-                ", preco=" + preco +
-                ", nota=" + nota +
-                ", tipo='" + tipo + '\'' +
-                ", dono='" + dono +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "Anuncio{" + "_id=" + _id + ", titulo='" + titulo + '\'' + ", dataDeCriacao=" + getDataDeCriacao()
+				+ ", preco=" + preco + ", nota=" + nota + ", tipo='" + tipo + '\'' + ", dono='" + dono + '}';
+	}
 }

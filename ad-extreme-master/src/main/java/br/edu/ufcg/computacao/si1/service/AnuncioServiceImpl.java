@@ -10,9 +10,6 @@ import java.util.Collection;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-/**
- * Created by Marcus Oliveira on 28/12/16.
- */
 @Service
 public class AnuncioServiceImpl implements AnuncioService {
 	// TODO add validity checks

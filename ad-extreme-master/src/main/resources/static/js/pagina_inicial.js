@@ -65,7 +65,6 @@ function recommendation() {
 			for (var i = 0; i < allAds.length; i++) {
 				if(allAds[i].dono != userLogged) {
 					while(true) {
-						console.log(getRandomArbitrary(0, allAds.length))
 						recommendation = allAds[getRandomArbitrary(0, allAds.length)]
 						if(recommendation.dono != userLogged){
 							break

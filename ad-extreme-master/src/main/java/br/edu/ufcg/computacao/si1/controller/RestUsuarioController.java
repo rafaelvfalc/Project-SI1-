@@ -28,20 +28,20 @@ public class RestUsuarioController {
 
 	@RequestMapping(value = "/favoritos/add/{id}", method = RequestMethod.GET)
 	public ResponseEntity<Collection<String>> addFavorito(@PathVariable Long id) {
-		Usuario usuarioLogged = usuarioService.getByEmail(SecurityContextHolder
-				.getContext().getAuthentication().getName()).get();
+		Usuario usuarioLogged = usuarioService
+				.getByEmail(SecurityContextHolder.getContext().getAuthentication().getName()).get();
 		String emailFavoritado = usuarioService.getById(id).get().getEmail();
 
-			usuarioLogged.addFavorito(emailFavoritado);
-			usuarioService.update(usuarioLogged);
+		usuarioLogged.addFavorito(emailFavoritado);
+		usuarioService.update(usuarioLogged);
 
 		return new ResponseEntity<>(usuarioLogged.getFavoritos(), HttpStatus.OK);
 	}
 
 	@RequestMapping(value = "/favoritos/remove/{id}", method = RequestMethod.GET)
 	public ResponseEntity<Collection<String>> removeFavorito(@PathVariable Long id) {
-		Usuario usuarioLogged = usuarioService.getByEmail(SecurityContextHolder
-				.getContext().getAuthentication().getName()).get();
+		Usuario usuarioLogged = usuarioService
+				.getByEmail(SecurityContextHolder.getContext().getAuthentication().getName()).get();
 		String emailFavoritado = usuarioService.getById(id).get().getEmail();
 
 		usuarioLogged.removeFavorito(emailFavoritado);
@@ -52,14 +52,14 @@ public class RestUsuarioController {
 
 	@RequestMapping(value = "/logged", method = RequestMethod.GET)
 	public ResponseEntity<String> getLoggedUser() {
-		return new ResponseEntity<>(SecurityContextHolder.getContext()
-				.getAuthentication().getName(), HttpStatus.OK);
+		return new ResponseEntity<>(SecurityContextHolder.getContext().getAuthentication().getName(), HttpStatus.OK);
 	}
 
 	@RequestMapping(value = "/loggedUser", method = RequestMethod.GET)
 	public ResponseEntity<Usuario> getUserLogged() {
-		Usuario usuario = usuarioService.getByEmail(SecurityContextHolder
-				.getContext().getAuthentication().getName()).get();
+		Usuario usuario = usuarioService.getByEmail(SecurityContextHolder.getContext().getAuthentication().getName())
+				.get();
 		return new ResponseEntity<>(usuario, HttpStatus.OK);
 	}
+
 }

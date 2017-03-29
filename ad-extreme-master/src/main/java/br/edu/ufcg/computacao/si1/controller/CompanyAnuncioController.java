@@ -62,7 +62,8 @@ public class CompanyAnuncioController {
 		anuncio.setPreco(anuncioForm.getPreco());
 		anuncio.setTipo(anuncioForm.getTipo());
 
-		Usuario usuarioLogged = usuarioService.getByEmail(SecurityContextHolder.getContext().getAuthentication().getName()).get();
+		Usuario usuarioLogged = usuarioService
+				.getByEmail(SecurityContextHolder.getContext().getAuthentication().getName()).get();
 		anuncio.setDono(usuarioLogged.getEmail());
 		anuncioService.create(anuncio);
 
@@ -83,8 +84,8 @@ public class CompanyAnuncioController {
 		return model;
 	}
 
-	@RequestMapping(value ="/company/anuncio/{id}", method = RequestMethod.GET)
-	public ResponseEntity<Anuncio> getAnuncio(@PathVariable Long id){
+	@RequestMapping(value = "/company/anuncio/{id}", method = RequestMethod.GET)
+	public ResponseEntity<Anuncio> getAnuncio(@PathVariable Long id) {
 		Anuncio anuncio = anuncioService.getById(id).get();
 		return new ResponseEntity<>(anuncio, HttpStatus.OK);
 	}

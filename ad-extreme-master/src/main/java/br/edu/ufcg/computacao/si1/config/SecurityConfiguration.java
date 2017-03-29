@@ -46,11 +46,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	 */
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-		// auth
-		// .inMemoryAuthentication()
-		// .withUser("user").password("password").roles("USER")
-		// .and()
-		// .withUser("company").password("password").roles("COMPANY");
 
 		auth.jdbcAuthentication().dataSource(dataSource)
 				.usersByUsernameQuery(
@@ -58,14 +53,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.authoritiesByUsernameQuery("select email as username, role from tb_usuario where email=?");
 	}
 
-	// @Autowired
-	// public final void configAuthentication(final AuthenticationManagerBuilder
-	// auth) throws Exception {
-	// auth
-	// .userDetailsService(userDetailsService())
-	// .passwordEncoder(new BasicEncoder());
-	// }
-	//
 	@Bean
 	protected UserDetailsService userDetailsService() {
 		return new UserDetailsService() {

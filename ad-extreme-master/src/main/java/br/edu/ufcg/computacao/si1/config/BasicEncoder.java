@@ -2,9 +2,6 @@ package br.edu.ufcg.computacao.si1.config;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-/**
- * Created by marcus on 06/02/17.
- */
 public class BasicEncoder implements PasswordEncoder {
 	@Override
 	public String encode(CharSequence charSequence) {
